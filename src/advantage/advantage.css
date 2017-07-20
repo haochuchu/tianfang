@@ -1,0 +1,190 @@
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+
+/* show */
+.show_top{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_move 1s forwards;
+}
+.show_bottom{
+    position:absolute; 
+    top:50vh; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_shift 1s forwards;
+}
+@keyframes show_move {
+   0%{
+      top:0;
+     }
+   100%{
+      top:-50vh;
+       }
+}
+@keyframes show_shift {
+    0%{
+        top:50vh;
+      }
+    100%{
+        top:100vh;
+        }
+}
+
+.home_advantage{
+    width: 100vw;
+    height: 80vh;
+    background:url("images/fuwu_banner.jpg");
+    background-size:100% 100%;
+    background-attachment:fixed;
+}
+
+.main{
+    width:1061px;
+    margin:0 auto;
+    margin-top:-60px;
+}
+.Title{
+    width:100%;
+    height:123px;
+    background:#fff;
+    font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 300;
+    color: #999;
+    font-size: 32px;
+    line-height:123px;
+    text-align:center;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+    margin-top:-60px;
+}
+.zero li{
+    width:100%;
+    background:#fff;
+    margin-top:30px;
+    clear:both;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+.zero li:first-of-type{
+    height:429px;
+}
+.zero li:nth-of-type(2){
+    height:477px;
+}
+.zero li:nth-of-type(3){
+    height:417px;
+}
+.zero li:nth-of-type(4){
+    height:472px;
+}
+.zero li:nth-of-type(5){
+    height:453px;
+}
+.L_img{
+    width:741px;
+    height:429px;
+    float:left;
+}
+.L_img img{
+    width:741px; 
+    height:100%;
+}
+.R_con{
+    width:237px;
+    height:349px;
+    padding:40px;
+    border-left: 1px solid #f0f0f0;
+    float:left;
+}
+.R_con h3{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+    color:#999;
+}
+.R_word span{
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+.R_word h5{
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+}
+/* contact */
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:120px;
+}
+
+.contact_ul{
+  width:200px;
+  margin:0 auto;
+  padding-top:40px;
+}
+.contact_ul li{
+  width:50px;
+  height:50px;
+  background:red;
+  float:left;
+  margin-right: 10px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  transition: all .4s ease;
+  text-align:center;
+  cursor: pointer;
+}
+.contact_ul li a{
+  vertical-align: middle;
+}
+.contact_ul li:hover{
+   box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
+}
+.contact_word{
+  clear:both;
+  width:200px;
+  margin:0 auto;
+  text-align:center;
+  padding-top:40px;
+}
+.contact_word h5{
+  cursor: default;
+  margin-top:2px;
+  font-size: 18px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color: #999;
+}
+.contact_word .light{
+  font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 300;
+  cursor: default;
+  margin-top:5px;
+  font-size: 27px;
+  color: #999;
+}

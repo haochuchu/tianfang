@@ -1,0 +1,142 @@
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+/* show */
+.show_top{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_move 1s forwards;
+}
+.show_bottom{
+    position:absolute; 
+    top:50vh; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_shift 1s forwards;
+}
+@keyframes show_move {
+   0%{
+      top:0;
+     }
+   100%{
+      top:-50vh;
+       }
+}
+@keyframes show_shift {
+    0%{
+        top:50vh;
+      }
+    100%{
+        top:100vh;
+        }
+}
+/* 定宽 */
+.fixed_news{
+    width:1080px;
+    margin:0 auto;
+}
+/* banner */
+.home_news{
+  width: 100vw;
+  height: 20vh;
+  background:#f0f0f0;
+}
+/* prize */
+.fixed_news h2{
+  cursor: default;
+  font-size: 48px;
+  color: #999;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  width:60px;
+  margin:0 auto;
+
+}
+.prize{
+  height:1512px;
+   margin-top: 30px;
+}
+.prize ul li{
+  height:186px;
+  width:1080px;
+  background:#fff;
+  margin-bottom:27px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+}
+.prize ul li:hover{
+  box-shadow: 0 20px 20px rgba(0,0,0,.2);
+  transform:translateZ(4px);
+  cursor:pointer;
+  transition: all .4s ease;
+}
+.prize_word{
+  width:540px;
+  height:186px;
+  float:left;
+}
+.prize_word h6{
+  color:#999;
+  padding-top:43px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  margin-left:40px;
+}
+.prize_word h4{
+  transition: all .4s ease;
+  cursor: pointer;
+  font-size: 24px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color: #999;
+  margin-left:40px;
+  margin-bottom:38px;
+}
+.prize ul li:hover:hover h4{
+  color:#000;
+  transition:.5s;
+}
+.prize_word span{
+  cursor: pointer;
+  font-size: 12px;
+  color: #c6ba9a;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-left:40px;
+
+}
+.prize_lore{
+  width:540px;
+  height:186px;
+  overflow:hidden;
+  float:left;
+}
+.prize_lore img{
+  width:540px;
+}
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:180px;
+}

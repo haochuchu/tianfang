@@ -1,0 +1,115 @@
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+
+/* show */
+.show_top{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_move 1s forwards;
+}
+.show_bottom{
+    position:absolute; 
+    top:50vh; 
+    left:0; 
+    z-index:10000;
+    width:100vw; 
+    height:50vh; 
+    background:#fff; 
+    transition: 1s;
+    animation: show_shift 1s forwards;
+}
+@keyframes show_move {
+   0%{
+      top:0;
+     }
+   100%{
+      top:-50vh;
+       }
+}
+@keyframes show_shift {
+    0%{
+        top:50vh;
+      }
+    100%{
+        top:100vh;
+        }
+}
+
+.home_contact{
+    width: 100vw;
+    height: 80vh;
+    background:url("images/lxwm_banner.jpg");
+    background-size:100% 100%;
+    background-attachment:fixed;
+}
+
+.main{
+    width:1061px;
+    margin:0 auto;
+    margin-top:-60px;
+}
+
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:180px;
+}
+.c_word{
+	width:526px;
+	height:63px;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    margin:0 auto;
+    margin-top: 24px;
+}
+.c_box{
+	width:321px; 
+	height:231px; 
+	margin:0 auto;
+	margin-bottom: 24px;
+	background:url("images/lxwm_lb_bg.jpg");
+	background-size:100% 100%;
+}
+.c_box p{
+	width:100%;
+	text-align:center;
+}
+.c_box p:first-of-type{
+	font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    padding-top: 70px;
+}
+.c_box p:nth-of-type(2){
+	font-size: 16px;
+    color: #000000;
+}
+.c_box p:nth-of-type(3){
+	font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding-top: 24px;
+
+}
+.c_box p:last-of-type{
+	font-size: 16px;
+    color: #000000;
+    text-align: center;
+}

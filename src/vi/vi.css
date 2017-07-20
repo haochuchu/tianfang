@@ -1,0 +1,73 @@
+.home_vi{
+    width: 100vw;
+    height: 80vh;
+    background:url("images/logo_vi.jpg");
+    background-size:100% 100%;
+    background-attachment:fixed;
+}
+.main{
+	width:1094px; 
+	margin:0 auto;
+}
+.main h1{
+	width:100%;
+	height:140px;
+	line-height:140px;
+	text-align:center;
+	font-size:48px;
+	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+    color:#999;
+}
+.img_list {
+	width:100%;
+	height:2100px;
+}
+.img_list li{
+	float:left;
+	width:528px; 
+	height:296px;
+	margin:0 9px 20px;
+	cursor:pointer;
+	box-shadow:0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.img_list li:hover{
+	box-shadow:0px 20px 20px rgba(0, 0, 0, 0.2);
+	transition: all .4s ease;
+	transform:translateZ(2px);
+}
+.img_list li img{
+	width:528px; 
+	height:238px;
+}
+.img_list li p{
+	width:528px; 
+	height:58px;
+}
+.img_list li span:first-of-type{
+	float:left;
+	margin-left:22px;
+	font-size:17px;
+	line-height:50px;
+	color:#999;
+	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+}
+.img_list li span:nth-of-type(2){
+	float:right;
+	margin-right:22px;
+	line-height:54px;
+	color:#999;
+	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 14px;
+}
+
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:100px;
+}
+
+
