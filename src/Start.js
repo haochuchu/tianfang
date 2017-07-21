@@ -109,7 +109,7 @@ class Start extends Component {
                                                 </li>
                                             </div>
                                     )
-                              })};
+                              })}
                             </ul>
                         </div>
                          {/*contact*/}
@@ -120,7 +120,7 @@ class Start extends Component {
                                                 <img src={foot.foot_img}/>
                                             </div>
                                     )
-                            })};
+                            })}
                             <ul className="contact_ul">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>

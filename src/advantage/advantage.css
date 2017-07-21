@@ -9,45 +9,7 @@ body{
  background:#f0f0f0;
 }
 
-/* show */
-.show_top{
-    position:absolute; 
-    top:0; 
-    left:0; 
-    z-index:10000;
-    width:100vw; 
-    height:50vh; 
-    background:#fff; 
-    transition: 1s;
-    animation: show_move 1s forwards;
-}
-.show_bottom{
-    position:absolute; 
-    top:50vh; 
-    left:0; 
-    z-index:10000;
-    width:100vw; 
-    height:50vh; 
-    background:#fff; 
-    transition: 1s;
-    animation: show_shift 1s forwards;
-}
-@keyframes show_move {
-   0%{
-      top:0;
-     }
-   100%{
-      top:-50vh;
-       }
-}
-@keyframes show_shift {
-    0%{
-        top:50vh;
-      }
-    100%{
-        top:100vh;
-        }
-}
+
 
 .home_advantage{
     width: 100vw;

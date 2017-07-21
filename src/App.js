@@ -47,7 +47,7 @@ class App extends Component {
                     return;
                 };
             })
-        $("#first_page a").click(function (){
+        $("#first_page a,#logo").click(function (){
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
             var indexs=$('first_page').children('a').index();
             if (indexs==0) {

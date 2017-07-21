@@ -29,7 +29,6 @@ class About extends Component {
         document.addEventListener('scroll', this.handleScroll.bind(this));
         setTimeout(function(){
           document.getElementById("showss_box").style.display="none";
-          console.log(document.getElementById("shows"))
         },900);
         lunbo(document.querySelectorAll('.interact')[0],1060);
         function lunbo(element,FWidth){

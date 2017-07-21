@@ -34,7 +34,7 @@ body{
 }
 /* show */
 .show_top{
-  position:absolute; 
+  position:fixed; 
   top:0; 
   left:0; 
   z-index:10000;
@@ -45,7 +45,7 @@ body{
   animation: show_move 1s forwards;
 }
 .show_bottom{
-  position:absolute; 
+  position:fixed; 
   top:50vh; 
   left:0; 
   z-index:10000;
