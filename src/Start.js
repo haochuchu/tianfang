@@ -30,12 +30,19 @@ class Start extends Component {
         })
          $(window).scroll(function () {
             if($("body").scrollTop()>=500){
-                $('.content_bundle ul').animate({
-                    transition: 'all .8s ',
-                    marginLeft:'0px'
-                },600);
+                $('.content h2').css({
+                    opacity:'1',
+                    transition: 'all .6s ',
+                });
+                // $('.content_bundle ul').css({
+                //     transition: 'all .6s ',
+                //     opacity:'1',
+                //     transform:'scale(1)'
+                // })
                 
-               
+               $('.bundle').css({
+                    transform:'scale(1)'
+               })
             }
         })
 
