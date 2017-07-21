@@ -28,6 +28,37 @@ class Start extends Component {
                 $(".home div").eq(count).fadeIn(600).siblings().fadeOut(600);
             },5000);
         })
+         $(window).scroll(function () {
+            if($("body").scrollTop()>=200){
+                $('.bundle:first-child').animate({
+                    transition: 'all .1s ease',
+                    marginLeft:'0px'
+                },100);
+                $('.bundle:nth-child(2)').animate({
+                    transition: 'all .6s ease',
+                    marginLeft:'10px'
+                },100);
+                $('.bundle:nth-child(3)').animate({
+                    transition: 'all 1s ease',
+                    marginLeft:'10px'
+                },100);
+            }
+            if($("body").scrollTop()>=200){
+                $('.bundle:nth-child(4)').animate({
+                    transition: 'all .1s ease',
+                    marginLeft:'0px'
+                },100);
+                $('.bundle:nth-child(5)').animate({
+                    transition: 'all .6s ease',
+                    marginLeft:'10px'
+                },100);
+                $('.bundle:nth-child(6)').animate({
+                    transition: 'all 1s ease',
+                    marginLeft:'10px'
+                },100);
+               
+            }
+        })
 
     } 
     handleScroll=function (e) {
