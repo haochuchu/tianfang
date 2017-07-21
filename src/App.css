@@ -99,10 +99,9 @@ body{
   background:url("images/index_banner_03.jpg");
   background-size:100% 100%;
   background-attachment:fixed;
-  position:relative;
 }
 .animate{
-  position:absolute;
+  position:fixed;
   top:200px;
   left:430px;
   transform: rotateX(-30deg) rotateY(-15deg) rotateZ(0deg) translateX(-4%);
@@ -346,6 +345,9 @@ body{
 .fixedBox{
   width:1061px;
   margin:100vh auto 0;
+  position:relative;
+  z-index:1;
+  background:#f0f0f0;
 }
 /* h2  title */
 .content h2{
@@ -484,6 +486,8 @@ body{
   margin:0 auto;
   clear:both;
   padding-top:120px;
+    position:relative;
+  z-index:1000;
 }
 
 .contact_ul{
