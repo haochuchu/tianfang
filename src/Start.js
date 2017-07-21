@@ -29,33 +29,12 @@ class Start extends Component {
             },5000);
         })
          $(window).scroll(function () {
-            if($("body").scrollTop()>=200){
-                $('.bundle:first-child').animate({
-                    transition: 'all .1s ease',
+            if($("body").scrollTop()>=500){
+                $('.content_bundle ul').animate({
+                    transition: 'all .8s ',
                     marginLeft:'0px'
-                },100);
-                $('.bundle:nth-child(2)').animate({
-                    transition: 'all .6s ease',
-                    marginLeft:'10px'
-                },100);
-                $('.bundle:nth-child(3)').animate({
-                    transition: 'all 1s ease',
-                    marginLeft:'10px'
-                },100);
-            }
-            if($("body").scrollTop()>=200){
-                $('.bundle:nth-child(4)').animate({
-                    transition: 'all .1s ease',
-                    marginLeft:'0px'
-                },100);
-                $('.bundle:nth-child(5)').animate({
-                    transition: 'all .6s ease',
-                    marginLeft:'10px'
-                },100);
-                $('.bundle:nth-child(6)').animate({
-                    transition: 'all 1s ease',
-                    marginLeft:'10px'
-                },100);
+                },600);
+                
                
             }
         })
