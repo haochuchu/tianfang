@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './contact.css';
+import $ from 'jquery';
 
 class Contact extends Component {
     constructor(){
@@ -8,6 +11,18 @@ class Contact extends Component {
         }
     };
 	componentDidMount(){
+        //回到顶部
+        $(function(){
+            $('.blocks').click(function(){
+                $('body').animate({scrollTop:0},function(){
+                    return false;
+                })
+            });
+        })
+        var backs=document.getElementById("backs");
+        backs.onclick=function(){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+        }
         document.addEventListener('scroll', this.handleScroll.bind(this));
         setTimeout(function(){
           document.getElementById("showsss").style.display="none";
@@ -71,7 +86,14 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
-
+                <div className="Rt_top">
+                    <p id="backs">
+                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                    </p>
+                    <p className="blocks">
+                        <img src="images/gotop.jpg" alt="" />
+                    </p>
+                </div>
 
 			</div>
 		)

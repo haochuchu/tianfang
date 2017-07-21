@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './about.css';
+import $ from 'jquery';
 
 class About extends Component {
     constructor(){
@@ -13,6 +14,18 @@ class About extends Component {
         }
     };
 	componentDidMount(){
+        //回到顶部
+        $(function(){
+            $('.blocks').click(function(){
+                $('body').animate({scrollTop:0},function(){
+                    return false;
+                })
+            });
+        })
+        var backs=document.getElementById("backs");
+        backs.onclick=function(){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+        }
         document.addEventListener('scroll', this.handleScroll.bind(this));
         setTimeout(function(){
           document.getElementById("showss_box").style.display="none";
@@ -35,61 +48,61 @@ class About extends Component {
                 aniTime,//定时器
                 lastNum=0,//图片每次移动距离计数器
                 flag=true;//按钮事件开关
-        //右键点击事件
-        RBtn.onclick=function(){
+            //右键点击事件
+            RBtn.onclick=function(){
+                if(flag){
+                    flag=false;
+                    if(imgNum>=li.length-1){
+                    lb.style.marginLeft="0px";//sum=sum-1;
+                    imgNum=0;
+                    }
+                    animation(-1060,FWidth);
+                    imgNum++;     
+               }
+            }
+        //左键点击事件
+        LBtn.onclick=function(){
             if(flag){
                 flag=false;
-                if(imgNum>=li.length-1){
-                lb.style.marginLeft="0px";//sum=sum-1;
-                imgNum=0;
+                if(imgNum<=0){
+                lb.style.marginLeft=-parseInt(getComputedStyle(lb).width)+1060+'px';
+                imgNum=li.length-1;
                 }
-                animation(-1060,FWidth);
-                imgNum++;     
-           }
-        }
-    //左键点击事件
-    LBtn.onclick=function(){
-        if(flag){
-            flag=false;
-            if(imgNum<=0){
-            lb.style.marginLeft=-parseInt(getComputedStyle(lb).width)+1060+'px';
-            imgNum=li.length-1;
+                animation(1060,FWidth);//移动距离
+                imgNum--;
             }
-            animation(1060,FWidth);//移动距离
-            imgNum--;
         }
-    }
-              
-    //动画函数
-    function animation(everyMove,liW){        //绝对值math.abs
-            var moveNum=Math.abs(parseInt(liW/everyMove));  
-            aniTime=setInterval(function(){//定时器；
-                if(lastNum>=moveNum){
-                    clearInterval(aniTime);
-                    lastNum=0;
-                    flag=true;
-                    return;       
-                    }
-                lb.style.marginLeft=parseInt(getComputedStyle(lb).marginLeft)+everyMove+"px";//封装的代码//animation;
-                lastNum++;
-            },120);
+                  
+        //动画函数
+        function animation(everyMove,liW){        //绝对值math.abs
+                var moveNum=Math.abs(parseInt(liW/everyMove));  
+                aniTime=setInterval(function(){//定时器；
+                    if(lastNum>=moveNum){
+                        clearInterval(aniTime);
+                        lastNum=0;
+                        flag=true;
+                        return;       
+                        }
+                    lb.style.marginLeft=parseInt(getComputedStyle(lb).marginLeft)+everyMove+"px";//封装的代码//animation;
+                    lastNum++;
+                },120);
+            }
+            var autoTime;
+        function autoPlay(){
+            autoTime=setInterval(function(){
+            RBtn.onclick();
+            },5000);
         }
-        var autoTime;
-    function autoPlay(){
-        autoTime=setInterval(function(){
-        RBtn.onclick();
-        },5000);
-    }
-    autoPlay();
-    interact.onmouseover=function(){
-        clearInterval(autoTime);
-    }   
-    interact.onmouseout=function(){
         autoPlay();
-    }   
-    }
-    
-} 
+        interact.onmouseover=function(){
+            clearInterval(autoTime);
+        }   
+        interact.onmouseout=function(){
+            autoPlay();
+        }   
+        }
+        
+    } 
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(document.body.scrollTop>=h){
@@ -214,8 +227,17 @@ class About extends Component {
                                 <h5>HOT LINE</h5>
                                 <h3 className="light">400·8167·995</h3>
                             </div>
-                        </div>
+                </div>
+                <div className="Rt_top">
+                    <p id="backs">
+                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                    </p>
+                    <p className="blocks">
+                        <img src="images/gotop.jpg" alt="" />
+                    </p>
+                </div>
 			</div>
+
 		)
 	}
 }

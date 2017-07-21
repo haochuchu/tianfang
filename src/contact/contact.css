@@ -69,6 +69,8 @@ body{
   margin:0 auto;
   clear:both;
   padding-top:180px;
+  position:relative;
+  z-index:-1;
 }
 .c_word{
 	width:526px;

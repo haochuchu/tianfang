@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './news.css';
+import $ from 'jquery';
 
 class News extends Component {
     constructor(){
@@ -10,6 +11,18 @@ class News extends Component {
         this.data={"prize":[{"titb":"?","prize_title":"Mar 29,2017","prize_word":"德国IF大奖","prize_new":"Read More","prize_img":"images/20170329040139669.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"红点设计大奖","prize_new":"Read More","prize_img":"images/20170329035639390.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"导视系统设计","prize_new":"Read More","prize_img":"images/20170329030126120.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"品牌设计，蜂蜜包装","prize_new":"Read More","prize_img":"images/20170329030321810.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"咖啡品牌形象设计","prize_new":"Read More","prize_img":"images/20170329030445823.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"极致简约的书房，灵感创作的发源地","prize_new":"Read More","prize_img":"images/20170329030519675.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"品牌设计创意可以来源于品类的创新","prize_new":"Read More","prize_img":"images/20170321054516367.jpg"}]}
     };
 	componentDidMount(){
+        //回到顶部
+        $(function(){
+            $('.blocks').click(function(){
+                $('body').animate({scrollTop:0},function(){
+                    return false;
+                })
+            });
+        })
+        var backs=document.getElementById("backs");
+        backs.onclick=function(){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+        }
         document.addEventListener('scroll', this.handleScroll.bind(this));
         setTimeout(function(){
           document.getElementById("show_news").style.display="none";
@@ -70,6 +83,14 @@ class News extends Component {
                                 <h3 className="light">400·8167·995</h3>
                             </div>
                         </div>
+                </div>
+                <div className="Rt_top">
+                    <p id="backs">
+                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                    </p>
+                    <p className="blocks">
+                        <img src="images/gotop.jpg" alt="" />
+                    </p>
                 </div>
 			</div>
 		)

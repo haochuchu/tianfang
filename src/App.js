@@ -28,6 +28,7 @@ class App extends Component {
         var first_page=document.getElementById("first_page");
         var num=0;
             $("#list a").click(function (){
+                (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
                 var index=$(this).index();
                 if (index==0) {
                     if(num==0){
@@ -47,6 +48,7 @@ class App extends Component {
                 };
             })
         $("#first_page a").click(function (){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
             var indexs=$('first_page').children('a').index();
             if (indexs==0) {
                 if(num==0){

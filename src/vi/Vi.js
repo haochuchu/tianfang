@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './vi.css';
+import $ from 'jquery';
 
 class Vi extends Component {
     constructor(){
@@ -10,6 +11,17 @@ class Vi extends Component {
         this.list={"pic_list":[{"titb":"?","pics":"images/20170331053559398.jpg","after":"巴斯资本","before":"MORE"},{"titb":"?","pics":"images/20170328062938310.jpg","after":"拉斐","before":"MORE"},{"titb":"?","pics":"images/20170328063035132.jpg","after":"米兰之窗","before":"MORE"},{"titb":"?","pics":"images/20170405052252382.jpg","after":"布朗卡","before":"MORE"},{"titb":"?","pics":"images/20170405052313179.jpg","after":"创意式","before":"MORE"},{"titb":"?","pics":"images/20170327125212751.jpg","after":"伊美尔","before":"MORE"},{"titb":"?","pics":"images/20170405052405409.jpg","after":"农科院","before":"MORE"},{"titb":"?","pics":"images/20170324072603581.jpg","after":"天神娱乐","before":"MORE"},{"titb":"?","pics":"images/20170328063142669.jpg","after":"美丫妈妈","before":"MORE"},{"titb":"?","pics":"images/20170405054850489.jpg","after":"亦庄","before":"MORE"},{"titb":"?","pics":"images/20170405052350205.jpg","after":"浪奇冲浪","before":"MORE"},{"titb":"?","pics":"images/20170329070122845.jpg","after":"摩塔","before":"MORE"},{"titb":"?","pics":"images/20170405054127459.jpg","after":"赛瓦服装","before":"MORE"},{"titb":"?","pics":"images/20170405052336533.jpg","after":"恒源","before":"MORE"}]}
     };
 	componentDidMount(){
+        $(function(){
+            $('.blocks').click(function(){
+                $('body').animate({scrollTop:0},function(){
+                    return false;
+                })
+            });
+        })
+        var backs=document.getElementById("backs");
+        backs.onclick=function(){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+        }
         document.addEventListener('scroll', this.handleScroll.bind(this));
         setTimeout(function(){
           document.getElementById("showssss").style.display="none";
@@ -77,7 +89,14 @@ class Vi extends Component {
                             </div>
                         </div>
                 </div>
-
+                <div className="Rt_top">
+                    <p id="backs">
+                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                    </p>
+                    <p className="blocks">
+                        <img src="images/gotop.jpg" alt="" />
+                    </p>
+                </div>
 
 			</div>
 		)
