@@ -24,9 +24,6 @@ class Contact extends Component {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
         }
         document.addEventListener('scroll', this.handleScroll.bind(this));
-        setTimeout(function(){
-          document.getElementById("showsss").style.display="none";
-        },900);
     };
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;

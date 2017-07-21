@@ -24,9 +24,6 @@ class News extends Component {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
         }
         document.addEventListener('scroll', this.handleScroll.bind(this));
-        setTimeout(function(){
-          document.getElementById("show_news").style.display="none";
-        },900);
     };
     handleScroll=function (e) {
         if(document.body.scrollTop>=0){

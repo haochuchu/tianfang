@@ -27,9 +27,6 @@ class About extends Component {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
         }
         document.addEventListener('scroll', this.handleScroll.bind(this));
-        setTimeout(function(){
-          document.getElementById("showss_box").style.display="none";
-        },900);
         lunbo(document.querySelectorAll('.interact')[0],1060);
         function lunbo(element,FWidth){
             var interact=element,

@@ -12,10 +12,6 @@ class Start extends Component {
     };
     componentDidMount(){
         document.addEventListener('scroll', this.handleScroll.bind(this));
-        setTimeout(function(){
-          document.getElementById("shows").style.display="none"
-        },900);
-
 
         $(function() {
             var count=0;
@@ -72,7 +68,6 @@ class Start extends Component {
         return (
         <Router>
             <div className="wrap">
-
       	        <div className="home">
                     <div className="home_one" id="home">
                         <div className="animate animate_s">

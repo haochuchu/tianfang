@@ -197,6 +197,13 @@ body{
   margin-left:720px;
   cursor:pointer;
 }
+.nav ul {
+  overflow:hidden;
+}
+.nav ul>a{
+  overflow:hidden;
+  float:left;
+}
 .nav ul li{
   float:left;
   position: relative;
