@@ -32,15 +32,9 @@ class Start extends Component {
                     opacity:'1',
                     transition: 'all .6s ',
                 });
-                // $('.content_bundle ul').css({
-                //     transition: 'all .6s ',
-                //     opacity:'1',
-                //     transform:'scale(1)'
-                // })
-                
-               $('.bundle').css({
+                $('.bundle').css({
                     transform:'scale(1)'
-               })
+                })
             }
         })
 
