@@ -3,12 +3,14 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './App.css';
 import $ from 'jquery';
 
+
+
 class Start extends Component {
     constructor(){
         super();
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
-        this.data={"bundle":[{"bundle_img":"images/img_1.png","bundle_word":"标志+VI"},{"bundle_img":"images/img_2.png","bundle_word":"品牌+战略"},{"bundle_img":"images/img_3.png","bundle_word":"网络+互动"},{"bundle_img":"images/img_4.png","bundle_word":"空间+导视"},{"bundle_img":"images/img_5.png","bundle_word":"视频+动画"},{"bundle_img":"images/img_6.png","bundle_word":"720全景拍摄"}]}
+        this.data={"bundle":[{"bundle_img":"images/img_1.png","bundle_word":"标志+VI","link":"/vi"},{"bundle_img":"images/img_2.png","bundle_word":"品牌+战略","link":"/about"},{"bundle_img":"images/img_3.png","bundle_word":"网络+互动","link":"/system"},{"bundle_img":"images/img_4.png","bundle_word":"空间+导视","link":"/system"},{"bundle_img":"images/img_5.png","bundle_word":"视频+动画","link":"/system"},{"bundle_img":"images/img_6.png","bundle_word":"720全景拍摄","link":"/system"}]}
     };
     componentDidMount(){
         document.addEventListener('scroll', this.handleScroll.bind(this));
@@ -94,8 +96,6 @@ class Start extends Component {
                         </div>
                     </div>
                 </div>
-
-                
                 {/*content*/}
                 <div className="content">
                     <div className="fixedBox">
@@ -105,15 +105,16 @@ class Start extends Component {
                                 {this.data.bundle.map(function(bundle,i){
                                     return (
                                             <div className="bundle">
-                                                <li>
+                                                <Link key={i}  to={bundle.link}><li>
                                                     <p className="none"><img src={bundle.bundle_img}/></p>
                                                     <p className="word">{bundle.bundle_word}</p>
-                                                </li>
+                                                </li></Link>
                                             </div>
                                     )
                               })}
                             </ul>
                         </div>
+                       
                          {/*contact*/}
                         <div className="contact">
                             {this.foot.footer.map(function(foot,i){
