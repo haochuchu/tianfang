@@ -24,7 +24,7 @@ class Start extends Component {
                     count=0;
                 }
                 $(".home div").eq(count).fadeIn(600).siblings().fadeOut(600);
-            },5000);
+            },3000);
         })
          $(window).scroll(function () {
             if($("body").scrollTop()>=500){
