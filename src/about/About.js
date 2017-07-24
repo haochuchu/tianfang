@@ -6,14 +6,44 @@ import $ from 'jquery';
 class About extends Component {
     constructor(){
         super();
+        this.state={
+            journey:[],
+            made:[]
+        };
         this.data={"brand":[{"title":"ABOUT","con":"天坊创意品牌策划机构","All":"天坊创意(北京)品牌策划是一家具备国内前瞻视野的综合性品牌战略咨询和品牌策划机构。10年的行业沉淀，7年的品牌服务实战经验，曾为国内数百家企业提供系统的品牌设计及整合传播服务，提供品牌策略+设计+亮相落地的综合服务","img":"images/gywm_01.jpg"}]
         },
-        this.date={"grow":[{"grow_title":"用细节与厚度见证成长","grow_con":"天坊品牌策划迎来多少新同事，又走过多少不凡同仁。有的成为社会重要担当，有的初露峥嵘，有的正在同我们一起成长。他们都是带有个性色彩的标签，优秀而不可替代。用自己的热情与才华丰富着天坊品牌的细节与厚度！","grow_sign":"Go to all lengths Mutual Symbiosis","grow_img":"images/about_02.jpg"}],"journey":[{"news_first":"寒来暑往，十载春秋！","news_nth":"2017年，天坊品牌策划机构迎来建立第十年，回望十年征程，见证我们的成长。","news_last":"不同于单纯的管理咨询公司和设计公司，天坊专注于为客户创造和管理品牌，提供从品牌资产研究、市场洞察、品牌机会分析、品牌战略、品牌组合规划、命名和语词创作、设计（包括品牌识别、展览展示、环境空间导示、包装、网络形象设计等）到内部品牌导入、品牌管理制度建设的综合性服务，以提升客户在海内外的品牌影响力。"}],"made":[{"made_title":"品牌创意是天坊设计团队的唯一宗旨，出众的设计精英，专注于做企业的品牌提升伙伴，完整的传达用户的个性和风格。","mode_word":"Talefant brand design","mode_news":"因用户而诞生，量身定制"}]
+        this.date={"grow":[{"grow_title":"用细节与厚度见证成长","grow_con":"天坊品牌策划迎来多少新同事，又走过多少不凡同仁。有的成为社会重要担当，有的初露峥嵘，有的正在同我们一起成长。他们都是带有个性色彩的标签，优秀而不可替代。用自己的热情与才华丰富着天坊品牌的细节与厚度！","grow_sign":"Go to all lengths Mutual Symbiosis","grow_img":"images/about_02.jpg"}]
         },
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         }
     };
 	componentDidMount(){
+         $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/journey",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    journey:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+         $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/made",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    made:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -162,7 +192,7 @@ class About extends Component {
                                     })}
                         </div>
                        <div className="journey">
-                            {this.date.journey.map(function(journey,i){
+                            {this.state.journey.map(function(journey,i){
                                         return (  
                                             <div>
                                               <p>{journey.news_first}</p>
@@ -192,7 +222,7 @@ class About extends Component {
                             <div className="flia_right"></div>
                        </div>
                        <div className="made">
-                            {this.date.made.map(function(made,i){
+                            {this.state.made.map(function(made,i){
                                         return (  
                                             <div>
                                               <p>{made.made_title}</p>
