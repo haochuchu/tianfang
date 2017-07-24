@@ -1,0 +1,101 @@
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+
+.fixed_prize{
+	width:1080px;
+	overflow:hidden;
+	margin:0 auto;
+	
+}
+.fixed_prize h2{
+	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+    height:60px;
+    line-height:60px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #999;
+    text-align:center;
+}
+.fixed_prize p{
+	    cursor: default;
+	    height:21px;
+	    line-height:21px;
+	    color:#999;
+	    font-size: 14px;
+	    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    	font-weight: 400;
+    	text-align:center;
+    	margin-bottom:30px;
+}
+.prize_box{
+	width:1080px;
+	height:15320px;
+	box-shadow: 0 20px 40px rgba(0,0,0,.1);
+	background:#fff;
+}
+.top_prize{
+	height:108px;
+	border-bottom: 1px solid #f0f0f0;
+	line-height:108px;
+}
+.top_prize h3{
+	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size: 24px;
+    font-weight:400;
+    color:#999;
+    margin-left:40px;
+}
+.prize_design p{
+	text-align:left;
+	padding:40px;
+}
+.printAll .print_two{
+	width:1000px;
+	height:719px;
+	overflow:hidden;
+	float:right;
+	margin-top:2px;
+}
+.printAll .print_one{
+	width:1000px;
+	height:960px;
+	overflow:hidden;
+	float:right;
+	margin-top:2px;
+}
+.printAll .print_three{
+	width:1000px;
+	height:853px;
+	overflow:hidden;
+	float:right;
+}
+.printAll .print_four{
+	width:1000px;
+	height:896px;
+	overflow:hidden;
+	float:right;
+	margin-top:2px;
+}
+.printAll .print_five{
+	width:1000px;
+	height:1399px;
+	overflow:hidden;
+	float:right;
+	margin-top:2px;
+}
+.printAll .print_six{
+	width:1000px;
+	height:834px;
+	overflow:hidden;
+	float:right;
+	margin-top:2px;
+}

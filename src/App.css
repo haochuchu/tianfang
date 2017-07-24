@@ -292,19 +292,6 @@ body{
    color:#000;
 }
 
-
-.start{
-  float:left;
-  margin-right:36px;
-  margin-left:16px;
-  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-  font-size: 14px;
-  color: #fff;
-}
-.start:hover{
-  color:#000;
-}
-
 /* CASE案例 */
 .first_page{
   width:100%; 

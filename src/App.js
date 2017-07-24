@@ -11,13 +11,16 @@ import Contact from './contact/Contact';
 import News from './news/News';
 import Vi from './vi/Vi';
 import System from './system/System';
+import Prize from './newsChild/Prize';
 
 
 class App extends Component {
   constructor(){
         super();
         this.state={
-            nav:[]
+            nav:[],
+            footer:[]
+
         };
 
 
@@ -55,6 +58,19 @@ class App extends Component {
                     return;
                 };
             })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/footer",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    footer:ss
+                })
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -107,9 +123,7 @@ class App extends Component {
                                     </li></Link>
                                 })}
                             </ul>
-                            <p className="start"> 
-                                <span id="title">Start</span>
-                            </p>
+                            
                         </div>
                     </div>
                     <Route exact path="/" component={Start}></Route>
@@ -117,6 +131,7 @@ class App extends Component {
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
             		<Route path="/Contact" component={Contact}></Route>
+                    <Route path="/Prize" component={Prize}></Route>
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.data.first_page.map(function(con,i){
@@ -129,9 +144,14 @@ class App extends Component {
                     <Route path="/System" component={System}></Route>
                 {/*footer*/}
                 <div className="footer">
-                    <span>2007-2017版权所有</span>
-                    <a>天坊创意品牌策划机构</a>
-                    <a>京ICP备15003046号</a>
+                {this.state.footer.map(function(con,i){
+                    return  <div>
+                            <span>{con.copyright}</span>
+                            <a>{con.ality}</a>
+                            <a>{con.address}</a>
+                    </div>
+                        })}    
+                   
                 </div>
             </div>
         </Router>

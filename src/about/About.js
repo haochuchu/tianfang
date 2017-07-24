@@ -135,8 +135,7 @@ class About extends Component {
             document.getElementById("head").style.width='100vw';
             document.getElementById("head").style.background='#fff';
             document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-            document.getElementById("img").style.marginTop='-80px';
-            document.getElementById("title").style.color='#000';
+            document.getElementById("img").style.marginTop='-80px';           
             document.getElementById("nav").className='navs';
             
         }
@@ -146,7 +145,6 @@ class About extends Component {
             document.getElementById("head").style.boxShadow='';
             document.getElementById("img").style.marginTop='';
             document.getElementById("nav").className='nav';
-            document.getElementById("title").style.color='#fff';
         }
     }
 	render(){
