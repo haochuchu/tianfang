@@ -19,8 +19,12 @@ class App extends Component {
         this.state={
             nav:[]
         };
+<<<<<<< HEAD
 
         this.data={/*"nav":[{"tita":"CASE 案例","titb":"?"},{"tita":"WE 关于天坊","titb":"/about"},{"tita":"ADVANTAGE 优势","titb":"/advantage"},{"tita":"NEWS 资讯","titb":"/news"},{"tita":"CONTACT 联系","titb":"/contact"}],*/
+=======
+        this.data={
+>>>>>>> origin/master
         "first_page":[{"pic":"images/icon_01.png","sTitle":"标志+VI","link":"/vi"},{"pic":"images/icon_02.png","sTitle":"品牌+战略","link":"/about"},{"pic":"images/icon_03.png","sTitle":"网络+互动","link":"/system"},{"pic":"images/icon_04.png","sTitle":"空间+导视","link":"/system"},{"pic":"images/icon_05.png","sTitle":"视频+动画","link":"/system"},{"pic":"images/icon_06.png","sTitle":"720全景拍摄","link":"/system"},{"pic":"images/icon_07.png","sTitle":"域名服务器","link":"?"},{"pic":"images/icon_08.png","sTitle":"运营+管理","link":"?"}]
         }
     };
