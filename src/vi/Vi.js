@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './vi.css';
-import Case from './../case/Case'
-import './../case/case.css'
+import Case from './../case/Case';
+import './../case/case.css';
 import $ from 'jquery';
 
 class Vi extends Component {
@@ -23,7 +23,6 @@ class Vi extends Component {
                 this.setState({
                     pic_list:cc
                 })
-                console.log(this.state.pic_list)
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -66,58 +65,59 @@ class Vi extends Component {
                 <div>
                     <Route path="/Case" component={Case}></Route>
                     <Route exact path="/vi" render={()=>(
+                        <div className="wrap">
+                            <div className="show_top"></div>
+                            <div className="show_bottom" id="showssss"></div>
+                            <div className="home_vi" id="home"></div>
 
-                <div className="wrap">
-                <div className="show_top"></div>
-                <div className="show_bottom" id="showssss"></div>
-                <div className="home_vi" id="home"></div>
 
-                {/*content*/}
-                <div className="main">
-                    <h1>近期案例</h1>
-                    <ul className="img_list">
-                        {this.state.pic_list.map(function(xx,i){
-                            return <Link key={i}  to={`/Case?${xx.id}`}><li>
-                                <img src={xx.pics} />
-                                <p>
-                                    <span>{xx.after}</span>
-                                    <span>{xx.before}</span>
-                                </p>
-                            </li></Link>
-                        })}
-                        
-                    </ul>
-                    {/*contact*/}
-                        <div className="contact">
-                            {this.foot.footer.map(function(foot,i){
-                                    return (
-                                            <div className="contact_top">
-                                                <img src={foot.foot_img}/>
-                                            </div>
-                                    )
-                            })};
-                            <ul className="contact_ul">
-                                {this.foot.listAll.map(function(list,i){
-                                    return <li><a><img src={list.list_img}/></a></li>
-                                })}
-                            </ul>
-                            <div className="contact_word">
-                                <h5>HOT LINE</h5>
-                                <h3 className="light">400·8167·995</h3>
+                            {/*content*/}
+                            <div className="main">
+                                <h1>近期案例</h1>
+                                <ul className="img_list">
+                                    {this.state.pic_list.map(function(xx,i){
+                                        return <Link key={i}  to={`/Case?${xx.id}`}><li>
+                                            <img src={xx.pics} />
+                                            <p>
+                                                <span>{xx.after}</span>
+                                                <span>{xx.before}</span>
+                                            </p>
+                                        </li></Link>
+                                    })}
+                                    
+                                </ul>
+                                {/*contact*/}
+                                    <div className="contact">
+                                        {this.foot.footer.map(function(foot,i){
+                                                return (
+                                                        <div className="contact_top">
+                                                            <img src={foot.foot_img}/>
+                                                        </div>
+                                                )
+                                        })};
+                                        <ul className="contact_ul">
+                                            {this.foot.listAll.map(function(list,i){
+                                                return <li><a><img src={list.list_img}/></a></li>
+                                            })}
+                                        </ul>
+                                        <div className="contact_word">
+                                            <h5>HOT LINE</h5>
+                                            <h3 className="light">400·8167·995</h3>
+                                        </div>
+                                    </div>
                             </div>
-                        </div>
-                </div>
-                <div className="Rt_top">
-                    <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
-                    </p>
-                    <p className="blocks">
-                        <img src="images/gotop.jpg" alt="" />
-                    </p>
-                </div>
+                            <div className="Rt_top">
+                                <p id="backs">
+                                    <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                                </p>
+                                <p className="blocks">
+                                    <img src="images/gotop.jpg" alt="" />
+                                </p>
+                            </div>
 
-            </div>
-                    )}></Route>
+                        </div>
+                                )}>
+                    </Route>
                 </div>
             </Router>
 		)

@@ -21,13 +21,48 @@ class App extends Component {
         super();
         this.state={
             nav:[],
-            footer:[]
+            footer:[],
+            first_page:[]
         };
-        this.data={
+        /*this.data={
         "first_page":[{"pic":"images/icon_01.png","sTitle":"标志+VI","link":"/vi"},{"pic":"images/icon_02.png","sTitle":"品牌+战略","link":"/about"},{"pic":"images/icon_03.png","sTitle":"网络+互动","link":"/system"},{"pic":"images/icon_04.png","sTitle":"空间+导视","link":"/system"},{"pic":"images/icon_05.png","sTitle":"视频+动画","link":"/system"},{"pic":"images/icon_06.png","sTitle":"720全景拍摄","link":"/system"},{"pic":"images/icon_07.png","sTitle":"域名服务器","link":"?"},{"pic":"images/icon_08.png","sTitle":"运营+管理","link":"?"}]
-        }
+        }*/
     };
     componentDidMount(){
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/first_page",
+            async:"true",
+            success:function(pp){
+                console.log(pp)
+                this.setState({
+                    first_page:pp
+                })
+                $("#first_page a,#logo").click(function (){
+            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+            var indexs=$('first_page').children('a').index();
+            if (indexs==0) {
+                if(num==0){
+                    first_page.style.transform="perspective(800px) rotateX(0)";
+                    first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                    num++;
+                    return;
+                }else if(num==1){
+                    first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                    num=0;
+                    return;
+                }  
+            } else{
+                first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                num=0;
+                return;
+            };
+        })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         $.ajax({
             type:"post",
             url:"http://localhost:8100/tianfang/nav",
@@ -78,26 +113,7 @@ class App extends Component {
         var first_page=document.getElementById("first_page");
         var num=0;
            
-        $("#first_page a,#logo").click(function (){
-            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
-            var indexs=$('first_page').children('a').index();
-            if (indexs==0) {
-                if(num==0){
-                    first_page.style.transform="perspective(800px) rotateX(0)";
-                    first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-                    num++;
-                    return;
-                }else if(num==1){
-                    first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                    num=0;
-                    return;
-                }  
-            } else{
-                first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                num=0;
-                return;
-            };
-        })
+        
     } 
     render() {
         return (
@@ -128,10 +144,15 @@ class App extends Component {
             		<Route path="/About" component={About}></Route>
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
-            		<Route path="/Contact" component={Contact}></Route>
+
+            		<Route path="/Contact" component={Contact}></Route> 
+                    <Route path="/Case" component={Case}></Route>  
+                    <Route path="/Prize" component={Prize}></Route>
+
+
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
-                        {this.data.first_page.map(function(con,i){
+                        {this.state.first_page.map(function(con,i){
                                     return <Link key={i}  to={con.link}><li><a><span><img src={con.pic} /></span>
                                 <span>{con.sTitle}</span></a>
                                     </li></Link>
