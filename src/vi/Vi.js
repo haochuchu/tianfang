@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './vi.css';
-import Case from './../case/Case'
-import './../case/case.css'
+import Case from './../case/Case';
+import './../case/case.css';
 import $ from 'jquery';
 
 class Vi extends Component {
