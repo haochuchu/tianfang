@@ -56,6 +56,19 @@ class About extends Component {
                 alert('失败了');
             }
         })
+         $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/grow",
+            async:"true",
+            success:function(cc){
+                this.setState({
+                    grow:cc
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
