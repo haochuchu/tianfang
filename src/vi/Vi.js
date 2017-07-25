@@ -17,7 +17,7 @@ class Vi extends Component {
 	componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://192.168.43.91:8100/tianfang/pic_list",
+            url:"http://localhost:8100/tianfang/pic_list",
             async:"true",
             success:function(cc){
                 this.setState({
