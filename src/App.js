@@ -12,7 +12,6 @@ import News from './news/News';
 import Vi from './vi/Vi';
 import System from './system/System'
 import Prize from './newsChild/Prize';
-
 import Case from './case/Case';
 
 
@@ -132,7 +131,6 @@ class App extends Component {
             		<Route path="/Contact" component={Contact}></Route>
 
                     <Route path="/Prize" component={Prize}></Route>
-
                     <Route path="/Case" component={Case}></Route>
 
 
