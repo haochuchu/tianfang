@@ -10,7 +10,7 @@ import Advantage from './advantage/Advantage';
 import Contact from './contact/Contact';
 import News from './news/News';
 import Vi from './vi/Vi';
-import System from './system/System';
+import System from './system/System'
 import Prize from './newsChild/Prize';
 import Case from './case/Case';
 
@@ -129,7 +129,8 @@ class App extends Component {
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
             		<Route path="/Contact" component={Contact}></Route>
-                    <Route path="/Prize" component={Prize}></Route>
+
+
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.data.first_page.map(function(con,i){
@@ -142,13 +143,15 @@ class App extends Component {
                     <Route path="/System" component={System}></Route>
                 {/*footer*/}
                 <div className="footer">
+
                 {this.state.footer.map(function(con,i){
                     return  <div key={i}>
                             <span>{con.copyright}</span>
                             <a>{con.ality}</a>
                             <a>{con.address}</a>
                     </div>
-                })}    
+                        })}    
+
                 </div>
             </div>
         </Router>
