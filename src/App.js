@@ -24,9 +24,6 @@ class App extends Component {
             footer:[],
             first_page:[]
         };
-        /*this.data={
-        "first_page":[{"pic":"images/icon_01.png","sTitle":"标志+VI","link":"/vi"},{"pic":"images/icon_02.png","sTitle":"品牌+战略","link":"/about"},{"pic":"images/icon_03.png","sTitle":"网络+互动","link":"/system"},{"pic":"images/icon_04.png","sTitle":"空间+导视","link":"/system"},{"pic":"images/icon_05.png","sTitle":"视频+动画","link":"/system"},{"pic":"images/icon_06.png","sTitle":"720全景拍摄","link":"/system"},{"pic":"images/icon_07.png","sTitle":"域名服务器","link":"?"},{"pic":"images/icon_08.png","sTitle":"运营+管理","link":"?"}]
-        }*/
     };
     componentDidMount(){
         $.ajax({
@@ -98,12 +95,14 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://192.168.43.91:8100/tianfang/footer",
+            url:"http://localhost:8100/tianfang/footer",
             async:"true",
             success:function(ss){
+                console.log(ss)
                 this.setState({
                     footer:ss
                 })
+                console.log(this.state.footer)
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -131,7 +130,7 @@ class App extends Component {
                         <div className="nav" id="nav">
                             <ul id="list">
                                 {this.state.nav.map(function(con,i){
-                                    return <Link key={i}  to={con.titb}><li><a>{con.tita}</a>
+                                    return <Link key={i}  to={`${con.titb}`}><li><a>{con.tita}</a>
                                     <p className="nav_box"><span>{con.tita}</span></p>
                                     <span className="sild_dow">{con.tita}</span>
                                     </li></Link>

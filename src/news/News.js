@@ -17,7 +17,7 @@ class News extends Component {
 	componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://192.168.43.40:8100/tianfang/prize",
+            url:"http://localhost:8100/tianfang/prize",
             async:"true",
             success:function(pp){
                 console.log(pp)
