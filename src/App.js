@@ -16,6 +16,7 @@ import Prize from './newsChild/Prize';
 import Case from './case/Case';
 
 
+
 class App extends Component {
   constructor(){
         super();
@@ -63,7 +64,7 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/footer",
+            url:"http://192.168.43.91:8100/tianfang/footer",
             async:"true",
             success:function(ss){
                 this.setState({
@@ -134,6 +135,7 @@ class App extends Component {
 
                     <Route path="/Case" component={Case}></Route>
 
+
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.data.first_page.map(function(con,i){
@@ -148,12 +150,13 @@ class App extends Component {
                 <div className="footer">
 
                 {this.state.footer.map(function(con,i){
-                    return  <div>
+                    return  <div key={i}>
                             <span>{con.copyright}</span>
                             <a>{con.ality}</a>
                             <a>{con.address}</a>
                     </div>
                         })}    
+
                 </div>
             </div>
         </Router>

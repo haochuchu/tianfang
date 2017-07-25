@@ -11,6 +11,7 @@ class Advantage extends Component {
         
     };
 	componentDidMount(){
+        
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
