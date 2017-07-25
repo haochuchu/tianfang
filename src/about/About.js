@@ -60,9 +60,9 @@ class About extends Component {
             type:"post",
             url:"http://localhost:8100/tianfang/grow",
             async:"true",
-            success:function(ss){
+            success:function(cc){
                 this.setState({
-                    grow:ss
+                    grow:cc
                 })
             }.bind(this),
             error:function(){
