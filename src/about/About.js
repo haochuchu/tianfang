@@ -9,10 +9,10 @@ class About extends Component {
         this.state={
             journey:[],
             made:[],
-            brand:[]
+            brand:[],
+            grow:[]
         };
-        this.date={"grow":[{"grow_title":"用细节与厚度见证成长","grow_con":"天坊品牌策划迎来多少新同事，又走过多少不凡同仁。有的成为社会重要担当，有的初露峥嵘，有的正在同我们一起成长。他们都是带有个性色彩的标签，优秀而不可替代。用自己的热情与才华丰富着天坊品牌的细节与厚度！","grow_sign":"Go to all lengths Mutual Symbiosis","grow_img":"images/about_02.jpg"}]
-        },
+        
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         }
     };
@@ -197,7 +197,7 @@ class About extends Component {
                                     )
                                 })}
                         <div className="grow">
-                            {this.date.grow.map(function(grow,i){
+                            {this.state.grow.map(function(grow,i){
                                         return (  
                                             <div className="grow_witness">
                                                 <h2>{grow.grow_title}</h2>
@@ -206,7 +206,7 @@ class About extends Component {
                                             </div>
                                         )
                                     })}
-                            {this.date.grow.map(function(grow,i){
+                            {this.state.grow.map(function(grow,i){
                                         return (  
                                             <div className="grow_all">
                                                <img src={grow.grow_img}/>
