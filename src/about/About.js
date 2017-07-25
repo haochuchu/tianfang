@@ -228,7 +228,7 @@ class About extends Component {
                                               <h4>{made.mode_news}</h4>
                                             </div>
                                         )
-                                    })}
+                            })}
                        </div>
                     </div>
                 </div>

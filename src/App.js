@@ -130,7 +130,6 @@ class App extends Component {
             		<Route path="/News" component={News}></Route>
             		<Route path="/Contact" component={Contact}></Route>
                     <Route path="/Prize" component={Prize}></Route>
-                    <Route path="/Case" component={Case}></Route>
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.data.first_page.map(function(con,i){
