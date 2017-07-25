@@ -8,10 +8,9 @@ class About extends Component {
         super();
         this.state={
             journey:[],
-            made:[]
+            made:[],
+            brand:[]
         };
-        this.data={"brand":[{"title":"ABOUT","con":"天坊创意品牌策划机构","All":"天坊创意(北京)品牌策划是一家具备国内前瞻视野的综合性品牌战略咨询和品牌策划机构。10年的行业沉淀，7年的品牌服务实战经验，曾为国内数百家企业提供系统的品牌设计及整合传播服务，提供品牌策略+设计+亮相落地的综合服务","img":"images/gywm_01.jpg"}]
-        },
         this.date={"grow":[{"grow_title":"用细节与厚度见证成长","grow_con":"天坊品牌策划迎来多少新同事，又走过多少不凡同仁。有的成为社会重要担当，有的初露峥嵘，有的正在同我们一起成长。他们都是带有个性色彩的标签，优秀而不可替代。用自己的热情与才华丰富着天坊品牌的细节与厚度！","grow_sign":"Go to all lengths Mutual Symbiosis","grow_img":"images/about_02.jpg"}]
         },
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
@@ -38,6 +37,19 @@ class About extends Component {
             success:function(ss){
                 this.setState({
                     made:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+         $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/brand",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    brand:ss
                 })
             }.bind(this),
             error:function(){
@@ -157,7 +169,7 @@ class About extends Component {
                  {/*content*/}
                 <div className="about_content">
                     <div className="fixed_box">
-                        {this.data.brand.map(function(brand,i){
+                        {this.state.brand.map(function(brand,i){
                                     return (
                                         <div className="brand">
                                             <h2>{brand.title}<span>{brand.con}</span></h2>
@@ -165,7 +177,7 @@ class About extends Component {
                                         </div>
                                     )
                                 })}
-                        {this.data.brand.map(function(brand,i){
+                        {this.state.brand.map(function(brand,i){
                                     return ( <div className="character"> 
                                             <img src={brand.img}/>
                                         </div>
