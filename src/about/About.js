@@ -135,11 +135,7 @@ class About extends Component {
             document.getElementById("head").style.width='100vw';
             document.getElementById("head").style.background='#fff';
             document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-<<<<<<< HEAD
-            document.getElementById("img").style.marginTop='-80px';           
-=======
             document.getElementById("img").style.marginTop='-80px';
->>>>>>> origin/master
             document.getElementById("nav").className='navs';
             
         }

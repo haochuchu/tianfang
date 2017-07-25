@@ -11,11 +11,9 @@ import Contact from './contact/Contact';
 import News from './news/News';
 import Vi from './vi/Vi';
 import System from './system/System';
-<<<<<<< HEAD
 import Prize from './newsChild/Prize';
-=======
 import Case from './case/Case';
->>>>>>> origin/master
+
 
 
 class App extends Component {
@@ -24,10 +22,6 @@ class App extends Component {
         this.state={
             nav:[],
             footer:[]
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
         };
         this.data={
         "first_page":[{"pic":"images/icon_01.png","sTitle":"标志+VI","link":"/vi"},{"pic":"images/icon_02.png","sTitle":"品牌+战略","link":"/about"},{"pic":"images/icon_03.png","sTitle":"网络+互动","link":"/system"},{"pic":"images/icon_04.png","sTitle":"空间+导视","link":"/system"},{"pic":"images/icon_05.png","sTitle":"视频+动画","link":"/system"},{"pic":"images/icon_06.png","sTitle":"720全景拍摄","link":"/system"},{"pic":"images/icon_07.png","sTitle":"域名服务器","link":"?"},{"pic":"images/icon_08.png","sTitle":"运营+管理","link":"?"}]
@@ -69,7 +63,7 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/footer",
+            url:"http://192.168.43.91:8100/tianfang/footer",
             async:"true",
             success:function(ss){
                 this.setState({
@@ -135,11 +129,8 @@ class App extends Component {
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
             		<Route path="/Contact" component={Contact}></Route>
-<<<<<<< HEAD
                     <Route path="/Prize" component={Prize}></Route>
-=======
                     <Route path="/Case" component={Case}></Route>
->>>>>>> origin/master
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.data.first_page.map(function(con,i){
@@ -152,22 +143,13 @@ class App extends Component {
                     <Route path="/System" component={System}></Route>
                 {/*footer*/}
                 <div className="footer">
-<<<<<<< HEAD
                 {this.state.footer.map(function(con,i){
-                    return  <div>
+                    return  <div key={i}>
                             <span>{con.copyright}</span>
                             <a>{con.ality}</a>
                             <a>{con.address}</a>
                     </div>
-                        })}    
-                   
-=======
-                    {this.state.footer.map(function(con,i){
-                        return <div>
-                            <span>{con.copyright}</span><a>{con.ality}</a><a>{con.address}</a>
-                        </div>
-                    })}
->>>>>>> origin/master
+                })}    
                 </div>
             </div>
         </Router>
