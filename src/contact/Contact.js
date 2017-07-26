@@ -7,10 +7,26 @@ import $ from 'jquery';
 class Contact extends Component {
     constructor(){
         super();
-        this.foot={"footer":[{"foot_img":"images/slogan.png","p_first":"如果你有意向，请电话联系我，我们的项执行将会针对你的需求进行初步的需求分析与品牌建议！并配合贵方安排面谈沟通，提供1+1（策划+设计）项目跟进服务！","p_second":"策划部","p_third":"朝阳区CBD大望路阳光100C座10层","p_fourth":"TEL: 400-8167-995","p_fivth":"Email: tech@tianfangbj.com"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
+        this.state={
+            contact:[]
+        };
+        this.foot={"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         }
     };
 	componentDidMount(){
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/contact",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    contact:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -54,10 +70,10 @@ class Contact extends Component {
                 <div className="main">
                     {/*contact*/}
                     <div className="contact">
-                        {this.foot.footer.map(function(foot,i){
+                        {this.state.contact.map(function(foot,i){
                                 return <div>
                                         <div className="contact_top">
-                                            <img src={foot.foot_img}/>
+                                            <img src={foot.contact_img}/>
                                         </div>
                                         <div className="c_word">
                                             {foot.p_first}

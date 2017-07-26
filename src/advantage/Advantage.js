@@ -11,8 +11,7 @@ class Advantage extends Component {
         };
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
-        // this.data={"cont":[{"img":"images/ys_01.png","title":"零风险合作模式","eng":"Zero risk cooperation mode","w_one":"侧重以结果为服务导向","w_two":"设计率先推出设计稿不满意全部退款客户零风险合作模式","w_three":"最大限度降低客户的合作风险","w_four":"从不青睐于向您虚夸我们的设计能力如果量身设计的作品让您满意","w_five":"我们相信合作的基础会更加夯实","w_six":"这也是设计自信的最佳体现！"},{"img":"images/ys_02.png","title":"坚持定位至上的设计理念","eng":"ADHERE TO THE POSITIONING OF THE SUPREMACY OF THE DESIGN CONCEPT","w_one":"自创建以来","w_two":"始终坚持以定位为核心的发展方向","w_three":"我们深知设计不仅仅是满足视觉上的审美依赖","w_four":"更多是基于信息传播与受众行为的思考，设计应是有目标的创作行为","w_five":"精于设计","w_six":"更擅长您的品牌传播之道"},{"img":"images/ys_03.png","title":"强调受众感受的视觉体验","eng":"THE AUDIENCE FEEL STRESSED VISUAL EXPERIENCE","w_one":"我们坚信精细而恰当的体验设计","w_two":"可以使信息的传达更具魅力，印象更","w_three":"加深刻 ","w_four":"将精美的形象设计和创意进行融合 ","w_five":"会带来更加愉悦的体验 ","w_six":"使形象流露出独有的品牌特性"},{"img":"images/ys_04.png","title":"保证设计与销售预期的高度统一","eng":"ADD ENTRY CONTENT INFORMATION 100%","w_one":"我们保证以终为始的逆向推导思路 ","w_two":"做以实现销售增长为目的的“有效设计”我们将结合品牌定位和受众需求进行研究，告别“为了设计而设计” ","w_three":"做以实现销售增长为目的的“有效设计”我们将结合品牌定位和受众需求进行研究，告别“为了设计而设计”  ","w_four":"这样做的目的不仅仅因为我们擅长设","w_five":"计与排版","w_six":"而是为用户提供更加有效的服务"},{"img":"images/ys_05.png","title":"设计前期品牌定位如此重要","eng":"PRELIMINARY DESIGN BRAND POSITIONING IS SO IMPORTANT","w_one":"设计在了解客户需求的前提下 ","w_two":"会将客户需求进行细致的挖掘与分析根据不同需求将设计的各个层面进行全面规划说明","w_three":"设计坚持不做“十分钟搞定的无营养","w_four":"样板方案” ","w_five":"确保每一份方案都量身定制","w_six":"并且这项服务是免费的！"}]
-        // }
+        
     };
 	componentDidMount(){
     $.ajax({
