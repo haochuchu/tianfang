@@ -13,6 +13,8 @@ import Vi from './vi/Vi';
 import System from './system/System'
 import Prize from './newsChild/Prize';
 import Case from './case/Case';
+import Supers from './supers/Supers';
+
 
 
 
@@ -140,12 +142,10 @@ class App extends Component {
             		<Route path="/About" component={About}></Route>
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
-
             		<Route path="/Contact" component={Contact}></Route> 
-                    <Route path="/Case" component={Case}></Route>  
+                    <Route path="/Case" component={Case}></Route> 
                     <Route path="/Prize" component={Prize}></Route>
-
-
+                    <Route path="/Supers" component={Supers}></Route>
                     {/*CASE案例*/}
                     <ul className="first_page" id="first_page">
                         {this.state.first_page.map(function(con,i){

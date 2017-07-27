@@ -1,0 +1,146 @@
+*{
+    margin:0; padding:0;
+}
+ul li{
+    list-style:none;
+}
+body{
+    overflow-x:hidden;
+    background:#f0f0f0;
+}
+
+/* 定宽 */
+.fixed_news{
+    width:1080px;
+    margin:0 auto;
+}
+/* banner */
+.home_system{
+    width: 100vw;
+    height: 20vh;
+    background:#f0f0f0;
+}
+.fixed_news .system_word{
+  width:280px;
+  margin:40px auto 30px;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color:#999;
+}
+/* fixed_news ul li*/
+.fixed_news .system_box li{
+  width:520px;
+  height:293px;
+  background:#fff;
+  transition: all .4s ease;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  float:left;
+  margin-right:20px;
+  margin-bottom:20px;
+}
+.system_top{
+   width:520px;
+  height:235px;
+  overflow:hidden;
+}
+.system_top img{
+   width:520px;
+}
+.system_bot{
+  height:58px;
+  line-height:58px;
+}
+.system_bot h5{
+  float:left;
+  margin-left:20px;
+  transition: all .4s ease;
+  cursor: pointer;
+  font-size: 18px;
+  color:#999;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+}
+.fixed_news ul li:hover .system_bot h5{
+  color:#000;
+  transition: all .4s ease;
+}
+.fixed_news ul li:hover {
+  box-shadow: 0 20px 20px rgba(0,0,0,.2);
+  transform:translateZ(4px);
+  cursor:pointer;
+  transition: all .4s ease;
+}
+.system_bot span{
+  float:right;
+  margin-right:20px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  color:#999;
+  font-weight: 400;
+}
+/* contact_top */
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:180px;
+}
+/* contact */
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:120px;
+}
+
+.contact_ul{
+  width:200px;
+  margin:0 auto;
+  padding-top:40px;
+}
+.contact_ul li{
+  width:50px;
+  height:50px;
+  background:red;
+  float:left;
+  margin-right: 10px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  transition: all .4s ease;
+  text-align:center;
+  cursor: pointer;
+}
+.contact_ul li a{
+  vertical-align: middle;
+}
+.contact_ul li:hover{
+   box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
+}
+.contact_word{
+  clear:both;
+  width:200px;
+  margin:0 auto;
+  text-align:center;
+  padding-top:40px;
+}
+.contact_word h5{
+  cursor: default;
+  margin-top:2px;
+  font-size: 18px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color: #999;
+}
+.contact_word .light{
+  font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 300;
+  cursor: default;
+  margin-top:5px;
+  font-size: 27px;
+  color: #999;
+}

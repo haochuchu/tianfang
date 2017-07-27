@@ -76,15 +76,7 @@ class Case extends Component {
                             </div>    
                         </div>
                     })}
-                    {/*<h1>巴斯资本</h1>
-                    <div className="more_img">
-                        <img src="images/20170327120736980.jpg" alt="" />
-                        <img src="images/20170327120737821.jpg" alt="" />
-                        <img src="images/20170327120737615.jpg" alt="" />
-                        <img src="images/20170327120738192.jpg" alt="" />
-                        <img src="images/20170327120738806.jpg" alt="" />
-                        <img src="images/20170327120739112.jpg" alt="" />
-                    </div>*/}
+                    
                     {/*contact*/}
                         <div className="contact">
                             {this.foot.footer.map(function(foot,i){
