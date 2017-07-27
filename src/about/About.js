@@ -265,7 +265,6 @@ class About extends Component {
                                             </div>
                                     )
                               })};
-                            
                              <ul className="contact_ul">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>

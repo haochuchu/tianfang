@@ -3,15 +3,28 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './case.css';
 import $ from 'jquery';
 
-class Advantage extends Component {
+class Case extends Component {
     constructor(){
         super();
+        this.state={
+            pic_list:[]
+        };
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
-        
+
     };
 	componentDidMount(){
-        
+            var id=window.location.href.split('?')[1];
+            $.ajax({
+                url:'http://localhost:8100/tianfang/xiangqing',
+                type:'post',
+                data:{id:id},
+                success:function(e){
+                    this.setState({
+                        pic_list:e
+                    })
+                }.bind(this)
+            })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -53,7 +66,17 @@ class Advantage extends Component {
 
                 {/*content*/}
                 <div className="Main">
-                    <h1>巴斯资本</h1>
+                    {this.state.pic_list.map(function(dd,i){
+                        return <div>
+                            <h1>{dd.after}</h1>
+                            <div className="more_img">
+                                {dd.more.split('?').map(function(oo,i){
+                                    return <img src={'http://localhost:8100/images/'+oo} alt="" />
+                                })}
+                            </div>    
+                        </div>
+                    })}
+                    {/*<h1>巴斯资本</h1>
                     <div className="more_img">
                         <img src="images/20170327120736980.jpg" alt="" />
                         <img src="images/20170327120737821.jpg" alt="" />
@@ -61,7 +84,7 @@ class Advantage extends Component {
                         <img src="images/20170327120738192.jpg" alt="" />
                         <img src="images/20170327120738806.jpg" alt="" />
                         <img src="images/20170327120739112.jpg" alt="" />
-                    </div>
+                    </div>*/}
                     {/*contact*/}
                         <div className="contact">
                             {this.foot.footer.map(function(foot,i){
@@ -70,7 +93,7 @@ class Advantage extends Component {
                                                 <img src={foot.foot_img}/>
                                             </div>
                                     )
-                            })};
+                            })}
                             <ul className="contact_ul">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>
@@ -95,4 +118,4 @@ class Advantage extends Component {
 	}
 }
 
-export default Advantage;
+export default Case;

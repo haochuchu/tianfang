@@ -15,6 +15,7 @@ class Vi extends Component {
         };
     };
 	componentDidMount(){
+
         $.ajax({
             type:"post",
             url:"http://localhost:8100/tianfang/pic_list",
@@ -23,24 +24,26 @@ class Vi extends Component {
                 this.setState({
                     pic_list:cc
                 })
+                $(".db").click(function (){
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+                })
             }.bind(this),
             error:function(){
                 alert('失败了');
             }
         })
-        $(function(){
             $('.blocks').click(function(){
                 $('body').animate({scrollTop:0},function(){
                     return false;
                 })
             });
-        })
+
         var backs=document.getElementById("backs");
         backs.onclick=function(){
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
-        }
+        }        
         document.addEventListener('scroll', this.handleScroll.bind(this));
-    };
+    }
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(document.body.scrollTop>=h){
@@ -76,8 +79,8 @@ class Vi extends Component {
                                 <h1>近期案例</h1>
                                 <ul className="img_list">
                                     {this.state.pic_list.map(function(xx,i){
-                                        return <Link key={i}  to={`/Case?${xx.id}`}><li>
-                                            <img src={xx.pics} />
+                                        return <Link key={i}  to={`/Case?${xx.id}`} className="db"><li>
+                                            <img src={xx.pics} alt="" />
                                             <p>
                                                 <span>{xx.after}</span>
                                                 <span>{xx.before}</span>

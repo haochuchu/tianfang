@@ -12,7 +12,6 @@ class News extends Component {
        };
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         }
-        // this.data={"prize":[{"titb":"/Prize","prize_title":"Mar 29,2017","prize_word":"德国IF大奖","prize_new":"Read More","prize_img":"images/20170329040139669.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"红点设计大奖","prize_new":"Read More","prize_img":"images/20170329035639390.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"导视系统设计","prize_new":"Read More","prize_img":"images/20170329030126120.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"品牌设计，蜂蜜包装","prize_new":"Read More","prize_img":"images/20170329030321810.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"咖啡品牌形象设计","prize_new":"Read More","prize_img":"images/20170329030445823.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"极致简约的书房，灵感创作的发源地","prize_new":"Read More","prize_img":"images/20170329030519675.jpg"},{"titb":"?","prize_title":"Mar 29,2017","prize_word":"品牌设计创意可以来源于品类的创新","prize_new":"Read More","prize_img":"images/20170321054516367.jpg"}]}
     };
 	componentDidMount(){
         $.ajax({
@@ -23,6 +22,9 @@ class News extends Component {
                 console.log(pp)
                 this.setState({
                     prize:pp
+                })
+                $(".top_new").click(function (){
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
                 })
             }.bind(this),
             error:function(){
@@ -69,7 +71,7 @@ class News extends Component {
                                 <div className="prize">
                                  <ul>
                                 {this.state.prize.map(function(pp,i){
-                                return  <Link key={i}  to={`/Prize?${pp.id}`}>
+                                return  <Link key={i}  to={`/Prize?${pp.id}`} className="top_new">
                                 <li>
                                     <div className="prize_word">
                                     	<h6>{pp.prize_title}</h6>

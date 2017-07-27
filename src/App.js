@@ -31,30 +31,29 @@ class App extends Component {
             url:"http://localhost:8100/tianfang/first_page",
             async:"true",
             success:function(pp){
-                console.log(pp)
                 this.setState({
                     first_page:pp
                 })
                 $("#first_page a,#logo").click(function (){
-            (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
-            var indexs=$('first_page').children('a').index();
-            if (indexs==0) {
-                if(num==0){
-                    first_page.style.transform="perspective(800px) rotateX(0)";
-                    first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-                    num++;
-                    return;
-                }else if(num==1){
-                    first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                    num=0;
-                    return;
-                }  
-            } else{
-                first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                num=0;
-                return;
-            };
-        })
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+                    var indexs=$('first_page').children('a').index();
+                    if (indexs==0) {
+                        if(num==0){
+                            first_page.style.transform="perspective(800px) rotateX(0)";
+                            first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                            num++;
+                            return;
+                        }else if(num==1){
+                            first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                            num=0;
+                            return;
+                        }  
+                    } else{
+                        first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                        num=0;
+                        return;
+                    };
+                })
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -98,11 +97,9 @@ class App extends Component {
             url:"http://localhost:8100/tianfang/footer",
             async:"true",
             success:function(ss){
-                console.log(ss)
                 this.setState({
                     footer:ss
                 })
-                console.log(this.state.footer)
             }.bind(this),
             error:function(){
                 alert('失败了');
