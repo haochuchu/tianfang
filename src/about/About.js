@@ -14,7 +14,7 @@ class About extends Component {
             // carousel:[]
         };
         
-        this.foot={"list":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
+        this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         }
     };
 	componentDidMount(){
@@ -277,14 +277,13 @@ class About extends Component {
                     </div>
                 </div>
                 <div className="contact">
-                            {this.foot.list.map(function(foot,i){
+                            {this.foot.footer.map(function(foot,i){
                                     return (
                                             <div className="contact_top">
                                                 <img src={foot.foot_img}/>
                                             </div>
                                     )
                               })};
-                            
                              <ul className="contact_ul">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>

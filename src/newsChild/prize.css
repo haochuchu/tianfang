@@ -38,7 +38,7 @@ body{
 }
 .prize_box{
 	width:1080px;
-	height:15320px;
+	height:6300px;
 	box-shadow: 0 20px 40px rgba(0,0,0,.1);
 	background:#fff;
 }
@@ -47,55 +47,25 @@ body{
 	border-bottom: 1px solid #f0f0f0;
 	line-height:108px;
 }
-.top_prize h3{
+.h_word{
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-size: 24px;
     font-weight:400;
     color:#999;
-    margin-left:40px;
+    padding-left:40px;
+    border-bottom:1px solid #eee;
+    line-height:100px;
 }
 .prize_design p{
 	text-align:left;
 	padding:40px;
-}
-.printAll .print_two{
-	width:1000px;
-	height:719px;
-	overflow:hidden;
-	float:right;
-	margin-top:2px;
+	color:#000;
+	line-height:26px;
 }
 .printAll .print_one{
-	width:1000px;
-	height:960px;
+	width:680px;
+	height:425px;
 	overflow:hidden;
-	float:right;
 	margin-top:2px;
-}
-.printAll .print_three{
-	width:1000px;
-	height:853px;
-	overflow:hidden;
-	float:right;
-}
-.printAll .print_four{
-	width:1000px;
-	height:896px;
-	overflow:hidden;
-	float:right;
-	margin-top:2px;
-}
-.printAll .print_five{
-	width:1000px;
-	height:1399px;
-	overflow:hidden;
-	float:right;
-	margin-top:2px;
-}
-.printAll .print_six{
-	width:1000px;
-	height:834px;
-	overflow:hidden;
-	float:right;
-	margin-top:2px;
+	margin-left:200px;
 }
