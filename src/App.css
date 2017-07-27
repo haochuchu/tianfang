@@ -23,7 +23,7 @@
   to { transform: rotate(360deg); }
 } */
 *{
-   margin:0; padding:0;
+   margin:0; padding:0; user-select:none;
   }
 ul li{
   list-style:none;

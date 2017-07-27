@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import $ from 'jquery';
 
 import './App.css';
+import './App_phone.css';
 
 import Start from './Start';
 import About from './about/About';
@@ -30,6 +31,9 @@ class App extends Component {
         };
     };
     componentDidMount(){
+        $('.nav_btn').click(function(){
+            $('.nav_btn span').toggleClass('toggl')
+        })
         $.ajax({
             type:"post",
             url:"http://localhost:8100/tianfang/first_page",
@@ -85,7 +89,7 @@ class App extends Component {
                         num=0;
                         return;
                     }  
-                } else{
+                }else{
                     first_page.style.transform="perspective(800px) rotateX(-90deg)";
                     num=0;
                     return;

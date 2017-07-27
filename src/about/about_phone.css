@@ -1,5 +1,6 @@
+@media screen and (max-width:414px){
 *{
-   margin:0; padding:0;
+   margin:0; padding:0; user-select:none;
   }
 ul li{
   list-style:none;
@@ -10,151 +11,148 @@ body{
 }
 
 .home_about{
- width: 100vw;
-  height: 80vh;
+  width: 100%;
+  height: 13.458937198067632rem;
   background:url("images/gywm_banner.jpg");
-  background-size:100% 100%;
+  background-size:135% 60%;
   background-attachment:fixed;
 }
-/* contenr */
+/* content */
 .fixed_box{
-	width:1061px;
+	width:16rem;
 	margin:0 auto;
-	margin-top:-70px;
 }
 /* brand */
 .brand{
-	height:191px;
+	height:4.676rem;
+	padding:0.7729rem;
 	background:#fff;
 }
 .brand h2{
-	width:852px;
 	margin-bottom: 10px;
     cursor: default;
-    font-size: 46px;
+    font-size: 0.927rem;
     color: #999;
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
-    margin-left:40px;
-    padding-top:40px;
+    margin-left:0.001rem;
+    padding-top:0.001rem;
 }
 .brand h2 span{
-	font-size: 24px;
+	font-size: 0.927rem;
 	cursor: default;
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
     color:#999;
-    margin-left:
+    margin-left:0.4rem;
 }
 .brand p{
-	width:852px;
+	width:14.8rem;
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-	font-size:14px;
+	font-size:0.541rem;
 	color:#999;
 	cursor: default;
-	margin-left:40px;
+	margin-left:0.001rem;
+	line-height:0.85rem;
 }
 /* character */
 .character{
-	height:596px;
+	height:9.353rem;
 }
 .character img{
-	width:1061px;
+	width:16rem;
+	height:9.353rem;
 }
 /* grow */
 .grow{
-	height:283px;
+	height:18rem;
 	background:#fff;
 }
 .grow_witness{
-	width:529px;
+	width:13.684rem;
+	height:6rem;
+	padding:0.77rem;
 	float:left;
 }
 .grow_witness h2{
-	font-size: 24px;
+	font-size: 0.9rem;
 	cursor: default;
 	color: #999;
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
-    margin-left:40px;
-    margin-top:61px;
+    margin-left:0.0001rem;
+    margin-top:0.0002rem;
 }
 .grow_witness p{
-	width:448px;
-	height:78px;
-	font-size: 14px;
+	width:14.7rem;
+	height:3.015rem;
+	font-size: 0.541rem;
 	cursor: default;
 	color: #999;
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
-    margin-left:40px;
-    margin-top:23px;
+    margin-left:0.0001rem;
+    margin-top:0.5rem;
 }
 .grow_witness h4{
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 	cursor: default;
-    font-size: 24px;
+    font-size: 0.6rem;
     font-weight: 400;
     color:#999;
-     margin-left:40px;
-     margin-top:30px;
-     line-height:0;
+     margin-left:0.0001rem;
+     margin-top:0.2rem;
+     line-height:1.2rem;
 }
 .grow_all{
-	width:529px;
-	height:283px;
-	float:right;
+	width:20.444rem;
+	height:11rem;
+	float:left;
 	overflow:hidden;
 }
 .grow_all img{
-	width:529px;
+	width:20.444rem;
 }
 /* journey */
 .journey{
-	height:200px;
+	height:11rem;
 	background:#ffffff;
 }
 .journey p{
-	width:970px;
-	margin-left:40px;
+	width:15rem;
+	margin-left:0.7rem;
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-	font-size: 14px;    
+	font-size: 0.541rem;    
 	cursor: default;
 	color: #999;
-	line-height:23px;
+	line-height:1rem;
 	font-weight:500;
 }
 .journey p:first-of-type{
-	padding-top:40px;
+	padding-top:1.54589rem;
 }
 /* interact */
 .interact{
-	height:582px;
+	height:9rem;
 	/* overflow:hidden; */
 }
 .interact ul li{
   float:left;
 }
 .interact img{
-  width:1060px;
+  width:16rem;
 }
-.interact{width:1060px; overflow:hidden; position:relative;}
-.interact .lb{width:7413px; overflow:hidden;}
-.interact .lb li{width:1060px; overflow:hidden; float:left;}
-.interact .btn{width:100px; height:398px;  font: 60px/60px 'SimSun'; text-align:center; color:#fff; position:absolute; top:120px;  -webkit-user-select:none; cursor:pointer;  line-height:389px; 
- transition: all .4s ease; z-index:100;
+.interact{width:40.966rem; overflow:hidden; position:relative;}
+.interact .lb{width:286.49275rem; overflow:hidden;}
+.interact .lb li{width:40.966rem; overflow:hidden; float:left;}
+.interact .btn{/* width:3.86473rem; height:15.3816rem;  font: 2.31884rem/2.31884rem 'SimSun'; text-align:center; color:#fff; position:absolute; top:4.6376rem;  -webkit-user-select:none; cursor:pointer;  line-height:15.0338rem; 
+ transition: all .4s ease; z-index:100; */display:none;
 }
-.interact .LBtn{ left:30px;}
+/* .interact .LBtn{ left:1.1594rem;}
 .fliament_left{
-  width:12px;
-  height:2px;
-  background:#fff;
-  position:absolute;
-  bottom:50.6%;
-  left:42px;
-  opacity:0;
-}
-.interact .LBtn:hover .fliament_left{
+  display:none;
+} */
+/* .interact .LBtn:hover .fliament_left{
    opacity:1;
    width:42px;
   height:2px;
@@ -163,8 +161,8 @@ body{
 }
 .interact:hover  .LBtn{
   left:10px;
-}
-.fliament_right{
+} */
+/* .fliament_right{
   width:12px;
   height:2.8px;
   background:#fff;
@@ -172,7 +170,7 @@ body{
   bottom:50.55%;
   right:42px;
   opacity:0;
-}
+} */
 .interact .RBtn{ right:30px;}
 .interact:hover  .RBtn{
   right:10px;
@@ -185,29 +183,15 @@ body{
   transition: all .4s ease; 
 }
 .flia_left{
-  width:284px;
-  height:1px;
-  background:#fff;
-  position:absolute;
-  bottom:86px;
-  left:0;
+  display:none;
 }
 .flia_right{
-  width:284px;
-  height:1px;
-  background:#fff;
-  position:absolute;
-  bottom:86px;
-  right:0;
+  display:none;
 }
 .car{
-  width: 71px;
-    position: absolute;
-    left: 45%;
-    bottom:106px;
-    z-index: 9999;
+  display:none;
 }
-.car img{
+/* .car img{
   width:45px;
   height:23px;
 }
@@ -231,45 +215,50 @@ body{
 .car span img{
   width:26px;
   height:23px;
-}
+} */
 /* made */
 .made{
-	height:195px;
+	height:5rem;
 	background:#fff;
+	padding:0.37294rem;
+	box-shadow: 0 0.8rem 0.8rem rgba(0,0,0,.1);
 }
 .made p{
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-	font-size:14px;
+	font-size:0.541rem;
 	cursor: default;
 	color:#999;
-	margin-bottom: 20px;
-	margin-left:40px;
-	padding-top:45px;
+	margin-bottom: 0.6rem;
+	margin-left:0.4rem;
+	padding-top:0.5rem;
 }
 .made h4{
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 	cursor: default;
-	font-size: 24px;
+	font-size: 0.8rem;
 	font-weight: 400;
 	color:#999;
-	margin-left:40px;
+	margin-left:0.4rem;
 }
 .made h4:first-of-type{
-	margin-bottom: 20px;
+	margin-bottom: 0.2rem;
 }
 /* contact */
-.contact_top{
-  width:382px;
-  height:90px;
+
+.contact_top img{
+  width:10rem;
+  height:2.5rem;
   margin:0 auto;
   clear:both;
-  padding-top:120px;
+  padding-top:0rem;
+  margin-left:2rem;
 }
 
 .contact_ul{
   width:200px;
   margin:0 auto;
-  padding-top:40px;
+  padding-top:0.0001rem;
+  margin-left:0.5rem;  margin-top:-5rem;
 }
 .contact_ul li{
   width:50px;
@@ -320,5 +309,6 @@ body{
   cursor:pointer;
 }
 #phones{
-  display:none;
+  display:block;
+}
 }
