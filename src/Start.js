@@ -13,7 +13,6 @@ class Start extends Component {
         }
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
-        // this.data={"bundle":[{"bundle_img":"images/img_1.png","bundle_word":"标志+VI","link":"/vi"},{"bundle_img":"images/img_2.png","bundle_word":"品牌+战略","link":"/about"},{"bundle_img":"images/img_3.png","bundle_word":"网络+互动","link":"/system"},{"bundle_img":"images/img_4.png","bundle_word":"空间+导视","link":"/system"},{"bundle_img":"images/img_5.png","bundle_word":"视频+动画","link":"/system"},{"bundle_img":"images/img_6.png","bundle_word":"720全景拍摄","link":"/system"}]}
     };
     componentDidMount(){
      $.ajax({
@@ -55,6 +54,7 @@ class Start extends Component {
         })
 
     } 
+
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(document.body.scrollTop>=h){
@@ -73,7 +73,7 @@ class Start extends Component {
             document.getElementById("nav").className='nav';
         }
     }
-
+     
     render() {
         return (
         <Router>
@@ -132,7 +132,7 @@ class Start extends Component {
                                             </div>
                                     )
                             })}
-                            <ul className="contact_ul">
+                            <ul className="contact_ul" id="contact_ul">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>
                                 })}

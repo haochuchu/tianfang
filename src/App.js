@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import $ from 'jquery';
 
 import './App.css';
+import './app_phone.css';
 
 import Start from './Start';
 import About from './about/About';
@@ -112,7 +113,22 @@ class App extends Component {
         var list=document.getElementById("list");
         var first_page=document.getElementById("first_page");
         var num=0;
-           
+         $(".nav_btn").click(function (){
+                $(".nav_btn span").toggleClass("to")
+            })
+         
+        if(window.screen.width<=414){
+            var head=document.getElementById('head')
+            head.style.background="#fff";
+            head.style.height="1.932367149758454rem";
+            head.style.position="fixed";
+            head.style.left="0";
+            head.style.top="0";
+            var img=document.getElementById('img');
+            img.style.top='-50px';
+            img.style.left='5px';
+            img.style.position='fixed';
+        } 
         
     } 
     render() {
@@ -128,6 +144,7 @@ class App extends Component {
                             <Link to="/"><img id="img" src="images/logo.png" /></Link>
                         </div>
                         {/*navigator*/}
+
                         <div className="nav" id="nav">
                             <ul id="list">
                                 {this.state.nav.map(function(con,i){
@@ -137,8 +154,10 @@ class App extends Component {
                                     </li></Link>
                                 })}
                             </ul>
-                            
                         </div>
+                    </div>
+                    <div className="nav_btn">
+                        <span></span>
                     </div>
                     <Route exact path="/" component={Start}></Route>
             		<Route path="/About" component={About}></Route>

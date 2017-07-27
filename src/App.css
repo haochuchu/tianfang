@@ -22,6 +22,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
+
+
 *{
    margin:0; padding:0;
   }
@@ -29,10 +31,12 @@ ul li{
   list-style:none;
 }
 body{
-
  background:#f0f0f0;
 }
 /* show */
+.nav_btn{
+  display:none;
+}
 .show_top{
   position:fixed; 
   top:0; 
@@ -504,10 +508,7 @@ body{
   width:382px;
   height:90px;
   margin:0 auto;
-  clear:both;
   padding-top:120px;
-  position:relative;
-  z-index:1000;
 }
 
 .contact_ul{
