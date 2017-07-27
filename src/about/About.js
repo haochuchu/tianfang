@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './about.css';
+import './about_phone.css';
 import $ from 'jquery';
 
 class About extends Component {
@@ -206,8 +207,8 @@ class About extends Component {
                                     )
                                 })}
                         {this.state.brand.map(function(brand,i){
-                                    return ( <div className="character"> 
-                                            <img src={brand.img}/>
+                                    return ( <div className="character" style={{"border":"none"}}> 
+                                            <img src={brand.img} alt='' />
                                         </div>
                                     )
                                 })}
@@ -224,7 +225,7 @@ class About extends Component {
                             {this.state.grow.map(function(grow,i){
                                         return (  
                                             <div className="grow_all">
-                                               <img src={grow.grow_img}/>
+                                               <img src={grow.grow_img} alt='' />
                                             </div>
                                         )
                                     })}
@@ -246,7 +247,7 @@ class About extends Component {
                                         return (  
                                               <li><img src={ss.carousel_img}/></li>
                                         )
-                                    })}*/}
+                            })}*/}
                                 <li><img src="images/fw_01.jpg"/></li>
                                 <li><img src="images/fw_02.jpg"/></li>
                                 <li><img src="images/fw_03.jpg"/></li>
@@ -280,7 +281,7 @@ class About extends Component {
                             {this.foot.footer.map(function(foot,i){
                                     return (
                                             <div className="contact_top">
-                                                <img src={foot.foot_img}/>
+                                                <img src={foot.foot_img} alt='' />
                                             </div>
                                     )
                               })};
@@ -296,6 +297,9 @@ class About extends Component {
                             </div>
                 </div>
                 <div className="Rt_top">
+                    <p id="phones">
+                        <img src="images/phone.jpg" alt="" />
+                    </p>
                     <p id="backs">
                         <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                     </p>
