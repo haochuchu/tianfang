@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
-import './case.css';
+import './gold.css';
 import $ from 'jquery';
 
-class Case extends Component {
+class Gold extends Component {
     constructor(){
         super();
         this.state={
-            pic_list:[]
+            system:[]
         };
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
@@ -16,12 +16,12 @@ class Case extends Component {
 	componentDidMount(){
             var id=window.location.href.split('?')[1];
             $.ajax({
-                url:'http://localhost:8100/tianfang/xiangqing',
+                url:'http://localhost:8100/tianfang/xiangqing3',
                 type:'post',
                 data:{id:id},
                 success:function(e){
                     this.setState({
-                        pic_list:e
+                        system:e
                     })
                 }.bind(this)
             })
@@ -62,15 +62,15 @@ class Case extends Component {
 			<div className="wrap">
 				<div className="show_top"></div>
                 <div className="show_bottom" id="showsss"></div>
-                <div className="home_case" id="home"></div>
+                <div className="home_gold" id="home"></div>
 
                 {/*content*/}
-                <div className="Main">
-                    {this.state.pic_list.map(function(dd,i){
+                <div className="Main_gold">
+                    {this.state.system.map(function(gg,i){
                         return <div>
-                            <h1>{dd.after}</h1>
-                            <div className="more_img">
-                                {dd.more.split('?').map(function(oo,i){
+                            <h1>{gg.con}</h1>
+                            <div className="gold_img">
+                                {gg.more.split('?').map(function(oo,i){
                                     return <img src={'http://localhost:8100/images/'+oo} alt="" />
                                 })}
                             </div>    
@@ -110,4 +110,4 @@ class Case extends Component {
 	}
 }
 
-export default Case;
+export default Gold;

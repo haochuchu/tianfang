@@ -13,6 +13,7 @@ import Vi from './vi/Vi';
 import System from './system/System'
 import Prize from './newsChild/Prize';
 import Case from './case/Case';
+import Gold from './gold/Gold';
 
 
 
@@ -140,9 +141,9 @@ class App extends Component {
             		<Route path="/About" component={About}></Route>
             		<Route path="/Advantage" component={Advantage}></Route>
             		<Route path="/News" component={News}></Route>
-
             		<Route path="/Contact" component={Contact}></Route> 
                     <Route path="/Case" component={Case}></Route>  
+                    <Route path="/Gold" component={Gold}></Route>  
                     <Route path="/Prize" component={Prize}></Route>
 
 

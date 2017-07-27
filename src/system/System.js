@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './system.css';
-import Case from './../case/Case';
-import './../case/case.css';
+import Gold from './../gold/Gold';
+import './../gold/gold.css';
 import $ from 'jquery';
 
 class System extends Component {
@@ -24,6 +24,9 @@ class System extends Component {
                 console.log(pp)
                 this.setState({
                     system:pp
+                })
+                $(".db").click(function (){
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
                 })
             }.bind(this),
             error:function(){
@@ -64,7 +67,7 @@ class System extends Component {
         return(
             <Router>
                 <div>
-                    <Route path="/Case" component={Case}></Route>
+                    <Route path="/Gold" component={Gold}></Route>
                     <Route exact path="/system" render={()=>(
                         <div className="wrap">
                             <div className="show_top"></div>
@@ -75,7 +78,7 @@ class System extends Component {
                                 <h2 className="system_word">PRODUCTS</h2>
                                 <ul className="system_box">
                                          {this.state.system.map(function(system,i){
-                                                return <Link key={i}  to={`/Case?${system.id}`}><li>
+                                                return <Link key={i}  to={`/Gold?${system.id}`}><li className="db">
                                                     <div className="system_top">
                                                         <img src={system.system_img}/>
                                                     </div>

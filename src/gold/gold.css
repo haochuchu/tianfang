@@ -1,15 +1,15 @@
-.home_case{
+.home_gold{
     width: 100vw;
-    height: 70vh;
-    background:url("images/20170324045731157.jpg");
+    height: 80vh;
+    background:url("images/20170320054508430.jpg");
     background-size:100% 100%;
     background-attachment:fixed;
 }
-.Main{
+.Main_gold{
 	width:1094px; 
 	margin:0 auto;
 }
-.Main h1{
+.Main_gold h1{
 	text-align:center;
 	width:100%; 
 	padding:30px;
@@ -20,14 +20,15 @@
     color:#999;
     line-height:60px;
     font-size:36px;
+    margin-top:-60px;
     margin-bottom:40px;
 }
-.more_img{
+.gold_img{
 	width:100%;
 	background:#fff;
 	box-shadow: 0 20px 40px rgba(0,0,0,.1);
 }
-.more_img img{
+.gold_img img{
 	background-size:100%;
 	width:100%;
 	margin-top:-5px;

@@ -79,7 +79,7 @@ class Vi extends Component {
                                 <h1>近期案例</h1>
                                 <ul className="img_list">
                                     {this.state.pic_list.map(function(xx,i){
-                                        return <Link key={i}  to={`/Case?${xx.id}`} className="db"><li>
+                                        return <Link key={i}  to={`/Case?${xx.id}`}><li className="db">
                                             <img src={xx.pics} alt="" />
                                             <p>
                                                 <span>{xx.after}</span>
