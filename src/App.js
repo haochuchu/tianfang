@@ -15,6 +15,7 @@ import Prize from './newsChild/Prize';
 import Case from './case/Case';
 import Supers from './supers/Supers';
 import Gold from './gold/Gold';
+import Design from './design/Design';
 
 
 
@@ -146,7 +147,7 @@ class App extends Component {
             		<Route path="/Contact" component={Contact}></Route> 
                     <Route path="/Case" component={Case}></Route>  
                     <Route path="/Gold" component={Gold}></Route>  
-
+                    <Route path="/Design" component={Design}></Route>
                     <Route path="/Prize" component={Prize}></Route>
                     <Route path="/Supers" component={Supers}></Route>
                     {/*CASE案例*/}

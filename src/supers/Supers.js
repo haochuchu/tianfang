@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './supers.css';
+import Design from './../design/Design';
+import './../design/design.css';
 import $ from 'jquery';
 
 class Supers extends Component {
@@ -22,6 +24,9 @@ class Supers extends Component {
                 console.log(pp)
                 this.setState({
                     supers:pp
+                })
+                $(".db").click(function (){
+                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
                 })
             }.bind(this),
             error:function(){
@@ -62,7 +67,7 @@ class Supers extends Component {
         return(
             <Router>
                 <div>
-                   
+                    <Route path="/Design" component={Design}></Route>
                     <Route exact path="/supers" render={()=>(
                         <div className="wrap">
                             <div className="show_top"></div>
@@ -73,7 +78,7 @@ class Supers extends Component {
                                 <h2 className="system_word">SI形象设计</h2>
                                 <ul className="system_box">
                                          {this.state.supers.map(function(per,i){
-                                                return <Link key={i}  to={`/Case?${per.id}`}><li>
+                                                return <Link key={i}  to={`/Design?${per.id}`}><li className="db">
                                                     <div className="system_top">
                                                         <img src={per.super_img}/>
                                                     </div>
