@@ -8,11 +8,27 @@ import $ from 'jquery';
 class Start extends Component {
     constructor(){
         super();
+        this.state={
+            bundle:[]
+        }
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
         };
-        this.data={"bundle":[{"bundle_img":"images/img_1.png","bundle_word":"标志+VI","link":"/vi"},{"bundle_img":"images/img_2.png","bundle_word":"品牌+战略","link":"/about"},{"bundle_img":"images/img_3.png","bundle_word":"网络+互动","link":"/system"},{"bundle_img":"images/img_4.png","bundle_word":"空间+导视","link":"/system"},{"bundle_img":"images/img_5.png","bundle_word":"视频+动画","link":"/system"},{"bundle_img":"images/img_6.png","bundle_word":"720全景拍摄","link":"/system"}]}
+        // this.data={"bundle":[{"bundle_img":"images/img_1.png","bundle_word":"标志+VI","link":"/vi"},{"bundle_img":"images/img_2.png","bundle_word":"品牌+战略","link":"/about"},{"bundle_img":"images/img_3.png","bundle_word":"网络+互动","link":"/system"},{"bundle_img":"images/img_4.png","bundle_word":"空间+导视","link":"/system"},{"bundle_img":"images/img_5.png","bundle_word":"视频+动画","link":"/system"},{"bundle_img":"images/img_6.png","bundle_word":"720全景拍摄","link":"/system"}]}
     };
     componentDidMount(){
+     $.ajax({
+                type:"post",
+                url:"http://localhost:8100/tianfang/bundle",
+                async:"true",
+                success:function(ss){
+                    this.setState({
+                        bundle:ss
+                    })
+                }.bind(this),
+                error:function(){
+                    alert('失败了');
+                }
+            })
         document.addEventListener('scroll', this.handleScroll.bind(this));
 
         $(function() {
@@ -94,7 +110,7 @@ class Start extends Component {
                         <h2>PRODUCTS</h2>
                         <div className="content_bundle">
                             <ul>
-                                {this.data.bundle.map(function(bundle,i){
+                                {this.state.bundle.map(function(bundle,i){
                                     return (
                                             <div className="bundle">
                                                 <Link key={i}  to={bundle.link}><li>
