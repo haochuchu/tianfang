@@ -10,7 +10,8 @@ class About extends Component {
             journey:[],
             made:[],
             brand:[],
-            grow:[]
+            grow:[],
+            // carousel:[]
         };
         
         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
@@ -69,6 +70,20 @@ class About extends Component {
                 alert('失败了');
             }
         })
+        //  $.ajax({
+        //     type:"post",
+        //     url:"http://localhost:8100/tianfang/carousel",
+        //     async:"true",
+        //     success:function(ss){
+        //         console.log(ss)
+        //         this.setState({
+        //             carousel:ss
+        //         })
+        //     }.bind(this),
+        //     error:function(){
+        //         alert('失败了');
+        //     }
+        // })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -90,11 +105,11 @@ class About extends Component {
             LBtn=interact.querySelector('.LBtn'),
             RBtn=interact.querySelector('.RBtn');
             interact.style.width=FWidth+"px";  
+            var liW=parseInt($(li[0]).width);
                 for(var i=0; i<li.length; i++){
                     li[i].style.width=FWidth+"px";
                 }
             lb.style.width=FWidth*li.length+"px";
-            var liW=parseInt(getComputedStyle(li[0]).width);
             var imgNum=0,//初始化为0；//图片移动次数计数器；
                 aniTime,//定时器
                 lastNum=0,//图片每次移动距离计数器
@@ -126,7 +141,7 @@ class About extends Component {
                   
         //动画函数
         function animation(everyMove,liW){        //绝对值math.abs
-                var moveNum=Math.abs(parseInt(liW/everyMove));  
+                var moveNum=Math.abs(parseInt(1060/everyMove));  
                 aniTime=setInterval(function(){//定时器；
                     if(lastNum>=moveNum){
                         clearInterval(aniTime);
@@ -215,7 +230,7 @@ class About extends Component {
                                     })}
                         </div>
                        <div className="journey">
-                            {this.state.journey.map(function(journey,i){
+                                {this.state.journey.map(function(journey,i){
                                         return (  
                                             <div>
                                               <p>{journey.news_first}</p>
@@ -227,13 +242,17 @@ class About extends Component {
                        </div>
                        <div className="interact">
                            <ul className="lb">
-                                <li><img src="images/fw_01.jpg" alt=''/></li>
-                                <li><img src="images/fw_02.jpg" alt=''/></li>
-                                <li><img src="images/fw_03.jpg" alt=''/></li>
-                                <li><img src="images/fw_04.jpg" alt=''/></li>
-                                <li><img src="images/fw_05.jpg" alt=''/></li>
-                                <li><img src="images/fw_banner_05.jpg" alt=''/></li>
-                                <li><img src="images/fw_01.jpg" alt=''/></li>
+                           {/*{this.state.carousel.map(function(ss,i){
+                                        return (  
+                                              <li><img src={ss.carousel_img}/></li>
+                                        )
+                                    })}*/}
+                                <li><img src="images/fw_01.jpg"/></li>
+                                <li><img src="images/fw_02.jpg"/></li>
+                                <li><img src="images/fw_03.jpg"/></li>
+                                <li><img src="images/fw_04.jpg"/></li>
+                                <li><img src="images/fw_05.jpg"/></li>
+                                <li><img src="images/fw_01.jpg"/></li>
                            </ul>
                             <div className="LBtn btn">&lt;<div className="fliament_left"></div></div>
                             <div className="RBtn btn">&gt;<div className="fliament_right"></div></div>
