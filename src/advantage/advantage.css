@@ -19,7 +19,7 @@ body{
     background-attachment:fixed;
 }
 
-.main{
+.main_ad{
     width:1061px;
     margin:0 auto;
     margin-top:-60px;
@@ -148,4 +148,7 @@ body{
   margin-top:5px;
   font-size: 27px;
   color: #999;
+}
+#phones{
+  display:none;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './advantage.css';
+import './advantage_phone.css';
 import $ from 'jquery';
 
 class Advantage extends Component {
@@ -67,11 +68,11 @@ class Advantage extends Component {
                 <div className="home_advantage" id="home"></div>
 
                 {/*content*/}
-                <div className="main">
+                <div className="main_ad">
                     <h3 className="Title">ADVANTAGE</h3>
                     <ul className="zero">
                         {this.state.cont.map(function(con,i){
-                                return <li><div className="L_img"><img src={con.img} /></div><div className="R_con"><h3>{con.title}</h3><div className="R_word"><span>{con.eng}</span><h5 className="cn"><p>{con.w_one}</p><p>{con.w_two}</p><p>{con.w_three}</p><p>{con.w_four}</p><p>{con.w_five}</p><p>{con.w_six}</p></h5></div></div>
+                                return <li><div className="L_img"><img src={con.img} alt="" /></div><div className="R_con"><h3>{con.title}</h3><div className="R_word"><span>{con.eng}</span><h5 className="cn"><p>{con.w_one}</p><p>{con.w_two}</p><p>{con.w_three}</p><p>{con.w_four}</p><p>{con.w_five}</p><p>{con.w_six}</p></h5></div></div>
                                 </li>
                         })}
                     </ul>
@@ -96,6 +97,9 @@ class Advantage extends Component {
                         </div>
                 </div>
                 <div className="Rt_top">
+                    <p id="phones">
+                        <img src="images/phone.jpg" alt="" />
+                    </p>
                     <p id="backs">
                         <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                     </p>

@@ -19,7 +19,6 @@ class News extends Component {
             url:"http://localhost:8100/tianfang/prize",
             async:"true",
             success:function(pp){
-                console.log(pp)
                 this.setState({
                     prize:pp
                 })

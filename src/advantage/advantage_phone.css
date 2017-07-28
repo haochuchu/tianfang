@@ -1,0 +1,141 @@
+@media screen and (max-width:414px){
+*{
+   margin:0; padding:0;
+}
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+
+
+
+.home_advantage{
+    width: 100vw;
+    height:16.5rem;
+    background:url("images/fuwu_banner.jpg");
+    background-size:135% 60%;
+    background-attachment:fixed;
+}
+
+.main_ad{
+    width:14rem;
+    margin:0 auto;
+    margin-top:0rem;
+}
+.Title{
+    width:100%;
+    height:2.7536rem;
+    background:#fff;
+    font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 300;
+    color: #999;
+    font-size: 0.7rem;
+    line-height:2.7536rem;
+    text-align:center;
+    box-shadow: 0 0.7729rem 1.5458rem rgba(0,0,0,.1);
+    margin-top:-2rem;
+}
+.zero li{
+    width:100%;
+    background:#fff;
+    margin-top:1.8rem;
+    clear:both;
+    box-shadow: 0 0.7729rem 1.5458rem rgba(0,0,0,.1);
+}
+.zero li:first-of-type{
+    height:19.13043rem;
+    margin-top:0.6rem;
+}
+.zero li:nth-of-type(2){
+    height:20.05797rem;
+}
+.zero li:nth-of-type(3){
+    height:17.27536rem;
+}
+.zero li:nth-of-type(4){
+    height:20.13043rem;
+}
+.zero li:nth-of-type(5){
+    height:18.20289rem;
+}
+.L_img{
+    width:100%;
+    height:7.9227rem;
+    float:left;
+    border-bottom:1px solid #ccc;
+}
+.L_img img{
+    width:100%;
+    height:7.9227rem;
+}
+.R_con{
+    width:12.5217rem;
+    height:9.62318rem;
+    padding:0.7rem;
+    border-left: none;
+    float:left;
+}
+.R_con h3{
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+    color:#999;
+}
+.R_word span{
+    color: #333;
+    font-size: 0.69565rem;
+    text-transform: uppercase;
+    line-height: 0.69565rem;
+}
+.R_word h5{
+    font-size: 0.54106rem;
+    color: #999;
+    line-height: 0.92753rem;
+    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-weight: 400;
+}
+/* contact */
+
+.contact_top{
+    width:16rem;
+    height:3.4782608695652173rem;
+    margin:0 auto;
+    padding-top:0rem;
+    z-index:1000; 
+  }
+  #contact_ul{
+    padding-top:0rem;
+  }
+  .contact_top img{
+    position:relative;
+    bottom:3rem;
+    /* margin-top:-20rem; */
+    margin-left:1.875rem;
+    width:10.76328502415459rem;
+    height:2.9782608695652173rem;
+  }
+  .contact_ul{
+    width:14.067632850241546rem;
+    margin:0 auto;
+    margin-top:-10.875rem;
+    padding-top:0rem;
+  }
+  .contact_ul li{
+     margin-top:-1.875rem;
+  }
+  .contact_word{
+    padding-top:-0rem;
+  }
+  .footer{
+    margin-top:2.2rem;
+  }
+  #phones{
+  display:block;
+}
+
+
+}
