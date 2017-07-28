@@ -115,21 +115,26 @@ class App extends Component {
         var list=document.getElementById("list");
         var first_page=document.getElementById("first_page");
         var num=0;
-         $(".nav_btn").click(function (){
-                $(".nav_btn span").toggleClass("to")
-            })
+
          
         if(window.screen.width<=414){
-            var head=document.getElementById('head')
-            head.style.background="#fff";
-            head.style.height="1.932367149758454rem";
-            head.style.position="fixed";
-            head.style.left="0";
-            head.style.top="0";
-            var img=document.getElementById('img');
-            img.style.top='-50px';
-            img.style.left='5px';
-            img.style.position='fixed';
+             $(".nav_btn").click(function (){
+                $(".nav_btn span").toggleClass("to")  
+            })
+            $('.nav_btn').click(function(){
+                $('.nav').slideToggle()
+                $('.nav').css({'display':'block'})
+            })
+            $('.nav ul').click(function(){
+                $(".nav_btn span").removeClass("to") 
+                $('.nav').hide()
+            })
+            first_page.onclick=function (){
+                first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                    num=0;
+                    return;
+            }
+             
         } 
         
     } 
@@ -158,7 +163,7 @@ class App extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="nav_btn">
+                    <div className="nav_btn" id="nav_btn">
                         <span></span>
                     </div>
                     <Route exact path="/" component={Start}></Route>
