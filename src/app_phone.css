@@ -101,7 +101,6 @@
 	  top:9.048309178743962rem;
 	  left:2.069565217391305rem;
 		}
-	}
 	.animate:hover{
 	  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(-4%); 
 	  transition:.8s;
