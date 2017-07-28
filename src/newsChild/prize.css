@@ -9,13 +9,13 @@ body{
  background:#f0f0f0;
 }
 
-.fixed_prize{
+.prizes_box{
 	width:1080px;
 	overflow:hidden;
 	margin:0 auto;
 	
 }
-.fixed_prize h2{
+.prizes_box h2{
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
     height:60px;
@@ -25,7 +25,7 @@ body{
     color: #999;
     text-align:center;
 }
-.fixed_prize p{
+.prizes_box p{
 	    cursor: default;
 	    height:21px;
 	    line-height:21px;
@@ -68,4 +68,12 @@ body{
 	overflow:hidden;
 	margin-top:2px;
 	margin-left:200px;
+}
+.contact_word .lights{
+  font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 300;
+  cursor: default;
+  margin-top:5px;
+  font-size: 27px;
+  color: #999;
 }

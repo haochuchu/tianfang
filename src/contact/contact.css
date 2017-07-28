@@ -19,13 +19,14 @@ body{
     background-attachment:fixed;
 }
 
-.main{
+.main_contact{
     width:1061px;
     margin:0 auto;
     margin-top:-60px;
 }
 
-.contact_top{
+.contact_tops{
+  padding-top:180px;
   width:382px;
   height:90px;
   margin:0 auto;
@@ -75,4 +76,50 @@ body{
 	font-size: 16px;
     color: #000000;
     text-align: center;
+}
+.contact_uls{
+  width:200px;
+  margin:0 auto;
+  padding-top:40px;
+}
+.contact_uls li{
+  width:50px;
+  height:50px;
+  background:red;
+  float:left;
+  margin-right: 10px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  transition: all .4s ease;
+  text-align:center;
+  cursor: pointer;
+}
+.contact_uls li a{
+  vertical-align: middle;
+}
+.contact_uls li:hover{
+   box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
+}
+.contact_words{
+  clear:both;
+  width:200px;
+  margin:0 auto;
+  text-align:center;
+  padding-top:40px;
+}
+.contact_words h5{
+  cursor: default;
+  margin-top:2px;
+  font-size: 18px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color: #999;
+}
+.contact_words .light{
+  font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 300;
+  cursor: default;
+  margin-top:5px;
+  font-size: 27px;
+  color: #999;
 }
