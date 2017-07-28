@@ -34,6 +34,9 @@ body{
  background:#f0f0f0;
 }
 /* show */
+.header_phone{
+  display:none;
+}
 .nav_btn{
   display:none;
 }
@@ -250,7 +253,7 @@ body{
   top:0;
   left:10px;
   display:none;
-   color:#000;
+  color:#000;
 }
 
 
