@@ -154,8 +154,8 @@
 	}
 	/* logo */
 	.logo{
-	  width:2.821256038647343rem;
-	  height:2.0917874396135265rem; 
+	  width:3.821256038647343rem;
+	 height:3.0917874396135265rem; 
 	  float:left;
 	  cursor:pointer;
 	  overflow:hidden;
@@ -165,9 +165,11 @@
 	  padding-right:0.7729468599033816rem;
 	}
 	.logo a img{
-	  margin-top:0.478rem;
-	  width:1.821256038647343rem;
-	  height:3.864734299516908rem;
+
+		margin-top:0.278rem;
+	  width:3.821256038647343rem;
+	  height:5.864734299516908rem;
+
 	  overflow:hidden;
 	  transition:all .4s ease;
 	}
@@ -175,9 +177,10 @@
 	  background:#fff;
 	}
 	.logo:hover a img{
-	  margin-top:-1.664734299516908rem;
+	  margin-top:-2.664734299516908rem;
 	  transition:all .4s ease;
 	}
+
 	/* nav */
 	.nav{
 		display:none;
@@ -278,8 +281,8 @@
 	}
 	.content h2{
 	  opacity:0;
-	  padding-top:1.5458937198067633rem;
-	  margin-bottom: 1.1594202898550725rem;
+	  padding-top:1.1458937198067633rem;
+	  margin-bottom: 0.9594202898550725rem;
 	  cursor: default;
 	  font-size: 0.991304347826087rem;
 	  color: #999;
@@ -344,7 +347,7 @@
 /* contact */
 	.contact_top{
 	  width:16rem;
-	  height:3.4782608695652173rem;
+	  height:0.4782608695652173rem;
 	  margin:0 auto;
 	  padding-top:0rem;
 	  z-index:1000; 
@@ -352,27 +355,13 @@
 	#contact_ul{
 		padding-top:0rem;
 	}
-	.contact_top img{
-		position:relative;
-		bottom:5rem;
-		/* margin-top:-20rem; */
-		margin-left:1.875rem;
-		width:10.76328502415459rem;
-		height:3.4782608695652173rem;
+	.contact_tops img{
+		padding-top:0.9562rem;
 	}
-	.contact_ul{
-	  width:14.067632850241546rem;
-	  margin:0 auto;
-	  margin-top:-10.875rem;
-	  padding-top:0rem;
+	.contact_uls li{
+		margin-top:0.9856rem;
 	}
-	.contact_ul li{
-		 margin-top:-1.875rem;
-	}
-	.contact_word{
-		padding-top:-0rem;
-	}
-	.footer{
-		margin-top:2.2rem;
+	.footer_box{
+		margin-top:0.9857rem;
 	}
 }

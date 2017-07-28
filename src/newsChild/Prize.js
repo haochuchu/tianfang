@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './prize.css';
+import './prize_phone.css';
 import $ from 'jquery';
 
 class Prize extends Component {
@@ -55,9 +56,8 @@ class Prize extends Component {
                 <div className="show_bottom" id="show_news"></div>
                 <div className="home_news" id="home"></div>
                 {/*content*/}
-                    <div className="fixed_prize">
-
-                          <h2>NEWS</h2>
+                    <div className="prizes_box">
+                          <h2 className="prize_h2">NEWS</h2>
                           <p>Jun 08,2017</p>  
                         <div className="prize_box">
                             {this.state.prize.map(function(dd,i){
@@ -78,19 +78,19 @@ class Prize extends Component {
                         <div className="contact">
                             {this.foot.footer.map(function(foot,i){
                                     return (
-                                            <div className="contact_top">
+                                            <div className="contact_tops">
                                                 <img src={foot.foot_img}/>
                                             </div>
                                     )
                             })};
-                            <ul className="contact_ul">
+                            <ul className="contact_uls">
                                 {this.foot.listAll.map(function(list,i){
-                                    return <li><a><img src={list.list_img}/></a></li>
+                                    return <li className="li_box"><a><img src={list.list_img}/></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
                                 <h5>HOT LINE</h5>
-                                <h3 className="light">400·8167·995</h3>
+                                <h3 className="lights">400·8167·995</h3>
                             </div>
                         </div>
                     </div>

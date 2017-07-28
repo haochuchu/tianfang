@@ -191,9 +191,6 @@ body{
   height:160px;
   transition:all .4s ease;
 }
-.logo:hover{
-  background:#fff;
-}
 .logo:hover a img{
   margin-top:-80px;
   transition:all .4s ease;
@@ -507,18 +504,18 @@ body{
 }
 
 /* contact */
-.contact_top{
+.contact_tops{
   width:382px;
   height:90px;
   margin:0 auto;
 }
 
-.contact_ul{
+.contact_uls{
   width:200px;
   margin:0 auto;
   padding-top:40px;
 }
-.contact_ul li{
+.contact_uls li{
   width:50px;
   height:50px;
   background:red;
@@ -530,10 +527,10 @@ body{
   text-align:center;
   cursor: pointer;
 }
-.contact_ul li a{
+.contact_uls li a{
   vertical-align: middle;
 }
-.contact_ul li:hover{
+.contact_uls li:hover{
    box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
 }
 .contact_word{
@@ -560,7 +557,7 @@ body{
   color: #999;
 }
 /* footer */
-.footer{
+.footer_box{
   text-align:center;
   line-height:21px;
   margin-top:120px;
@@ -570,7 +567,7 @@ body{
   background-color: #333;
   font-size: 12px;
 }
-.footer span{
+.footer_box span{
   color: #fff;
   border-right:1px solid #fff;
   padding-right:8px;
@@ -578,7 +575,7 @@ body{
   font-size: 10px;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
-.footer a{
+.footer_box a{
   padding-left: 10px;
   padding-right: 10px;
   border-right:1px solid #fff;
@@ -589,9 +586,9 @@ body{
   font-size: 10px;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
-.footer a:hover{
+.footer_box a:hover{
   color:#c6ba9a;
 }
-.footer a:last-of-type{
+.footer_box a:last-of-type{
   border-right:none;
 }

@@ -1,0 +1,93 @@
+@media screen and (max-width:414px){
+	*{
+   margin:0; padding:0;
+	  }
+	ul li{
+	  list-style:none;
+	}
+	body{
+	 overflow-x:hidden;
+	 background:#f0f0f0;
+	}
+	.home_news{
+		height:3.0917874396135265rem;
+	}
+	.prizes_box{
+		margin:0rem;
+		width:16rem;
+		overflow:hidden;
+		margin:0 auto;
+	}
+	.prizes_box .prize_h2{
+		font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+	    font-weight: 400;
+	   	font-size:1.486rem;
+	    text-transform: uppercase;
+	    color: #999;
+	    text-align:center;
+	    margin-top:0.268rem;
+	}
+	.prizes_box p{
+	    cursor: default;
+	    height:0.8115942028985508rem;
+	    line-height:0.8115942028985508rem;
+	    color:#999;
+	    font-size: 0.5410628019323671rem;
+	    font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    	font-weight: 400;
+    	text-align:center;
+    	margin-bottom:0.568rem;
+	}
+	.prize_box h3{
+		height:2.357487922705314rem;
+		line-height:2.357487922705314rem;
+		font-size:0.785rem;
+		margin-left:0rem;
+	}
+	.prize_box{
+		width:16rem;
+		height:221rem;
+		box-shadow: 0 20px 40px rgba(0,0,0,.1);
+		background:#fff;
+	}
+	.prize_design{
+		width:16rem;
+		margin:0 auto;
+	}
+	.prize_design p{
+		font-size:0.463768115942029rem;
+		padding-top:0.586rem;
+		color:#000;
+		text-align:left;
+	}
+	.printAll{
+		width:14.454106280193237rem;
+		margin:0 auto;
+	}
+	.printAll .print_one{
+		width:26.280193236714975rem;
+		height:16.42512077294686rem;
+		overflow:hidden;
+		margin-top:0rem;
+		margin-top:0.07729468599033816rem;
+		margin-left:0rem;
+	}
+	.print_one li img{
+		width:49.468599033816425rem;
+		height:28.985507246376812rem;
+		float:left;
+	}
+	.contact_tops{
+		margin-top:0.7857rem;
+	}
+	.contact_uls .li_box{
+		width:1.5458937198067633rem;
+		height:1.5458937198067633rem;
+		margin-left:0.253rem;
+
+	}
+	.contact_uls li img{
+		width:1.5458937198067633rem;
+		height:1.5458937198067633rem;
+	}
+}

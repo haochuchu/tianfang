@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './contact.css';
+import './contact_phone.css';
 import $ from 'jquery';
 
 class Contact extends Component {
@@ -67,12 +68,12 @@ class Contact extends Component {
                 <div className="home_contact" id="home"></div>
 
                 {/*content*/}
-                <div className="main">
+                <div className="main_contact">
                     {/*contact*/}
                     <div className="contact">
                         {this.state.contact.map(function(foot,i){
                                 return <div>
-                                        <div className="contact_top">
+                                        <div className="contact_tops">
                                             <img src={foot.contact_img}/>
                                         </div>
                                         <div className="c_word">
@@ -86,12 +87,12 @@ class Contact extends Component {
                                         </div>
                                 </div>
                         })}
-                        <ul className="contact_ul">
+                        <ul className="contact_uls">
                             {this.foot.listAll.map(function(list,i){
                                 return <li><a><img src={list.list_img}/></a></li>
                             })}
                         </ul>
-                        <div className="contact_word">
+                        <div className="contact_words">
                             <h5>HOT LINE</h5>
                             <h3 className="light">400·8167·995</h3>
                         </div>
