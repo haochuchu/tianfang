@@ -119,15 +119,15 @@ class App extends Component {
          
         if(window.screen.width<=414){
              $(".nav_btn").click(function (){
-                $(".nav_btn span").toggleClass("to")  
+                $(".nav_btn span").toggleClass("to");
             })
             $('.nav_btn').click(function(){
-                $('.nav').slideToggle()
-                $('.nav').css({'display':'block'})
+                $('.nav').slideToggle();
+                $('.nav').css({'display':'block'});
             })
             $('.nav ul').click(function(){
-                $(".nav_btn span").removeClass("to") 
-                $('.nav').hide()
+                $(".nav_btn span").removeClass("to") ;
+                $('.nav').hide();
             })
             first_page.onclick=function (){
                 first_page.style.transform="perspective(800px) rotateX(-90deg)";

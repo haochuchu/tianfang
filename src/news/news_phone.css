@@ -1,3 +1,4 @@
+@media screen and (max-width:414px){
 *{
    margin:0; padding:0;
   }
@@ -11,35 +12,38 @@ body{
 
 /* 定宽 */
 .fixed_news{
-    width:1080px;
+    width:15rem;
     margin:0 auto;
 }
 /* banner */
 .home_news{
-  width: 100vw;
-  height: 20vh;
+  width: 100%;
+  height: 3.09178rem;
   background:#f0f0f0;
 }
 /* prize */
 .fixed_news h2{
   cursor: default;
-  font-size: 48px;
+  font-size: 1.4rem;
   color: #999;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
-  width:60px;
-  margin:0 auto;
-
+  width:15rem;
+  height:1.6618rem;
+  line-height:2.8rem;
+  text-align:center;
+  margin-left:-0.0001rem;
 }
 .prize{
   height:1512px;
    margin-top: 30px;
 }
 .prize ul li{
-  height:186px;
-  width:1080px;
+  height:12.56038rem;
+  width:15rem;
   background:#fff;
   margin-bottom:27px;
+  margin-left:0.5rem;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
 }
 .prize ul li:hover{
@@ -49,29 +53,30 @@ body{
   transition: all .4s ease;
 }
 .prize_word{
-  width:540px;
-  height:186px;
-  float:left;
+  width:12.9082rem;
+  height:2.8599rem;
+  padding:0.77294rem ;
+  float:right;
 }
 .prize_word h6{
   color:#999;
-  padding-top:43px;
+  padding-top:0;
   margin-bottom: 10px;
   cursor: pointer;
   font-size: 14px;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
-  margin-left:40px;
+  margin-left:0;
 }
 .prize_word h4{
   transition: all .4s ease;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 0.7rem;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
   color: #999;
-  margin-left:40px;
-  margin-bottom:38px;
+  margin-left:0;
+  margin-bottom:0.2rem;
 }
 .prize ul li:hover:hover h4{
   color:#000;
@@ -82,25 +87,62 @@ body{
   font-size: 12px;
   color: #c6ba9a;
   font-weight: 400;
-  margin-top: 30px;
-  margin-left:40px;
+  margin-top: 0.2rem;
+  margin-left:0;
 
 }
 .prize_lore{
-  width:540px;
-  height:186px;
+  width:15rem;
+  height:8.1159rem;
   overflow:hidden;
-  float:left;
+  float:right;
 }
 .prize_lore img{
-  width:540px;
+  width:15rem;
+}
+
+/* contact */
+.contact{
+	margin-top:35rem;
+	margin-left:-25rem;
 }
 .contact_top{
-  width:382px;
-  height:90px;
-  margin:0 auto;
-  clear:both;
-}
-#phones{
-    display:none;
+    width:16rem;
+    height:3.4782608695652173rem;
+    margin:0 auto;
+    padding-top:0rem;
+    z-index:1000; 
+
   }
+  #contact_ul{
+    padding-top:0rem;
+  }
+  .contact_top img{
+    position:relative;
+    bottom:3rem;
+    /* margin-top:-20rem; */
+    margin-left:1.875rem;
+    width:10.76328502415459rem;
+    height:2.9782608695652173rem;
+  }
+  .contact_ul{
+    width:14.067632850241546rem;
+    margin:0 auto;
+    margin-top:-10.875rem;
+    padding-top:0rem;
+  }
+  .contact_ul li{
+     margin-top:-1.875rem;
+  }
+  .contact_word{
+    padding-top:-0rem;
+  }
+  .footer{
+    margin-top:2.2rem;
+  }
+  #phones{
+  	display:block;
+  }
+
+
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './vi.css';
+import './vi_phone.css';
 import Case from './../case/Case';
 import './../case/case.css';
 import $ from 'jquery';
@@ -75,7 +76,7 @@ class Vi extends Component {
 
 
                             {/*content*/}
-                            <div className="main">
+                            <div className="main_vi">
                                 <h1>近期案例</h1>
                                 <ul className="img_list">
                                     {this.state.pic_list.map(function(xx,i){
@@ -110,6 +111,9 @@ class Vi extends Component {
                                     </div>
                             </div>
                             <div className="Rt_top">
+                                <p id="phones">
+                                    <img src="images/phone.jpg" alt="" />
+                                </p>
                                 <p id="backs">
                                     <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                                 </p>

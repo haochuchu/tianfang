@@ -1,4 +1,5 @@
-*{
+@media screen and (max-width:414px){
+	*{
     margin:0; padding:0;
 }
 ul li{
@@ -11,42 +12,61 @@ body{
 
 /* 定宽 */
 .fixed_news{
-    width:1080px;
+    width:15rem;
     margin:0 auto;
 }
 /* banner */
 .home_system{
     width: 100vw;
-    height: 20vh;
+    height: 10vh;
     background:#f0f0f0;
 }
+.fixed_news{
+	width:15rem;
+}
 .fixed_news .system_word{
-  width:280px;
-  margin:40px auto 30px;
+  width:100%;
+  margin:0;
   margin-bottom: 30px;
   font-size: 48px;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
   color:#999;
+  margin-left:0;
+}
+.fixed_news .pros{
+	width:100%;
+  margin:0;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-weight: 400;
+  color:#999;
+  margin-left:-5rem;
 }
 /* fixed_news ul li*/
+.fixed_news{
+	width:15rem;
+	margin:0 auto;
+}
 .fixed_news .system_box li{
-  width:520px;
-  height:293px;
+  height:12.56038rem;
+  width:15rem;
   background:#fff;
   transition: all .4s ease;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
   float:left;
-  margin-right:20px;
-  margin-bottom:20px;
+  margin-right:0;
+  margin-bottom:0;
 }
 .system_top{
-   width:520px;
-  height:235px;
+  width:15rem;
+  height:6.2222rem;
   overflow:hidden;
 }
 .system_top img{
-   width:520px;
+   width:15rem;
+   height:7.9227rem;
 }
 .system_bot{
   height:58px;
@@ -141,4 +161,6 @@ body{
   margin-top:5px;
   font-size: 27px;
   color: #999;
+}
+
 }

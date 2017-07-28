@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './system.css';
+import './system_phone.css';
 import Gold from './../gold/Gold';
 import './../gold/gold.css';
 import $ from 'jquery';
@@ -75,7 +76,7 @@ class System extends Component {
                             <div className="home_system" id="home"></div>
                             {/*content*/}
                             <div className="fixed_news">
-                                <h2 className="system_word">PRODUCTS</h2>
+                                <h2 className="system_word pros">PRODUCTS</h2>
                                 <ul className="system_box">
                                          {this.state.system.map(function(system,i){
                                                 return <Link key={i}  to={`/Gold?${system.id}`}><li className="db">

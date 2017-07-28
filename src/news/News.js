@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './news.css';
+import './news_phone.css';
 import Prize from './../newsChild/Prize';
 import $ from 'jquery';
 
@@ -66,8 +67,8 @@ class News extends Component {
                         <div className="home_news" id="home"></div>
                         {/*content*/}
                         <div className="fixed_news">
-                                <h2>NEWS</h2>
-                                <div className="prize">
+                            <h2>NEWS</h2>
+                            <div className="prize">
                                  <ul>
                                 {this.state.prize.map(function(pp,i){
                                 return  <Link key={i}  to={`/Prize?${pp.id}`} className="top_new">
@@ -84,7 +85,7 @@ class News extends Component {
                                 </Link>
                                 })}
                                 </ul>
-                                </div>
+                            </div>
                                 {/*contact*/}
                                 <div className="contact">
                                     {this.foot.footer.map(function(foot,i){
@@ -106,6 +107,9 @@ class News extends Component {
                                 </div>
                         </div>
                         <div className="Rt_top">
+                            <p id="phones">
+                                <img src="images/phone.jpg" alt="" />
+                            </p>
                             <p id="backs">
                                 <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                             </p>
