@@ -347,12 +347,11 @@ body{
   background:#f0f0f0;
 }
 /* h2  title */
-.content {
+.content_box {
 	position:relative;
 }
-.content h2{
-  opacity:0;
-  padding-top:120px;
+.content_box .content_h2{
+  padding-top:90px;
   margin-bottom: 30px;
   cursor: default;
   font-size: 48px;

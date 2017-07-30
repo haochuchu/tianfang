@@ -5,11 +5,11 @@
     background-size:100% 100%;
     background-attachment:fixed;
 }
-.Main{
+.Main_box{
 	width:1094px; 
 	margin:0 auto;
 }
-.Main h1{
+.Main_box h1{
 	text-align:center;
 	width:100%; 
 	padding:30px;

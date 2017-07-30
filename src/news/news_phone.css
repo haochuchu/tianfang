@@ -114,9 +114,7 @@ body{
     z-index:1000; 
 
   }
-  #contact_ul{
-    padding-top:0rem;
-  }
+  
   .contact_top img{
     position:relative;
     bottom:3rem;
@@ -125,15 +123,32 @@ body{
     width:10.76328502415459rem;
     height:2.9782608695652173rem;
   }
-  .contact_ul{
-    width:14.067632850241546rem;
-    margin:0 auto;
-    margin-top:-10.875rem;
-    padding-top:0rem;
-  }
-  .contact_ul li{
-     margin-top:-1.875rem;
-  }
+  .contact_ulp{
+  width:200px;
+  margin:0 auto;
+  padding-top:40px;
+}
+.contact_ulp li{
+  width:50px;
+  height:50px;
+  background:red;
+  float:left;
+  margin-right: 10px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  transition: all .4s ease;
+  text-align:center;
+  cursor: pointer;
+}
+.contact_ulp li a{
+  vertical-align: middle;
+}
+.contact_ulp li:hover{
+   box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
+}
+.prize_lore{
+  margin-bottom:1.5458937198067633rem;
+}
   .contact_word{
     padding-top:-0rem;
   }

@@ -345,6 +345,17 @@
 		display:none;
 	}
 /* contact */
+	.contact_box{
+		margin-top:0;
+
+	}
+	.content_box h2{
+		text-align:center;
+		font-size:0.927536231884058rem;
+		color:#999;
+		padding-top:0rem;
+		margin-bottom:0.5797101449275363rem;
+	}
 	.contact_top{
 	  width:16rem;
 	  height:0.4782608695652173rem;
@@ -355,6 +366,10 @@
 	#contact_ul{
 		padding-top:0rem;
 	}
+	.contact_tops{
+		padding-top:0;
+		margin-top:0;
+	}
 	.contact_tops img{
 		padding-top:0.9562rem;
 	}
@@ -364,4 +379,8 @@
 	.footer_box{
 		margin-top:0.9857rem;
 	}
+	.botmbar{
+		height:
+	}
+
 }

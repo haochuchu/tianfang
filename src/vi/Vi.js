@@ -91,15 +91,15 @@ class Vi extends Component {
                                     
                                 </ul>
                                 {/*contact*/}
-                                    <div className="contact">
+                                    <div className="contact_box">
                                         {this.foot.footer.map(function(foot,i){
                                                 return (
-                                                        <div className="contact_top">
+                                                        <div className="contact_tops">
                                                             <img src={foot.foot_img}/>
                                                         </div>
                                                 )
                                         })};
-                                        <ul className="contact_ul">
+                                        <ul className="contact_ulw">
                                             {this.foot.listAll.map(function(list,i){
                                                 return <li><a><img src={list.list_img}/></a></li>
                                             })}

@@ -1,0 +1,33 @@
+@media screen and (max-width:414px){
+.home_case{
+    width: 100vw;
+    height: 40vh;
+    background:url("images/20170324045731157.jpg") no-repeat;
+     background-position:center center;
+     background-size:200% 140%;
+}
+.Main_box{
+	width:16rem; 
+	margin:0 auto;
+}
+.Main_box h1{
+    font-size:0.791304347826087rem;
+    text-align:center;
+	width:85%; 
+	margin:0 auto;
+	padding:0.122468599033816rem;
+	background:#fff;
+}
+.more_img{
+	width:87%;
+	margin:0 auto;
+	margin-top:0.558rem;
+	background:#fff;
+	box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+.more_img img{
+	background-size:100%;
+	width:100%;
+	margin-top:-5px;
+}
+}

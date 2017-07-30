@@ -106,9 +106,9 @@ class Start extends Component {
                     </div>
                 </div>
                 {/*content*/}
-                <div className="content">
+                <div className="content_box">
                     <div className="fixedBox">
-                        <h2>PRODUCTS</h2>
+                        <h2 className="content_h2">PRODUCTS</h2>
                         <div className="content_bundle">
                             <ul>
                                 {this.state.bundle.map(function(bundle,i){
@@ -125,7 +125,7 @@ class Start extends Component {
                         </div>
                        
                          {/*contact*/}
-                        <div className="contact">
+                        <div className="contact_box">
                             {this.foot.footer.map(function(foot,i){
                                     return (
                                             <div className="contact_tops">

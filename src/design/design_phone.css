@@ -1,0 +1,48 @@
+@media screen and (max-width:414px){
+.home_design{
+    width: 100vw;
+    height: 40vh;
+    background:url("images/20170320054508430.jpg") no-repeat;
+     background-position:center center;
+     background-size:200% 140%;
+}
+
+.Main_design{
+	width:16rem; 
+	margin:0 auto;
+}
+.Main_design h1{
+    font-size:0.591304347826087rem;
+    text-align:center;
+	margin:0 auto;
+	padding:0.158rem;
+	width:85%;
+	line-height:1.2rem;
+	background:#fff;
+}
+.design_img{
+	
+	margin-top:1.258rem;
+}
+.Main_design{
+	width:87%;
+	margin:0 auto;
+	background:#fff;
+	box-shadow: 0 20px 40px rgba(0,0,0,.1);
+}
+.Main_design img{
+	background-size:100%;
+	width:100%;
+	margin-top:-5px;
+}
+.contact_topw{
+	padding-top:0rem;
+	margin:0 auto;
+	width:11.246376811594203rem;
+	height:2.6280193236714977rem;
+}
+.contact_topw img{
+	width:11.246376811594203rem;
+	height:2.6280193236714977rem;
+}
+}

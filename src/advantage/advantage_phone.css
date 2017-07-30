@@ -100,39 +100,36 @@ body{
 }
 /* contact */
 
-.contact_top{
-    width:16rem;
-    height:3.4782608695652173rem;
-    margin:0 auto;
-    padding-top:0rem;
-    z-index:1000; 
-  }
-  #contact_ul{
-    padding-top:0rem;
-  }
-  .contact_top img{
-    position:relative;
-    bottom:3rem;
-    /* margin-top:-20rem; */
-    margin-left:1.875rem;
-    width:10.76328502415459rem;
-    height:2.9782608695652173rem;
-  }
-  .contact_ul{
-    width:14.067632850241546rem;
-    margin:0 auto;
-    margin-top:-10.875rem;
-    padding-top:0rem;
-  }
-  .contact_ul li{
-     margin-top:-1.875rem;
-  }
-  .contact_word{
-    padding-top:-0rem;
-  }
-  .footer{
-    margin-top:2.2rem;
-  }
+.contact_ulw{
+  width:200px;
+  margin:0 auto;
+  padding-top:40px;
+}
+.contact_ulw li{
+  width:50px;
+  height:50px;
+  background:red;
+  float:left;
+  margin-right: 10px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+  transition: all .4s ease;
+  text-align:center;
+  cursor: pointer;
+}
+.contact_ulw li a{
+  vertical-align: middle;
+}
+.contact_ulw li:hover{
+   box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
+}
+.contact_word{
+  clear:both;
+  width:200px;
+  margin:0 auto;
+  text-align:center;
+  padding-top:40px;
+}
   #phones{
   display:block;
 }

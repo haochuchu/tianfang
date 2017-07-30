@@ -75,7 +75,7 @@ class Prize extends Component {
                                 </div>
                             })}
                         </div>
-                        <div className="contact">
+                        <div className="contact_box">
                             {this.foot.footer.map(function(foot,i){
                                     return (
                                             <div className="contact_tops">

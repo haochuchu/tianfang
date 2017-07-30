@@ -44,6 +44,11 @@
 		font-size:0.785rem;
 		margin-left:0rem;
 	}
+	.prize_design p{
+		margin-top:0.125rem;
+		margin-bottom:0.915rem;
+	}
+
 	.prize_box{
 		width:16rem;
 		height:221rem;

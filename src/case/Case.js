@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './case.css';
+import './case_phone.css';
 import $ from 'jquery';
 
 class Case extends Component {
@@ -65,7 +66,7 @@ class Case extends Component {
                 <div className="home_case" id="home"></div>
 
                 {/*content*/}
-                <div className="Main">
+                <div className="Main_box">
                     {this.state.pic_list.map(function(dd,i){
                         return <div>
                             <h1>{dd.after}</h1>
@@ -78,15 +79,15 @@ class Case extends Component {
                     })}
                     
                     {/*contact*/}
-                        <div className="contact">
+                        <div className="contact_box">
                             {this.foot.footer.map(function(foot,i){
                                     return (
-                                            <div className="contact_top">
+                                            <div className="contact_tops">
                                                 <img src={foot.foot_img}/>
                                             </div>
                                     )
                             })}
-                            <ul className="contact_ul">
+                            <ul className="contact_ulw">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>
                                 })}

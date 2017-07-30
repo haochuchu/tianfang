@@ -70,7 +70,7 @@ class Contact extends Component {
                 {/*content*/}
                 <div className="main_contact">
                     {/*contact*/}
-                    <div className="contact">
+                    <div className="contact_box">
                         {this.state.contact.map(function(foot,i){
                                 return <div>
                                         <div className="contact_tops">
