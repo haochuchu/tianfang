@@ -1,5 +1,5 @@
 @media screen and (max-width:414px){
-	*{
+*{
     margin:0; padding:0;
 }
 ul li{
@@ -9,9 +9,8 @@ body{
     overflow-x:hidden;
     background:#f0f0f0;
 }
-
-/* 定宽 */
-.fixed_newss{
+	/* 定宽 */
+.fixed_news{
     width:15rem;
     margin:0 auto;
 }
@@ -21,23 +20,19 @@ body{
     height: 10vh;
     background:#f0f0f0;
 }
-.fixed_newss{
-	width:15rem;
-	margin:0 auto;
-}
-.fixed_newss .system_word{
+.fixed_news .system_word{
   width:100%;
   margin:0;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.3rem;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
   color:#999;
-  margin-left:3.5rem;
-  margin-top:-1rem;
+  margin-left:0.3rem;
+  margin-top:0.6rem;
 }
-/* fixed_newss ul li*/
-.fixed_newss .system_box li{
+/* fixed_news ul li*/
+.fixed_news .system_box li{
   height:7.9227rem;
   width:15rem;
   background:#fff;
@@ -47,20 +42,20 @@ body{
   margin-right:0;
   margin-bottom:0.5rem;
 }
-.system_tops{
-  width:15rem;
+.system_top{
+   width:15rem;
   height:6.2222rem;
   overflow:hidden;
 }
-.system_tops img{
+.system_top img{
    width:15rem;
    height:6.2222rem;
 }
-.system_bots{
-  height:1.70048rem;
+.system_bot{
+   height:1.70048rem;
   line-height:1.70048rem;
 }
-.system_bots h5{
+.system_bot h5{
   float:left;
   margin-left:0.8rem;
   transition: all .4s ease;
@@ -70,17 +65,17 @@ body{
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
 }
-.fixed_newss ul li:hover .system_bots h5{
+.fixed_news ul li:hover .system_bot h5{
   color:#000;
   transition: all .4s ease;
 }
-.fixed_newss ul li:hover {
+.fixed_news ul li:hover {
   box-shadow: 0 0.772946rem 0.772946rem rgba(0,0,0,.2);
   transform:translateZ(0.154589rem);
   cursor:pointer;
   transition: all .4s ease;
 }
-.system_bots span{
+.system_bot span{
   float:right;
   margin-right:0.8rem;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
@@ -89,7 +84,14 @@ body{
   color:#999;
   font-weight: 400;
 }
-
+/* contact_top */
+.contact_top{
+  width:382px;
+  height:90px;
+  margin:0 auto;
+  clear:both;
+  padding-top:180px;
+}
 /* contact */
 .contact{
 	margin-left:-0.4rem;

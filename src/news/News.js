@@ -60,6 +60,7 @@ class News extends Component {
             <Router>
                 <div>
                     <Route path="/Prize" component={Prize}></Route>
+
                     <Route exact path="/News" render={()=>(
         			<div className="wrap">
         				<div className="show_top"></div>
@@ -113,6 +114,7 @@ class News extends Component {
                             <p id="backs">
                                 <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                             </p>
+
                             <p className="blocks">
                                 <img src="images/gotop.jpg" alt="" />
                             </p>

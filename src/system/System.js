@@ -75,15 +75,15 @@ class System extends Component {
                             <div className="show_bottom" id="show_news"></div>
                             <div className="home_system" id="home"></div>
                             {/*content*/}
-                            <div className="fixed_news">
+                            <div className="fixed_newss">
                                 <h2 className="system_word pros">PRODUCTS</h2>
                                 <ul className="system_box">
                                          {this.state.system.map(function(system,i){
                                                 return <Link key={i}  to={`/Gold?${system.id}`}><li className="db">
-                                                    <div className="system_top">
+                                                    <div className="system_tops">
                                                         <img src={system.system_img}/>
                                                     </div>
-                                                    <div className="system_bot">
+                                                    <div className="system_bots">
                                                         <h5>{system.system_word}</h5>
                                                         <span>{system.system_new}</span>
                                                     </div>
@@ -110,6 +110,9 @@ class System extends Component {
                                     </div>
                             </div>
                             <div className="Rt_top">
+                                <p id="phones">
+                                    <img src="images/phone.jpg" alt="" />
+                                </p>
                                 <p id="backs">
                                     <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                                 </p>
