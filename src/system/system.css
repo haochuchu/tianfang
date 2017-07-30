@@ -1,3 +1,4 @@
+/* reset */
 *{
     margin:0; padding:0;
 }
@@ -40,6 +41,7 @@ body{
   margin-right:20px;
   margin-bottom:20px;
 }
+/* system */
 .system_tops{
    width:520px;
   height:235px;
@@ -48,6 +50,7 @@ body{
 .system_tops img{
    width:520px;
 }
+/*  system_bots*/
 .system_bots{
   height:58px;
   line-height:58px;
@@ -62,6 +65,7 @@ body{
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
 }
+/*fixed_newss  */
 .fixed_newss ul li:hover .system_bots h5{
   color:#000;
   transition: all .4s ease;
@@ -72,6 +76,7 @@ body{
   cursor:pointer;
   transition: all .4s ease;
 }
+/* system */
 .system_bots span{
   float:right;
   margin-right:20px;
@@ -95,7 +100,7 @@ body{
   margin:0 auto;
   clear:both;
 }
-
+/*  contact_ul*/
 .contact_ul{
   width:200px;
   margin:0 auto;
@@ -142,6 +147,7 @@ body{
   font-size: 27px;
   color: #999;
 }
+/* phones */
 #phones{
     display:none;
 }

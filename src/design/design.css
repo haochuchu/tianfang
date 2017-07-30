@@ -1,3 +1,15 @@
+/* reset */
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+/* home_design */
 .home_design{
     width: 100vw;
     height: 80vh;
@@ -5,6 +17,7 @@
     background-size:100% 100%;
     background-attachment:fixed;
 }
+/* Main_design */
 .Main_design{
 	width:1094px; 
 	margin:0 auto;
@@ -22,17 +35,19 @@
     margin-top:-60px;
     margin-bottom:40px;
 }
-
+/* design */
 .design_img img{
 	background-size:100%;
 	width:100%;
 	margin-top:-5px;
 }
+/* contact_topw */
 .contact_topw{
 	width:382px; 
 	height:90px;
 	margin:180px auto 0;
 }
+/* phone */
 #phone{
 	diaplay:none;
 }

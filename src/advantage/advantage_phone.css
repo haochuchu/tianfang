@@ -9,9 +9,7 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
-
-
-
+/* home_adcantage */
 .home_advantage{
     width: 100vw;
     height:16.5rem;
@@ -19,12 +17,13 @@ body{
     background-size:135% 60%;
     background-attachment:fixed;
 }
-
+/* main_ad */
 .main_ad{
     width:14rem;
     margin:0 auto;
     margin-top:0rem;
 }
+/* title */
 .Title{
     width:100%;
     height:2.7536rem;
@@ -38,6 +37,7 @@ body{
     box-shadow: 0 0.7729rem 1.5458rem rgba(0,0,0,.1);
     margin-top:-2rem;
 }
+/* zero */
 .zero li{
     width:100%;
     background:#fff;
@@ -61,6 +61,7 @@ body{
 .zero li:nth-of-type(5){
     height:18.20289rem;
 }
+/* L */
 .L_img{
     width:100%;
     height:7.9227rem;
@@ -71,6 +72,7 @@ body{
     width:100%;
     height:7.9227rem;
 }
+/* R */
 .R_con{
     width:12.5217rem;
     height:9.62318rem;
@@ -99,7 +101,6 @@ body{
     font-weight: 400;
 }
 /* contact */
-
 .contact_ulw{
   width:200px;
   margin:0 auto;
@@ -130,6 +131,7 @@ body{
   text-align:center;
   padding-top:40px;
 }
+/* phone */
   #phones{
   display:block;
 }

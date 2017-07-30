@@ -1,3 +1,15 @@
+/* reset */
+*{
+   margin:0; padding:0;
+  }
+ul li{
+  list-style:none;
+}
+body{
+ overflow-x:hidden;
+ background:#f0f0f0;
+}
+/*  home_gold*/
 .home_gold{
     width: 100vw;
     height: 80vh;
@@ -5,6 +17,7 @@
     background-size:100% 100%;
     background-attachment:fixed;
 }
+/*Main_gold  */
 .Main_gold{
 	width:1094px; 
 	margin:0 auto;
@@ -23,6 +36,7 @@
     margin-top:-60px;
     margin-bottom:40px;
 }
+/* gold */
 .gold_img{
 	width:100%;
 	background:#fff;
@@ -33,6 +47,7 @@
 	width:100%;
 	margin-top:-5px;
 }
+/* phone */
 #phone{
 	display:none;
 }

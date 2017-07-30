@@ -9,7 +9,7 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
-
+/* home_about */
 .home_about{
   width: 100%;
   height: 13.458937198067632rem;
@@ -182,6 +182,7 @@ body{
   background:#fff;
   transition: all .4s ease; 
 }
+/* flia */
 .flia_left{
   display:none;
 }
@@ -244,7 +245,6 @@ body{
 	margin-bottom: 0.2rem;
 }
 /* contact */
-
 .contact_top{
     width:16rem;
     height:3.4782608695652173rem;
@@ -275,16 +275,18 @@ body{
   .contact_word{
     padding-top:-0rem;
   }
+  /* footer */
   .footer{
     margin-top:2.2rem;
   }
-  
+  /* Rt_top */
 .Rt_top{
   position:fixed;
   right:5px;
   bottom:5px;
   cursor:pointer;
 }
+/* phone */
 #phones{
   display:block;
 }

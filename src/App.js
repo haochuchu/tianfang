@@ -151,7 +151,6 @@ class App extends Component {
                             <Link to="/"><img id="img" src="images/logo.png" /></Link>
                         </div>
                         {/*navigator*/}
-
                         <div className="nav" id="nav">
                             <ul id="list">
                                 {this.state.nav.map(function(con,i){
@@ -163,9 +162,11 @@ class App extends Component {
                             </ul>
                         </div>
                     </div>
+                     {/*nav_btn*/}
                     <div className="nav_btn" id="nav_btn">
                         <span></span>
                     </div>
+                     {/*con*/}
                     <Route exact path="/" component={Start}></Route>
             		<Route path="/About" component={About}></Route>
             		<Route path="/Advantage" component={Advantage}></Route>
@@ -188,7 +189,6 @@ class App extends Component {
                     <Route path="/System" component={System}></Route>
                 {/*footer*/}
                 <div className="footer_box">
-
                 {this.state.footer.map(function(con,i){
                     return  <div key={i}>
                             <span>{con.copyright}</span>

@@ -92,6 +92,7 @@ class Prize extends Component {
 	render(){
 		return(
 			<div className="wrap">
+              {/*show*/}
 				<div className="show_top"></div>
                 <div className="show_bottom" id="show_news"></div>
                 <div className="home_news" id="home"></div>
@@ -115,6 +116,7 @@ class Prize extends Component {
                                 </div>
                             })}
                         </div>
+                          {/*contact_box*/}
                         <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                 return (
@@ -138,6 +140,7 @@ class Prize extends Component {
                             </div>
                         </div>
                     </div>
+                      {/*Rt_top*/}
                 <div className="Rt_top">
                     <p id="phones">
                         <img src="images/phone.jpg" alt="" />

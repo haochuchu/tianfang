@@ -163,6 +163,7 @@ class Start extends Component {
 
             <div className="wrap">
       	        <div className="home">
+                 {/*home*/}
                     <div className="home_one" id="home">
                         {this.state.animate_one.map(function(ani,i){
                             return (

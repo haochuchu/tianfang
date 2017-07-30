@@ -1,3 +1,4 @@
+/* reset */
 *{
    margin:0; padding:0;
   }
@@ -31,6 +32,7 @@ body{
   margin:0 auto;
 
 }
+/* prize */
 .prize{
   height:1512px;
    margin-top: 30px;
@@ -48,6 +50,7 @@ body{
   cursor:pointer;
   transition: all .4s ease;
 }
+/* prize_word */
 .prize_word{
   width:540px;
   height:186px;
@@ -73,6 +76,7 @@ body{
   margin-left:40px;
   margin-bottom:38px;
 }
+/* prize ul */
 .prize ul li:hover:hover h4{
   color:#000;
   transition:.5s;
@@ -86,6 +90,7 @@ body{
   margin-left:40px;
 
 }
+/*  prize_lore*/
 .prize_lore{
   width:540px;
   height:186px;
@@ -95,12 +100,14 @@ body{
 .prize_lore img{
   width:540px;
 }
+/* contact_top */
 .contact_top{
   width:382px;
   height:90px;
   margin:0 auto;
   clear:both;
 }
+/* phone */
 #phones{
     display:none;
   }

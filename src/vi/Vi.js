@@ -110,11 +110,10 @@ class Vi extends Component {
                     <Route path="/Case" component={Case}></Route>
                     <Route exact path="/vi" render={()=>(
                         <div className="wrap">
+                         {/*show*/}
                             <div className="show_top"></div>
                             <div className="show_bottom" id="showssss"></div>
                             <div className="home_vi" id="home"></div>
-
-
                             {/*content*/}
                             <div className="main_vi">
                                 <h1>近期案例</h1>
@@ -154,6 +153,7 @@ class Vi extends Component {
                                         </div>
                                     </div>
                             </div>
+                             {/*Rt_top*/}
                             <div className="Rt_top">
                                 <p id="phones">
                                     <img src="images/phone.jpg" alt="" />

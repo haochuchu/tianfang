@@ -100,11 +100,13 @@ class Gold extends Component {
 	render(){
 		return(
 			<div className="wrap">
+        {/*show*/}
 				<div className="show_top"></div>
                 <div className="show_bottom" id="showsss"></div>
                 <div className="home_gold" id="home"></div>
 
                 {/*content*/}
+                {/*Main_gold*/}
                 <div className="Main_gold">
                     {this.state.system.map(function(gg,i){
                         return <div>
@@ -141,6 +143,7 @@ class Gold extends Component {
                             </div>
                         </div>
                 </div>
+                {/*Rt_top*/}
                 <div className="Rt_top">
                     <p id="phones">
                         <img src="images/phone.jpg" alt="" />

@@ -1,3 +1,4 @@
+/* reset */
 *{
    margin:0; padding:0;
   }
@@ -8,7 +9,7 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
-
+/* home_about */
 .home_about{
  width: 100vw;
   height: 80vh;
@@ -100,6 +101,7 @@ body{
      margin-top:30px;
      line-height:0;
 }
+/*  grow_all*/
 .grow_all{
 	width:529px;
 	height:283px;
@@ -138,6 +140,7 @@ body{
 .interact img{
   width:1060px;
 }
+/*  interact lb*/
 .interact{width:1060px; overflow:hidden; position:relative;}
 .interact .lb{width:7413px; overflow:hidden;}
 .interact .lb li{width:1060px; overflow:hidden; float:left;}
@@ -164,6 +167,7 @@ body{
 .interact:hover  .LBtn{
   left:10px;
 }
+/* fliament_right */
 .fliament_right{
   width:12px;
   height:2.8px;
@@ -184,6 +188,7 @@ body{
   background:#fff;
   transition: all .4s ease; 
 }
+/* flia */
 .flia_left{
   width:284px;
   height:1px;
@@ -200,6 +205,7 @@ body{
   bottom:86px;
   right:0;
 }
+/* car */
 .car{
   width: 71px;
     position: absolute;
@@ -264,7 +270,7 @@ body{
   margin:0 auto;
   clear:both;
 }
-
+/* contact_ul */
 .contact_ul{
   width:200px;
   margin:0 auto;
@@ -288,6 +294,7 @@ body{
 .contact_ul li:hover{
    box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
 }
+/* contact_word */
 .contact_word{
   clear:both;
   width:200px;
@@ -311,13 +318,14 @@ body{
   font-size: 27px;
   color: #999;
 }
-
+/* Rt_top */
 .Rt_top{
   position:fixed;
   right:5px;
   bottom:5px;
   cursor:pointer;
 }
+/* phones */
 #phones{
   display:none;
 }
