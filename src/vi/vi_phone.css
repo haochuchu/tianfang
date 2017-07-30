@@ -1,4 +1,15 @@
 @media screen and (max-width:414px){
+  *{
+    margin:0; padding:0;
+}
+ul li{
+    list-style:none;
+}
+body{
+    overflow-x:hidden;
+    background:#f0f0f0;
+}
+/* home_vi*/
 .home_vi{
     width: 100vw;
     height:15.5rem;
@@ -7,6 +18,7 @@
     background-position:center 1%;
     background-attachment:fixed;
 }
+/* main_vi */
 .main_vi{
 	width:15rem; 
 	margin:0 auto;
@@ -21,10 +33,12 @@
     font-weight: 400;
     color:#999;
 }
+/* img_list */
 .img_list {
 	width:100%;
 	height:2100px;
 }
+/* img_list li */
 .img_list li{
 	float:left;
 	width:15rem; 
@@ -69,6 +83,7 @@
 .contact{
 	margin-left:0.5rem;
 }
+/*contact_top  */
 .contact_top{
     width:16rem;
     height:3.4782608695652173rem;
@@ -87,6 +102,7 @@
     width:10.76328502415459rem;
     height:2.9782608695652173rem;
   }
+  /* contact_ul */
   .contact_ul{
     width:14.067632850241546rem;
     margin:0 auto;
@@ -99,9 +115,11 @@
   .contact_word{
     padding-top:-0rem;
   }
+  /* footer */
   .footer{
     margin-top:2.2rem;
   }
+  /* phones */
   #phones{
   display:block;
 }

@@ -1,3 +1,4 @@
+/* reset */
 *{
    margin:0; padding:0;
   }
@@ -8,7 +9,7 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
-
+/*  prizes_box*/
 .prizes_box{
 	width:1080px;
 	overflow:hidden;
@@ -42,11 +43,13 @@ body{
 	box-shadow: 0 20px 40px rgba(0,0,0,.1);
 	background:#fff;
 }
+/* top_prize */
 .top_prize{
 	height:108px;
 	border-bottom: 1px solid #f0f0f0;
 	line-height:108px;
 }
+/* h_word */
 .h_word{
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-size: 24px;
@@ -56,12 +59,14 @@ body{
     border-bottom:1px solid #eee;
     line-height:100px;
 }
+/* prize_design */
 .prize_design p{
 	text-align:left;
 	padding:40px;
 	color:#000;
 	line-height:26px;
 }
+/* printAll */
 .printAll .print_one{
 	width:680px;
 	height:425px;
@@ -69,6 +74,7 @@ body{
 	margin-top:2px;
 	margin-left:200px;
 }
+/* contact_word */
 .contact_word .lights{
   font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 300;
@@ -77,6 +83,7 @@ body{
   font-size: 27px;
   color: #999;
 }
+/* phone */
 #phone{
 	display:none;
 }

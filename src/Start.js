@@ -81,7 +81,7 @@ class Start extends Component {
 
             <div className="wrap">
       	        <div className="home">
-                
+                 {/*home*/}
                     <div className="home_one" id="home">
                         <div className="animate animate_s">
                             <h1>ELITE</h1>

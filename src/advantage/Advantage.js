@@ -63,6 +63,7 @@ class Advantage extends Component {
 	render(){
 		return(
 			<div className="wrap">
+             {/*show*/}
 				<div className="show_top"></div>
                 <div className="show_bottom" id="showsss"></div>
                 <div className="home_advantage" id="home"></div>
@@ -96,6 +97,7 @@ class Advantage extends Component {
                             </div>
                         </div>
                 </div>
+                 {/*Rt_top*/}
                 <div className="Rt_top">
                     <p id="phones">
                         <img src="images/phone.jpg" alt="" />

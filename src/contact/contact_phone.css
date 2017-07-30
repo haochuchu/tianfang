@@ -9,6 +9,7 @@
 	 overflow-x:hidden;
 	 background:#f0f0f0;
 	}
+	/*  home_contact*/
 	.home_contact{
 	    width: 100vw;
 	    height: 50vh;
@@ -16,11 +17,13 @@
 	    background-size:130% 85%;
 	    background-position:right top;
 	}
+	/* main_contact */
 	.main_contact{
 	    width:16rem;
 	    margin:0 auto;
 	    
 	}
+	/* contact */
 	.contact{
 		width:16rem;
 	    margin:0 auto;
@@ -64,6 +67,7 @@
 		margin-top:0.58rem;
 		padding-top:0rem;
 	}
+	/* phone */
 	#phone{
 		display:block;
 	}

@@ -198,6 +198,7 @@ class About extends Component {
                  {/*content*/}
                 <div className="about_content">
                     <div className="fixed_box">
+                     {/*brand*/}
                         {this.state.brand.map(function(brand,i){
                                     return (
                                         <div className="brand">
@@ -206,12 +207,14 @@ class About extends Component {
                                         </div>
                                     )
                                 })}
+                         {/*brand img*/}
                         {this.state.brand.map(function(brand,i){
                                     return ( <div className="character" style={{"border":"none"}}> 
                                             <img src={brand.img} alt='' />
                                         </div>
                                     )
                                 })}
+                         {/*grow*/}
                         <div className="grow">
                             {this.state.grow.map(function(grow,i){
                                         return (  
@@ -222,6 +225,7 @@ class About extends Component {
                                             </div>
                                         )
                                     })}
+                             {/* grow img*/}
                             {this.state.grow.map(function(grow,i){
                                         return (  
                                             <div className="grow_all">
@@ -230,6 +234,7 @@ class About extends Component {
                                         )
                                     })}
                         </div>
+                         {/*journey*/}
                        <div className="journey">
                                 {this.state.journey.map(function(journey,i){
                                         return (  
@@ -241,6 +246,7 @@ class About extends Component {
                                         )
                                     })}
                        </div>
+                          {/*interact lb*/}
                        <div className="interact">
                            <ul className="lb">
                            {/*{this.state.carousel.map(function(ss,i){
@@ -264,6 +270,7 @@ class About extends Component {
                             </div>
                             <div className="flia_right"></div>
                        </div>
+                       {/*made*/}
                        <div className="made">
                             {this.state.made.map(function(made,i){
                                         return (  
@@ -277,6 +284,7 @@ class About extends Component {
                        </div>
                     </div>
                 </div>
+                 {/*contact_box*/}
                 <div className="contact_box">
                             {this.foot.footer.map(function(foot,i){
                                     return (
@@ -285,17 +293,19 @@ class About extends Component {
                                             </div>
                                     )
                               })};
+                             {/*contact_uls*/}
                              <ul className="contact_uls">
                                 {this.foot.listAll.map(function(list,i){
                                     return <li><a><img src={list.list_img}/></a></li>
                                 })}
                              </ul>
-                             
+                             {/*contact_word*/}
                             <div className="contact_word">
                                 <h5>HOT LINE</h5>
                                 <h3 className="light">400·8167·995</h3>
                             </div>
                 </div>
+                  {/*Rt_top*/}
                 <div className="Rt_top">
                     <p id="phones">
                         <img src="images/phone.jpg" alt="" />

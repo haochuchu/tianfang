@@ -9,9 +9,11 @@
 	 overflow-x:hidden;
 	 background:#f0f0f0;
 	}
+	/* home_news */
 	.home_news{
 		height:3.0917874396135265rem;
 	}
+	/*prizes_box  */
 	.prizes_box{
 		margin:0rem;
 		width:16rem;
@@ -27,6 +29,7 @@
 	    text-align:center;
 	    margin-top:0.268rem;
 	}
+	/* p */
 	.prizes_box p{
 	    cursor: default;
 	    height:0.8115942028985508rem;
@@ -44,17 +47,19 @@
 		font-size:0.785rem;
 		margin-left:0rem;
 	}
+	/*  prize_design p*/
 	.prize_design p{
 		margin-top:0.125rem;
 		margin-bottom:0.915rem;
 	}
-
+	/* prize_box */
 	.prize_box{
 		width:16rem;
 		height:221rem;
 		box-shadow: 0 20px 40px rgba(0,0,0,.1);
 		background:#fff;
 	}
+	/*prize_design  */
 	.prize_design{
 		width:16rem;
 		margin:0 auto;
@@ -65,6 +70,7 @@
 		color:#000;
 		text-align:left;
 	}
+	/* printAll */
 	.printAll{
 		width:14.454106280193237rem;
 		margin:0 auto;
@@ -77,11 +83,13 @@
 		margin-top:0.07729468599033816rem;
 		margin-left:0rem;
 	}
+	/* print_one */
 	.print_one li img{
 		width:49.468599033816425rem;
 		height:28.985507246376812rem;
 		float:left;
 	}
+	/* contact_uls */
 	.contact_tops{
 		margin-top:0.7857rem;
 	}
@@ -95,6 +103,7 @@
 		width:1.5458937198067633rem;
 		height:1.5458937198067633rem;
 	}
+	/* phone */
 	#phone{
 		display:block;
 	}

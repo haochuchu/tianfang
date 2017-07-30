@@ -21,6 +21,7 @@ body{
     height: 20vh;
     background:#f0f0f0;
 }
+/* fixed_newss */
 .fixed_newss{
 	width:15rem;
 	margin:0 auto;
@@ -47,6 +48,7 @@ body{
   margin-right:0;
   margin-bottom:0.5rem;
 }
+/* system */
 .system_tops{
   width:15rem;
   height:6.2222rem;
@@ -70,6 +72,7 @@ body{
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
 }
+/*  fixed_newss*/
 .fixed_newss ul li:hover .system_bots h5{
   color:#000;
   transition: all .4s ease;
@@ -94,13 +97,14 @@ body{
 .contact{
 	margin-left:-0.4rem;
 }
+/* contact_top */
 .contact_top{
   width:14.76328rem;
   height:3.478260rem;
   margin:0 auto;
   clear:both;
 }
-
+/* contact_ul */
 .contact_ul{
   width:7.7294rem;
   margin:0 auto;
@@ -124,6 +128,7 @@ body{
 .contact_ul li:hover{
    box-shadow:0 0 0.1932rem #ccc,0px 0px 0.1932rem #ccc,0 0px 0.30917rem #999; 
 }
+/* contact_word */
 .contact_word{
   clear:both;
   width:7.729468rem;
@@ -147,6 +152,7 @@ body{
   font-size: 1.04346rem;
   color: #999;
 }
+/* phones */
 #phones{
     display:block;
 }
