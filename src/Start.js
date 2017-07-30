@@ -9,25 +9,107 @@ class Start extends Component {
     constructor(){
         super();
         this.state={
-            bundle:[]
+            bundle:[],
+            animate_one:[],
+            animate_two:[],
+            animate_three:[],
+            hot_line:[],
+            message:[],
+            con_img:[]
         }
-        this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
-        };
-    };
+    }
     componentDidMount(){
-     $.ajax({
-                type:"post",
-                url:"http://localhost:8100/tianfang/bundle",
-                async:"true",
-                success:function(ss){
-                    this.setState({
-                        bundle:ss
-                    })
-                }.bind(this),
-                error:function(){
-                    alert('失败了');
-                }
-            })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/bundle",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    bundle:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/animate_one",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    animate_one:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/animate_two",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    animate_two:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/animate_three",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    animate_three:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/hot_line",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    hot_line:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/message",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    message:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/con_img",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    con_img:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         document.addEventListener('scroll', this.handleScroll.bind(this));
 
         $(function() {
@@ -81,30 +163,42 @@ class Start extends Component {
 
             <div className="wrap">
       	        <div className="home">
-                
                     <div className="home_one" id="home">
-                        <div className="animate animate_s">
-                            <h1>ELITE</h1>
-                            <h4>提供品牌策略+设计+亮相落地的综合服务</h4>
-                            <h6>- READ MORE -</h6>
-                            <p></p>
-                        </div>
+                        {this.state.animate_one.map(function(ani,i){
+                            return (
+                                    <div className="animate animate_s">
+                                        <h1>{ani.life}</h1>
+                                        <h4>{ani.serves}</h4>
+                                        <h6>{ani.read}</h6>
+                                        <p></p>
+                                    </div>
+                            )
+                        })}
                     </div>
                     <div className="home_two" id="home">
-                        <div className="animate animate_o">
-                            <h1>PARTNER</h1>
-                            <h4>高效专业的团队 是您可靠的合作伙伴</h4>
-                            <h6>- READ MORE -</h6>
-                            <p></p>
-                        </div>
+                        {this.state.animate_two.map(function(ani,i){
+                            return (
+                                    <div className="animate animate_o">
+                                        <h1>{ani.life}</h1>
+                                        <h4>{ani.serves}</h4>
+                                        <h6>{ani.read}</h6>
+                                        <p></p>
+                                    </div>
+                            )
+                        })}
+                        
                     </div>
                     <div className="home_three" id="home">
-                        <div className="animate">
-                            <h1>Congratulations</h1>
-                            <h4>德国if大奖    红点传达设计大奖</h4>
-                            <h6>- READ MORE -</h6>
-                            <p></p>
-                        </div>
+                        {this.state.animate_three.map(function(ani,i){
+                            return (
+                                    <div className="animate">
+                                        <h1>{ani.life}</h1>
+                                        <h4>{ani.serves}</h4>
+                                        <h6>{ani.read}</h6>
+                                        <p></p>
+                                    </div>
+                            )
+                        })}
                     </div>
                 </div>
                 {/*content*/}
@@ -126,23 +220,27 @@ class Start extends Component {
                             </ul>
                         </div>
                        
-                         {/*contact*/}
+                        {/*contact*/}
                         <div className="contact_box">
-                            {this.foot.footer.map(function(foot,i){
+                            {this.state.con_img.map(function(foot,i){
                                     return (
-                                            <div className="contact_tops">
-                                                <img src={foot.foot_img}/>
-                                            </div>
+                                        <div className="contact_tops">
+                                            <img src={foot.img} alt='' />
+                                        </div>
                                     )
                             })}
                             <ul className="contact_uls" id="contact_ul">
-                                {this.foot.listAll.map(function(list,i){
-                                    return <li><a><img src={list.list_img}/></a></li>
+                                {this.state.message.map(function(list,i){
+                                    return <li><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
-                                <h5>HOT LINE</h5>
-                                <h3 className="light">400·8167·995</h3>
+                                {this.state.hot_line.map(function(hot,i){
+                                    return <div>
+                                        <h5>{hot.hot}</h5>
+                                        <h3 className="light">{hot.line}</h3>
+                                    </div>
+                                })}
                             </div>
                         </div>
                     </div>

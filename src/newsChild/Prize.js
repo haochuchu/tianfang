@@ -8,10 +8,11 @@ class Prize extends Component {
     constructor(){
         super();
         this.state={
-            prize:[]
+            prize:[],
+            message:[],
+            hot_line:[],
+            con_img:[]
         };
-         this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
-        }
     };
 	componentDidMount(){
         var id=window.location.href.split('?')[1];
@@ -24,6 +25,45 @@ class Prize extends Component {
                         prize:e
                     })
                 }.bind(this)
+            })
+            $.ajax({
+                type:"post",
+                url:"http://localhost:8100/tianfang/message",
+                async:"true",
+                success:function(ss){
+                    this.setState({
+                        message:ss
+                    })
+                }.bind(this),
+                error:function(){
+                    alert('失败了');
+                }
+            })
+            $.ajax({
+                type:"post",
+                url:"http://localhost:8100/tianfang/hot_line",
+                async:"true",
+                success:function(ss){
+                    this.setState({
+                        hot_line:ss
+                    })
+                }.bind(this),
+                error:function(){
+                    alert('失败了');
+                }
+            })
+            $.ajax({
+                type:"post",
+                url:"http://localhost:8100/tianfang/con_img",
+                async:"true",
+                success:function(ss){
+                    this.setState({
+                        con_img:ss
+                    })
+                }.bind(this),
+                error:function(){
+                    alert('失败了');
+                }
             })
         //回到顶部
         $(function(){
@@ -76,21 +116,25 @@ class Prize extends Component {
                             })}
                         </div>
                         <div className="contact_box">
-                            {this.foot.footer.map(function(foot,i){
-                                    return (
-                                            <div className="contact_tops">
-                                                <img src={foot.foot_img}/>
-                                            </div>
-                                    )
-                            })};
+                            {this.state.con_img.map(function(foot,i){
+                                return (
+                                    <div className="contact_tops">
+                                        <img src={foot.img} alt='' />
+                                    </div>
+                                )
+                            })}
                             <ul className="contact_uls">
-                                {this.foot.listAll.map(function(list,i){
-                                    return <li className="li_box"><a><img src={list.list_img}/></a></li>
+                                {this.state.message.map(function(list,i){
+                                    return <li><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
-                                <h5>HOT LINE</h5>
-                                <h3 className="lights">400·8167·995</h3>
+                                {this.state.hot_line.map(function(hot,i){
+                                    return <div>
+                                        <h5>{hot.hot}</h5>
+                                        <h3 className="light">{hot.line}</h3>
+                                    </div>
+                                })}
                             </div>
                         </div>
                     </div>

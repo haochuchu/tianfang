@@ -10,13 +10,13 @@ class Vi extends Component {
     constructor(){
         super();
         this.state={
-            pic_list:[]
-        };
-        this.foot={"footer":[{"foot_img":"images/slogan.png"}],"listAll":[{"list_img":"images/footer_icon_01.png"},{"list_img":"images/footer_icon_02.png"},{"list_img":"images/footer_icon_03.png"}]
+            pic_list:[],
+            message:[],
+            hot_line:[],
+            con_img:[]
         };
     };
 	componentDidMount(){
-
         $.ajax({
             type:"post",
             url:"http://localhost:8100/tianfang/pic_list",
@@ -33,6 +33,46 @@ class Vi extends Component {
                 alert('失败了');
             }
         })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/message",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    message:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/hot_line",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    hot_line:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/con_img",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    con_img:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+
             $('.blocks').click(function(){
                 $('body').animate({scrollTop:0},function(){
                     return false;
@@ -92,21 +132,25 @@ class Vi extends Component {
                                 </ul>
                                 {/*contact*/}
                                     <div className="contact_box">
-                                        {this.foot.footer.map(function(foot,i){
-                                                return (
-                                                        <div className="contact_tops">
-                                                            <img src={foot.foot_img}/>
-                                                        </div>
-                                                )
-                                        })};
+                                        {this.state.con_img.map(function(foot,i){
+                                            return (
+                                                <div className="contact_tops">
+                                                    <img src={foot.img} alt='' />
+                                                </div>
+                                            )
+                                        })}
                                         <ul className="contact_ulw">
-                                            {this.foot.listAll.map(function(list,i){
-                                                return <li><a><img src={list.list_img}/></a></li>
+                                            {this.state.message.map(function(list,i){
+                                                return <li><a><img src={list.imgs} alt='' /></a></li>
                                             })}
                                         </ul>
                                         <div className="contact_word">
-                                            <h5>HOT LINE</h5>
-                                            <h3 className="light">400·8167·995</h3>
+                                            {this.state.hot_line.map(function(hot,i){
+                                                return <div>
+                                                    <h5>{hot.hot}</h5>
+                                                    <h3 className="light">{hot.line}</h3>
+                                                </div>
+                                            })}
                                         </div>
                                     </div>
                             </div>
@@ -130,5 +174,4 @@ class Vi extends Component {
 		)
 	}
 }
-
 export default Vi;
