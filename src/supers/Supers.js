@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './supers.css';
+import './supers_phone.css';
 import Design from './../design/Design';
 import './../design/design.css';
 import $ from 'jquery';
@@ -109,6 +110,9 @@ class Supers extends Component {
                                     </div>
                             </div>
                             <div className="Rt_top">
+                                <p id="phones">
+                                    <img src="images/phone.jpg" alt="" />
+                                </p>
                                 <p id="backs">
                                     <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                                 </p>

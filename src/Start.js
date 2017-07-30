@@ -78,8 +78,10 @@ class Start extends Component {
     render() {
         return (
         <Router>
+
             <div className="wrap">
       	        <div className="home">
+                
                     <div className="home_one" id="home">
                         <div className="animate animate_s">
                             <h1>ELITE</h1>
@@ -145,6 +147,7 @@ class Start extends Component {
                         </div>
                     </div>
                 </div>
+
            </div>
         </Router>
     );

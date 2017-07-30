@@ -10,7 +10,7 @@ body{
 }
 
 /* 定宽 */
-.fixed_news{
+.fixed_newss{
     width:1080px;
     margin:0 auto;
 }
@@ -20,7 +20,7 @@ body{
     height: 20vh;
     background:#f0f0f0;
 }
-.fixed_news .system_word{
+.fixed_newss .system_word{
   width:280px;
   margin:40px auto 30px;
   margin-bottom: 30px;
@@ -29,8 +29,8 @@ body{
   font-weight: 400;
   color:#999;
 }
-/* fixed_news ul li*/
-.fixed_news .system_box li{
+/* fixed_newss ul li*/
+.fixed_newss .system_box li{
   width:520px;
   height:293px;
   background:#fff;
@@ -40,19 +40,19 @@ body{
   margin-right:20px;
   margin-bottom:20px;
 }
-.system_top{
+.system_tops{
    width:520px;
   height:235px;
   overflow:hidden;
 }
-.system_top img{
+.system_tops img{
    width:520px;
 }
-.system_bot{
+.system_bots{
   height:58px;
   line-height:58px;
 }
-.system_bot h5{
+.system_bots h5{
   float:left;
   margin-left:20px;
   transition: all .4s ease;
@@ -62,17 +62,17 @@ body{
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 400;
 }
-.fixed_news ul li:hover .system_bot h5{
+.fixed_newss ul li:hover .system_bots h5{
   color:#000;
   transition: all .4s ease;
 }
-.fixed_news ul li:hover {
+.fixed_newss ul li:hover {
   box-shadow: 0 20px 20px rgba(0,0,0,.2);
   transform:translateZ(4px);
   cursor:pointer;
   transition: all .4s ease;
 }
-.system_bot span{
+.system_bots span{
   float:right;
   margin-right:20px;
   font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
@@ -141,4 +141,7 @@ body{
   margin-top:5px;
   font-size: 27px;
   color: #999;
+}
+#phones{
+    display:none;
 }
