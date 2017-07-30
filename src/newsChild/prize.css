@@ -77,3 +77,6 @@ body{
   font-size: 27px;
   color: #999;
 }
+#phone{
+	display:none;
+}

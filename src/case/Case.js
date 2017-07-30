@@ -99,6 +99,9 @@ class Case extends Component {
                         </div>
                 </div>
                 <div className="Rt_top">
+                    <p id="phones">
+                        <img src="images/phone.jpg" alt="" />
+                    </p>
                     <p id="backs">
                         <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
                     </p>

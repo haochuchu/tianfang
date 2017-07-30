@@ -13,22 +13,24 @@
 }
 .Main_design h1{
     font-size:0.591304347826087rem;
+    box-shadow: 0 0 0 0;
     text-align:center;
 	margin:0 auto;
-	padding:0.158rem;
-	width:85%;
+	padding:0.5rem;
+	width:92.5%;
 	line-height:1.2rem;
 	background:#fff;
+	margin-bottom:0.2rem;
 }
 .design_img{
-	
 	margin-top:1.258rem;
+	box-shadow: 0 20px 20px rgba(0,0,0,.1);
 }
 .Main_design{
 	width:87%;
 	margin:0 auto;
-	background:#fff;
-	box-shadow: 0 20px 40px rgba(0,0,0,.1);
+	background:transparent;
+	box-shadow: 0 0 0 0;
 }
 .Main_design img{
 	background-size:100%;
@@ -36,7 +38,7 @@
 	margin-top:-5px;
 }
 .contact_topw{
-	padding-top:0rem;
+	padding-top:1.5rem;
 	margin:0 auto;
 	width:11.246376811594203rem;
 	height:2.6280193236714977rem;
@@ -44,5 +46,8 @@
 .contact_topw img{
 	width:11.246376811594203rem;
 	height:2.6280193236714977rem;
+}
+#phone{
+	display:block;
 }
 }

@@ -18,7 +18,7 @@ body{
 /* banner */
 .home_system{
     width: 100vw;
-    height: 10vh;
+    height: 20vh;
     background:#f0f0f0;
 }
 .fixed_newss{
@@ -34,7 +34,7 @@ body{
   font-weight: 400;
   color:#999;
   margin-left:3.5rem;
-  margin-top:-1rem;
+  margin-top:1rem;
 }
 /* fixed_newss ul li*/
 .fixed_newss .system_box li{

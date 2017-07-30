@@ -38,7 +38,7 @@
 	.contact_tops img{
 		width:11.246376811594203rem;
 		height:2.6508212560386473rem;
-		margin-left:1.875rem;
+		margin-left:1.5rem;
 	}
 	.c_word{
 		width:14.067632850241546rem;
@@ -63,6 +63,9 @@
 	.contact_uls{
 		margin-top:0.58rem;
 		padding-top:0rem;
+	}
+	#phone{
+		display:block;
 	}
 	
 }

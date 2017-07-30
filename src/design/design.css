@@ -22,13 +22,17 @@
     margin-top:-60px;
     margin-bottom:40px;
 }
-.Main_design{
-	width:100%;
-	background:#fff;
-	box-shadow: 0 20px 40px rgba(0,0,0,.1);
-}
+
 .design_img img{
 	background-size:100%;
 	width:100%;
 	margin-top:-5px;
+}
+.contact_topw{
+	width:382px; 
+	height:90px;
+	margin:180px auto 0;
+}
+#phone{
+	diaplay:none;
 }
