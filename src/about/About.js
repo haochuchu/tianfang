@@ -211,20 +211,27 @@ class About extends Component {
     } 
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
-        if(document.body.scrollTop>=h){
+        if(window.screen.width>414){
+            if(document.body.scrollTop>=h){ 
+                document.getElementById("head").style.width='100vw';
+                document.getElementById("head").style.background='#fff';
+                document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                document.getElementById("img").style.marginTop='-80px';
+                document.getElementById("nav").className='navs';
+                
+            }
+            else{
+                document.getElementById("head").style.width='100vw';
+                document.getElementById("head").style.background='transparent';
+                document.getElementById("head").style.boxShadow='';
+                document.getElementById("img").style.marginTop='';
+                document.getElementById("nav").className='nav';
+            }
+        }else if(window.screen.width<=414){
             document.getElementById("head").style.width='100vw';
             document.getElementById("head").style.background='#fff';
-            document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+            document.getElementById("head").style.height='10vh';
             document.getElementById("img").style.marginTop='-80px';
-            document.getElementById("nav").className='navs';
-            
-        }
-        else{
-            document.getElementById("head").style.width='100vw';
-            document.getElementById("head").style.background='transparent';
-            document.getElementById("head").style.boxShadow='';
-            document.getElementById("img").style.marginTop='';
-            document.getElementById("nav").className='nav';
         }
     }
 	render(){

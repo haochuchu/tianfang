@@ -195,6 +195,9 @@ body{
   margin-top:-80px;
   transition:all .4s ease;
 }
+.logo:hover{
+  background:#fff;
+}
 /* nav */
 .nav{
   line-height:80px;
@@ -337,7 +340,9 @@ body{
   font-size:14px;
   color:#333;
 }
-
+.back_btn{
+  display:none;
+}
 /* content */
 .fixedBox{
   width:1061px;

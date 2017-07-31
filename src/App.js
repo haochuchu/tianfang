@@ -41,26 +41,28 @@ class App extends Component {
                 this.setState({
                     first_page:pp
                 })
-                $("#first_page a,#logo").click(function (){
-                    (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
-                    var indexs=$('first_page').children('a').index();
-                    if (indexs==0) {
-                        if(num==0){
-                            first_page.style.transform="perspective(800px) rotateX(0)";
-                            first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-                            num++;
-                            return;
-                        }else if(num==1){
+                if(window.screen.width>414){
+                    $("#first_page a,#logo").click(function (){
+                        (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+                        var indexs=$('first_page').children('a').index();
+                        if (indexs==0) {
+                            if(num==0){
+                                first_page.style.transform="perspective(800px) rotateX(0)";
+                                first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                                num++;
+                                return;
+                            }else if(num==1){
+                                first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                                num=0;
+                                return;
+                            }  
+                        } else{
                             first_page.style.transform="perspective(800px) rotateX(-90deg)";
                             num=0;
                             return;
-                        }  
-                    } else{
-                        first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                        num=0;
-                        return;
-                    };
-                })
+                        };
+                    })
+                }
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -74,26 +76,50 @@ class App extends Component {
                 this.setState({
                     nav:ss
                 })
-                 $("#list a").click(function (){
-                (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
-                var index=$(this).index();
-                if (index==0) {
-                    if(num==0){
-                        first_page.style.transform="perspective(800px) rotateX(0)";
-                        first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
-                        num++;
-                        return;
-                    }else if(num==1){
-                        first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                        num=0;
-                        return;
-                    }  
-                }else{
-                    first_page.style.transform="perspective(800px) rotateX(-90deg)";
-                    num=0;
-                    return;
-                };
-            })
+                if(window.screen.width>414){
+                     $("#list a").click(function (){
+                        (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+                        var index=$(this).index();
+                        if (index==0) {
+                            if(num==0){
+                                first_page.style.transform="perspective(800px) rotateX(0)";
+                                first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                                num++;
+                                return;
+                            }else if(num==1){
+                                first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                                num=0;
+                                return;
+                            }  
+                        }else{
+                            first_page.style.transform="perspective(800px) rotateX(-90deg)";
+                            num=0;
+                            return;
+                        };
+                    })
+                }else if(window.screen.width<=414){
+                    $("#list a").click(function (){
+                        (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
+                        var index=$(this).index();
+                        if (index==0) {
+                            $(".nav,.navs").show()
+                            first_page.style.left="0";
+                            first_page.style.opacity="1";
+                            first_page.style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                            num++;
+                            return;
+                            
+                        }
+                    })
+                    $("#first_page").click(function (){
+                            $(".nav,.navs").show()
+                            $(".nav_btn span").addClass("to") ;
+                        first_page.style.transform="none";
+                        first_page.style.left="100%";
+                        first_page.style.opacity="1";
+                    })
+                
+                }
             }.bind(this),
             error:function(){
                 alert('失败了');
@@ -115,44 +141,26 @@ class App extends Component {
         var list=document.getElementById("list");
         var first_page=document.getElementById("first_page");
         var num=0;
-
-         
         if(window.screen.width<=414){
             $(".nav_btn").click(function (){
                 $(".nav_btn span").toggleClass("to");
+                $('.nav,.navs').stop().slideToggle();
             })
-            $('.nav_btn').click(function(){
-                $('.nav').slideToggle();
-                $('.nav').css({'display':'block'});
-            })
+            // $('.nav_btn').click(function(){
+            // })
             $('.nav ul').click(function(){
                 $(".nav_btn span").removeClass("to") ;
-                $('.nav').hide();
+                $('.nav,.navs').hide();
             })
             first_page.onclick=function (){
                 first_page.style.transform="perspective(800px) rotateX(-90deg)";
                     num=0;
                     return;
             }
-             
         } 
-        document.addEventListener('scroll', this.handleScroll.bind(this));
-
     } 
 
-    handleScroll=function (e) {
-        var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
-        if(document.body.scrollTop>=h){ 
-            $(".nav_btn span").addClass("span") ;
-            $(".nav_btn").click(function (){
-                $(".nav_btn span").css({'display':'block'});
-                $('.nav #list').slideToggle();
-            })
-        }
-        else{
-            $(".nav_btn span").removeClass("span") ;
-        }
-    }
+    
     render() {
         return (
         <Router>
@@ -192,8 +200,9 @@ class App extends Component {
                     <Route path="/Design" component={Design}></Route>
                     <Route path="/Prize" component={Prize}></Route>
                     <Route path="/Supers" component={Supers}></Route>
-                    {/*CASE°¸Àý*/}
+                    {/*CASE 案例*/}
                     <ul className="first_page" id="first_page">
+                        <p className="back_btn" id="back_btn">BACK</p>
                         {this.state.first_page.map(function(con,i){
                                     return <Link key={i}  to={con.link}><li><a><span><img src={con.pic} /></span>
                                 <span>{con.sTitle}</span></a>
