@@ -119,7 +119,7 @@ class Gold extends Component {
                             <h1>{gg.con}</h1>
                             <div className="design_img">
                                 {gg.more.split('?').map(function(oo,i){
-                                    return <img src={'http://localhost:8100/images/'+oo} alt="" />
+                                    return <img key={i} src={'http://localhost:8100/images/'+oo} alt="" />
                                 })}
                             </div>    
                         </div>

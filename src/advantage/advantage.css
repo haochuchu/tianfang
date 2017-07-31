@@ -55,7 +55,7 @@ body{
     height:417px;
 }
 .zero li:nth-of-type(4){
-    height:472px;
+    height:500px;
 }
 .zero li:nth-of-type(5){
     height:453px;
@@ -73,8 +73,8 @@ body{
 /* R */
 .R_con{
     width:237px;
-    height:349px;
-    padding:40px;
+    height:calc(100% - 60px);
+    padding:30px 40px;
     border-left: 1px solid #f0f0f0;
     float:left;
 }

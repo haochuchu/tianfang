@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './App.css';
 import $ from 'jquery';
+import Vi from './vi/Vi';
+import About from './about/About';
+import System from './system/System'
+import Supers from './supers/Supers';
 
 
 
@@ -165,93 +169,104 @@ class Start extends Component {
     render() {
         return (
         <Router>
+            <div>
+                <Route path="/About" component={About}></Route>
+                <Route path="/Vi" component={Vi}></Route>
+                <Route path="/System" component={System}></Route>
+                <Route path="/Supers" component={Supers}></Route>
 
-            <div className="wrap">
-      	        <div className="home" id="home">
-                 {/*home*/}
-                    <div className="home_one">
-                        {this.state.animate_one.map(function(ani,i){
-                            return (
-                                    <div key={i} className="animate animate_s">
-                                        <h1>{ani.life}</h1>
-                                        <h4>{ani.serves}</h4>
-                                        <h6>{ani.read}</h6>
-                                        <p></p>
-                                    </div>
-                            )
-                        })}
-                    </div>
-                    <div className="home_two">
-                        {this.state.animate_two.map(function(ani,i){
-                            return (
-                                    <div key={i} className="animate animate_o">
-                                        <h1>{ani.life}</h1>
-                                        <h4>{ani.serves}</h4>
-                                        <h6>{ani.read}</h6>
-                                        <p></p>
-                                    </div>
-                            )
-                        })}
-                    </div>
-                    <div className="home_three">
-                        {this.state.animate_three.map(function(ani,i){
-                            return (
-                                    <div key={i} className="animate">
-                                        <h1>{ani.life}</h1>
-                                        <h4>{ani.serves}</h4>
-                                        <h6>{ani.read}</h6>
-                                        <p></p>
-                                    </div>
-                            )
-                        })}
-                    </div>
-                </div>
-                {/*content*/}
-                <div className="content_box">
-                    <div className="fixedBox">
-                        <h2 className="content_h3">PRODUCTS</h2>
-                        <div className="content_bundle">
-                            <ul>
-                                {this.state.bundle.map(function(bundle,i){
+
+                <Route exact path="/" render={()=>(
+                    <div className="wrap">
+                        <div className="home" id="home">
+                         {/*home*/}
+                            <div className="home_one">
+                                {this.state.animate_one.map(function(ani,i){
                                     return (
-                                            <div key={i} className="bundle">
-                                                <Link to={bundle.link}><li>
-                                                    <p className="none"><img src={bundle.bundle_img}/></p>
-                                                    <p className="word">{bundle.bundle_word}</p>
-                                                </li></Link>
-                                            </div>
-                                    )
-                              })}
-                            </ul>
-                        </div>
-                       
-                        {/*contact*/}
-                        <div className="contact_box">
-                            {this.state.con_img.map(function(foot,i){
-                                    return (
-                                        <div key={i} className="contact_tops">
-                                            <img src={foot.img} alt='' />
+                                        <div key={i} className="animate animate_s">
+                                            <h1>{ani.life}</h1>
+                                            <h4>{ani.serves}</h4>
+                                            <h6>{ani.read}</h6>
+                                            <p></p>
                                         </div>
                                     )
-                            })}
-                            <ul className="contact_uls" id="contact_ul">
-                                {this.state.message.map(function(list,i){
-                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
-                            </ul>
-                            <div className="contact_word">
-                                {this.state.hot_line.map(function(hot,i){
-                                    return <div key={i}>
-                                        <h5>{hot.hot}</h5>
-                                        <h3 className="light">{hot.line}</h3>
-                                    </div>
+                            </div>
+                            <div className="home_two">
+                                {this.state.animate_two.map(function(ani,i){
+                                    return (
+                                        <div key={i}className="animate animate_o">
+                                            <h1>{ani.life}</h1>
+                                            <h4>{ani.serves}</h4>
+                                            <h6>{ani.read}</h6>
+                                            <p></p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            <div className="home_three">
+                                {this.state.animate_three.map(function(ani,i){
+                                    return (
+                                        <div key={i} className="animate">
+                                            <h1>{ani.life}</h1>
+                                            <h4>{ani.serves}</h4>
+                                            <h6>{ani.read}</h6>
+                                            <p></p>
+                                        </div>
+                                    )
                                 })}
                             </div>
                         </div>
+                        {/*content*/}
+                        <div className="content_box">
+                            <div className="fixedBox">
+                                <h2 className="content_h3">PRODUCTS</h2>
+                                <div className="content_bundle">
+                                    <ul>
+                                        {this.state.bundle.map(function(bundle,i){
+                                            return (
+                                                <div key={i} className="bundle">
+                                                    <Link to={bundle.link}>
+                                                        <li>
+                                                            <p className="none"><img src={bundle.bundle_img}/></p>
+                                                            <p className="word">{bundle.bundle_word}</p>
+                                                        </li>
+                                                    </Link>
+                                                </div>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                                {/*contact*/}
+                                <div className="contact_box">
+                                    {this.state.con_img.map(function(foot,i){
+                                        return (
+                                            <div key={i} className="contact_tops">
+                                                <img src={foot.img} alt='' />
+                                            </div>
+                                        )
+                                    })}
+                                    <ul className="contact_uls" id="contact_ul">
+                                        {this.state.message.map(function(list,i){
+                                            return <li key={i}>
+                                                    <a><img src={list.imgs} alt='' /></a>
+                                                </li>
+                                        })}
+                                    </ul>
+                                    <div className="contact_word">
+                                        {this.state.hot_line.map(function(hot,i){
+                                            return <div key={i}>
+                                                <h5>{hot.hot}</h5>
+                                                <h3 className="light">{hot.line}</h3>
+                                            </div>
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-           </div>
+                )}></Route>
+            </div>
         </Router>
     );
   }

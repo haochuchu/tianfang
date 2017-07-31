@@ -8,14 +8,14 @@
 	body{
 	 overflow-x:hidden;
 	 background:#f0f0f0;
-	}s
+	}
 	/*  home_case*/
-	.home_case{
+	.home_cases{
 	    width: 100vw;
 	    height: 40vh;
 	    background:url("images/20170324045731157.jpg") no-repeat;
-	     background-position:center center;
-	     background-size:200% 140%;
+	    background-position:center center;
+	    background-size:200% 140%;
 	}
 	/* Main_box */
 	.Main_box{

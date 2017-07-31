@@ -123,7 +123,7 @@ class Prize extends Component {
                                         <p>{dd.con}</p>
                                         <ul className="printAll">
                                             {dd.more.split('?').map(function(oo,i){
-                                            return <li className="print_one">
+                                            return <li key={i} className="print_one">
                                                        <img src={'http://localhost:8100/images/'+oo} alt="" />
                                             </li>
                                             })}

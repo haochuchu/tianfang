@@ -110,7 +110,7 @@ class Case extends Component {
              {/*show*/}
 				<div className="show_top"></div>
                 <div className="show_bottom" id="showsss"></div>
-                <div className="home_case" id="home"></div>
+                <div className="home_cases" id="home"></div>
 
                 {/*content*/}
                 <div className="Main_box">
@@ -119,7 +119,7 @@ class Case extends Component {
                             <h1>{dd.after}</h1>
                             <div className="more_img">
                                 {dd.more.split('?').map(function(oo,i){
-                                    return <img src={'http://localhost:8100/images/'+oo} alt="" />
+                                    return <img key={i} src={'http://localhost:8100/images/'+oo} alt="" />
                                 })}
                             </div>    
                         </div>

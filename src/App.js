@@ -5,15 +5,15 @@ import $ from 'jquery';
 import './App.css';
 import './app_phone.css';
 import Start from './Start';
-import About from './about/About';
 import Advantage from './advantage/Advantage';
 import Contact from './contact/Contact';
 import News from './news/News';
 import Vi from './vi/Vi';
+import About from './about/About';
 import System from './system/System'
+import Supers from './supers/Supers';
 import Prize from './newsChild/Prize';
 import Case from './case/Case';
-import Supers from './supers/Supers';
 import Gold from './gold/Gold';
 import Design from './design/Design';
 
