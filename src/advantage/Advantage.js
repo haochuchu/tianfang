@@ -112,7 +112,7 @@ class Advantage extends Component {
                     <h3 className="Title">ADVANTAGE</h3>
                     <ul className="zero">
                         {this.state.cont.map(function(con,i){
-                                return <li><div className="L_img"><img src={con.img} alt="" /></div><div className="R_con"><h3>{con.title}</h3><div className="R_word"><span>{con.eng}</span><h5 className="cn"><p>{con.w_one}</p><p>{con.w_two}</p><p>{con.w_three}</p><p>{con.w_four}</p><p>{con.w_five}</p><p>{con.w_six}</p></h5></div></div>
+                                return <li key={i}><div className="L_img"><img src={con.img} alt="" /></div><div className="R_con"><h3>{con.title}</h3><div className="R_word"><span>{con.eng}</span><h5 className="cn"><p>{con.w_one}</p><p>{con.w_two}</p><p>{con.w_three}</p><p>{con.w_four}</p><p>{con.w_five}</p><p>{con.w_six}</p></h5></div></div>
                                 </li>
                         })}
                     </ul>
@@ -120,19 +120,19 @@ class Advantage extends Component {
                         <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                     return (
-                                        <div className="contact_tops">
+                                        <div key={i} className="contact_tops">
                                             <img src={foot.img} alt='' />
                                         </div>
                                     )
                             })}
                             <ul className="contact_ulw">
                                 {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
                                 {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>
@@ -146,7 +146,9 @@ class Advantage extends Component {
                         <img src="images/phone.jpg" alt="" />
                     </p>
                     <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                        <a href="http://localhost:3000/">
+                            <img src="images/go_back.jpg" alt="" />
+                        </a>
                     </p>
                     <p className="blocks">
                         <img src="images/gotop.jpg" alt="" />

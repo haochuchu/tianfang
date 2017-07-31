@@ -22,7 +22,6 @@ class Supers extends Component {
             url:"http://localhost:8100/tianfang/supers",
             async:"true",
             success:function(pp){
-                console.log(pp)
                 this.setState({
                     supers:pp
                 })
@@ -119,7 +118,8 @@ class Supers extends Component {
                                 <h2 className="system_word">SI形象设计</h2>
                                 <ul className="system_box">
                                          {this.state.supers.map(function(per,i){
-                                                return <Link key={i}  to={`/Design?${per.id}`}><li className="db">
+                                                return <Link key={i}  to={`/Design?${per.id}`}>
+                                                <li className="db">
                                                     <div className="system_top">
                                                         <img src={per.super_img}/>
                                                     </div>
@@ -127,26 +127,27 @@ class Supers extends Component {
                                                         <h5>{per.super_word}</h5>
                                                         <span>{per.super_new}</span>
                                                     </div>
-                                                </li></Link>
+                                                </li>
+                                                </Link>
                                             })}
                                 </ul>
                                  {/*contact_box*/}
                                 <div className="contact_box">
                                     {this.state.con_img.map(function(foot,i){
                                         return (
-                                            <div className="contact_tops">
+                                            <div key={i} className="contact_tops">
                                                 <img src={foot.img} alt='' />
                                             </div>
                                         )
                                     })}
                                     <ul className="contact_ulw">
                                         {this.state.message.map(function(list,i){
-                                            return <li><a><img src={list.imgs} alt='' /></a></li>
+                                            return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                         })}
                                     </ul>
                                     <div className="contact_word">
                                         {this.state.hot_line.map(function(hot,i){
-                                            return <div>
+                                            return <div key={i}>
                                                 <h5>{hot.hot}</h5>
                                                 <h3 className="light">{hot.line}</h3>
                                             </div>
@@ -160,7 +161,9 @@ class Supers extends Component {
                                     <img src="images/phone.jpg" alt="" />
                                 </p>
                                 <p id="backs">
-                                    <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                                    <a href="http://localhost:3000/">
+                                        <img src="images/go_back.jpg" alt="" />
+                                    </a>
                                 </p>
                                 <p className="blocks">
                                     <img src="images/gotop.jpg" alt="" />

@@ -108,7 +108,7 @@ class Case extends Component {
                 {/*content*/}
                 <div className="Main_box">
                     {this.state.pic_list.map(function(dd,i){
-                        return <div>
+                        return <div key={i}>
                             <h1>{dd.after}</h1>
                             <div className="more_img">
                                 {dd.more.split('?').map(function(oo,i){
@@ -122,19 +122,19 @@ class Case extends Component {
                         <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                     return (
-                                        <div className="contact_tops">
+                                        <div key={i} className="contact_tops">
                                             <img src={foot.img} alt='' />
                                         </div>
                                     )
                             })}
                             <ul className="contact_ulw">
                                 {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
                                 {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>
@@ -148,7 +148,9 @@ class Case extends Component {
                         <img src="images/phone.jpg" alt="" />
                     </p>
                     <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                        <a href="http://localhost:3000/">
+                            <img src="images/go_back.jpg" alt="" />
+                        </a>
                     </p>
                     <p className="blocks">
                         <img src="images/gotop.jpg" alt="" />

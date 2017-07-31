@@ -118,7 +118,7 @@ class App extends Component {
 
          
         if(window.screen.width<=414){
-             $(".nav_btn").click(function (){
+            $(".nav_btn").click(function (){
                 $(".nav_btn span").toggleClass("to");
             })
             $('.nav_btn').click(function(){
@@ -136,8 +136,23 @@ class App extends Component {
             }
              
         } 
-        
+        document.addEventListener('scroll', this.handleScroll.bind(this));
+
     } 
+
+    handleScroll=function (e) {
+        var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
+        if(document.body.scrollTop>=h){ 
+            $(".nav_btn span").addClass("span") ;
+            $(".nav_btn").click(function (){
+                $(".nav_btn span").css({'display':'block'});
+                $('.nav #list').slideToggle();
+            })
+        }
+        else{
+            $(".nav_btn span").removeClass("span") ;
+        }
+    }
     render() {
         return (
         <Router>
@@ -164,7 +179,7 @@ class App extends Component {
                     </div>
                      {/*nav_btn*/}
                     <div className="nav_btn" id="nav_btn">
-                        <span></span>
+                        <span id="span"></span>
                     </div>
                      {/*con*/}
                     <Route exact path="/" component={Start}></Route>
@@ -177,7 +192,7 @@ class App extends Component {
                     <Route path="/Design" component={Design}></Route>
                     <Route path="/Prize" component={Prize}></Route>
                     <Route path="/Supers" component={Supers}></Route>
-                    {/*CASE案例*/}
+                    {/*CASE°¸Àý*/}
                     <ul className="first_page" id="first_page">
                         {this.state.first_page.map(function(con,i){
                                     return <Link key={i}  to={con.link}><li><a><span><img src={con.pic} /></span>

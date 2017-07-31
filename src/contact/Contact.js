@@ -113,7 +113,7 @@ class Contact extends Component {
                     {/*contact*/}
                     <div className="contact_box">
                         {this.state.contact.map(function(foot,i){
-                                return <div>
+                                return <div key={i}>
                                         <div className="contact_tops">
                                             <img src={foot.contact_img}/>
                                         </div>
@@ -130,12 +130,12 @@ class Contact extends Component {
                         })}
                         <ul className="contact_uls">
                             {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                         </ul>
                         <div className="contact_words">
                             {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>
@@ -149,7 +149,9 @@ class Contact extends Component {
                         <img src="images/phone.jpg" alt="" />
                     </p>
                     <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                        <a href="http://localhost:3000/">
+                            <img src="images/go_back.jpg" alt="" />
+                        </a>
                     </p>
                     <p className="blocks">
                         <img src="images/gotop.jpg" alt="" />

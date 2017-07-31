@@ -102,13 +102,15 @@ class Prize extends Component {
                           <p>Jun 08,2017</p>  
                         <div className="prize_box">
                             {this.state.prize.map(function(dd,i){
-                                return <div>
+                                return <div key={i}>
                                     <h3 className="h_word">{dd.prize_word}</h3>
                                     <div className="prize_design">
                                         <p>{dd.con}</p>
                                         <ul className="printAll">
                                             {dd.more.split('?').map(function(oo,i){
-                                            return <li className="print_one"><img src={'http://localhost:8100/images/'+oo} alt="" /></li>
+                                            return <li className="print_one">
+                                                       <img src={'http://localhost:8100/images/'+oo} alt="" />
+                                            </li>
                                             })}
                                             
                                         </ul>    
@@ -120,19 +122,19 @@ class Prize extends Component {
                         <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                 return (
-                                    <div className="contact_tops">
+                                    <div key={i} className="contact_tops">
                                         <img src={foot.img} alt='' />
                                     </div>
                                 )
                             })}
                             <ul className="contact_uls">
                                 {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
                                 {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>
@@ -146,7 +148,9 @@ class Prize extends Component {
                         <img src="images/phone.jpg" alt="" />
                     </p>
                     <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                        <a href="http://localhost:3000/">
+                            <img src="images/go_back.jpg" alt="" />
+                        </a>
                     </p>
                     <p className="blocks">
                         <img src="images/gotop.jpg" alt="" />

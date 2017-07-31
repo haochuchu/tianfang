@@ -240,7 +240,7 @@ class About extends Component {
                      {/*brand*/}
                         {this.state.brand.map(function(brand,i){
                                     return (
-                                        <div className="brand">
+                                        <div key={i} className="brand">
                                             <h2>{brand.title}<span>{brand.con}</span></h2>
                                             <p>{brand.All}</p>
                                         </div>
@@ -248,7 +248,7 @@ class About extends Component {
                                 })}
                          {/*brand img*/}
                         {this.state.brand.map(function(brand,i){
-                                    return ( <div className="character" style={{"border":"none"}}> 
+                                    return ( <div key={i} className="character" style={{"border":"none"}}> 
                                             <img src={brand.img} alt='' />
                                         </div>
                                     )
@@ -257,7 +257,7 @@ class About extends Component {
                         <div className="grow">
                             {this.state.grow.map(function(grow,i){
                                         return (  
-                                            <div className="grow_witness">
+                                            <div key={i} className="grow_witness">
                                                 <h2>{grow.grow_title}</h2>
                                                 <p>{grow.grow_con}</p>
                                                 <h4>{grow.grow_sign}</h4>
@@ -267,7 +267,7 @@ class About extends Component {
                              {/* grow img*/}
                             {this.state.grow.map(function(grow,i){
                                         return (  
-                                            <div className="grow_all">
+                                            <div key={i} className="grow_all">
                                                <img src={grow.grow_img} alt='' />
                                             </div>
                                         )
@@ -277,7 +277,7 @@ class About extends Component {
                        <div className="journey">
                                 {this.state.journey.map(function(journey,i){
                                         return (  
-                                            <div>
+                                            <div key={i}>
                                               <p>{journey.news_first}</p>
                                               <p>{journey.news_nth}</p>
                                               <p>{journey.news_last}</p>
@@ -313,7 +313,7 @@ class About extends Component {
                        <div className="made">
                             {this.state.made.map(function(made,i){
                                         return (  
-                                            <div>
+                                            <div key={i}>
                                               <p>{made.made_title}</p>
                                               <h4>{made.mode_word}</h4>
                                               <h4>{made.mode_news}</h4>
@@ -327,7 +327,7 @@ class About extends Component {
                 <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                     return (
-                                        <div className="contact_tops">
+                                        <div key={i} className="contact_tops">
                                             <img src={foot.img} alt='' />
                                         </div>
                                     )
@@ -335,13 +335,13 @@ class About extends Component {
                              {/*contact_uls*/}
                              <ul className="contact_uls">
                                 {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                              </ul>
                              {/*contact_word*/}
                             <div className="contact_word">
                                 {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>
@@ -354,7 +354,9 @@ class About extends Component {
                         <img src="images/phone.jpg" alt="" />
                     </p>
                     <p id="backs">
-                        <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                        <a href="http://localhost:3000/">
+                            <img src="images/go_back.jpg" alt="" />
+                        </a>
                     </p>
                     <p className="blocks">
                         <img src="images/gotop.jpg" alt="" />

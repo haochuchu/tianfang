@@ -162,12 +162,12 @@ class Start extends Component {
         <Router>
 
             <div className="wrap">
-      	        <div className="home">
+      	        <div className="home" id="home">
                  {/*home*/}
-                    <div className="home_one" id="home">
+                    <div className="home_one">
                         {this.state.animate_one.map(function(ani,i){
                             return (
-                                    <div className="animate animate_s">
+                                    <div key={i} className="animate animate_s">
                                         <h1>{ani.life}</h1>
                                         <h4>{ani.serves}</h4>
                                         <h6>{ani.read}</h6>
@@ -176,10 +176,10 @@ class Start extends Component {
                             )
                         })}
                     </div>
-                    <div className="home_two" id="home">
+                    <div className="home_two">
                         {this.state.animate_two.map(function(ani,i){
                             return (
-                                    <div className="animate animate_o">
+                                    <div key={i} className="animate animate_o">
                                         <h1>{ani.life}</h1>
                                         <h4>{ani.serves}</h4>
                                         <h6>{ani.read}</h6>
@@ -187,12 +187,11 @@ class Start extends Component {
                                     </div>
                             )
                         })}
-                        
                     </div>
-                    <div className="home_three" id="home">
+                    <div className="home_three">
                         {this.state.animate_three.map(function(ani,i){
                             return (
-                                    <div className="animate">
+                                    <div key={i} className="animate">
                                         <h1>{ani.life}</h1>
                                         <h4>{ani.serves}</h4>
                                         <h6>{ani.read}</h6>
@@ -205,13 +204,13 @@ class Start extends Component {
                 {/*content*/}
                 <div className="content_box">
                     <div className="fixedBox">
-                        <h2 className="content_h2">PRODUCTS</h2>
+                        <h2 className="content_h3">PRODUCTS</h2>
                         <div className="content_bundle">
                             <ul>
                                 {this.state.bundle.map(function(bundle,i){
                                     return (
-                                            <div className="bundle">
-                                                <Link key={i}  to={bundle.link}><li>
+                                            <div key={i} className="bundle">
+                                                <Link to={bundle.link}><li>
                                                     <p className="none"><img src={bundle.bundle_img}/></p>
                                                     <p className="word">{bundle.bundle_word}</p>
                                                 </li></Link>
@@ -225,19 +224,19 @@ class Start extends Component {
                         <div className="contact_box">
                             {this.state.con_img.map(function(foot,i){
                                     return (
-                                        <div className="contact_tops">
+                                        <div key={i} className="contact_tops">
                                             <img src={foot.img} alt='' />
                                         </div>
                                     )
                             })}
                             <ul className="contact_uls" id="contact_ul">
                                 {this.state.message.map(function(list,i){
-                                    return <li><a><img src={list.imgs} alt='' /></a></li>
+                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}
                             </ul>
                             <div className="contact_word">
                                 {this.state.hot_line.map(function(hot,i){
-                                    return <div>
+                                    return <div key={i}>
                                         <h5>{hot.hot}</h5>
                                         <h3 className="light">{hot.line}</h3>
                                     </div>

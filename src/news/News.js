@@ -112,39 +112,39 @@ class News extends Component {
                             <h2>NEWS</h2>
                             <div className="prize">
                                  <ul>
-                                {this.state.prize.map(function(pp,i){
-                                return  <Link key={i}  to={`/Prize?${pp.id}`} className="top_new">
-                                <li>
-                                    <div className="prize_word">
-                                    	<h6>{pp.prize_title}</h6>
-                                    	  <h4>{pp.prize_word}</h4>
-                                    	<span>{pp.prize_new}</span>
-                                    </div>
-                                    <div className="prize_lore">
-                                        <img src={pp.prize_img}/>
-                                    </div>
-                                </li>
-                                </Link>
-                                })}
+                                    {this.state.prize.map(function(pp,i){
+                                    return  <Link key={i}  to={`/Prize?${pp.id}`} className="top_new">
+                                    <li>
+                                        <div className="prize_word">
+                                        	<h6>{pp.prize_title}</h6>
+                                        	  <h4>{pp.prize_word}</h4>
+                                        	<span>{pp.prize_new}</span>
+                                        </div>
+                                        <div className="prize_lore">
+                                            <img src={pp.prize_img}/>
+                                        </div>
+                                    </li>
+                                    </Link>
+                                    })}
                                 </ul>
                             </div>
                                 {/*contact*/}
                                 <div className="contact">
                                     {this.state.con_img.map(function(foot,i){
                                         return (
-                                            <div className="contact_tops">
+                                            <div key={i} className="contact_tops">
                                                 <img src={foot.img} alt='' />
                                             </div>
                                         )
                                     })}
                                     <ul className="contact_ulw">
                                         {this.state.message.map(function(list,i){
-                                            return <li><a><img src={list.imgs} alt='' /></a></li>
+                                            return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                         })}
                                     </ul>
                                     <div className="contact_word">
                                         {this.state.hot_line.map(function(hot,i){
-                                            return <div>
+                                            return <div key={i}>
                                                 <h5>{hot.hot}</h5>
                                                 <h3 className="light">{hot.line}</h3>
                                             </div>
@@ -158,7 +158,9 @@ class News extends Component {
                                 <img src="images/phone.jpg" alt="" />
                             </p>
                             <p id="backs">
-                                <Link to="/"><img src="images/go_back.jpg" alt="" /></Link>
+                                <a href="http://localhost:3000/">
+                                    <img src="images/go_back.jpg" alt="" />
+                                </a>
                             </p>
 
                             <p className="blocks">
