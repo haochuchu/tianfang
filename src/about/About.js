@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './about.css';
 import './about_phone.css';
 import $ from 'jquery';
+import { Carousel } from 'antd';
 
 class About extends Component {
     constructor(){
@@ -14,8 +15,9 @@ class About extends Component {
             grow:[],
             message:[],
             hot_line:[],
-            con_img:[]
-            // carousel:[]
+            con_img:[],
+            banner:[{img:"",id:""}]
+           
         };
     };
 	componentDidMount(){
@@ -110,20 +112,20 @@ class About extends Component {
                 alert('失败了');
             }
         })
-        //  $.ajax({
-        //     type:"post",
-        //     url:"http://localhost:8100/tianfang/carousel",
-        //     async:"true",
-        //     success:function(ss){
-        //         console.log(ss)
-        //         this.setState({
-        //             carousel:ss
-        //         })
-        //     }.bind(this),
-        //     error:function(){
-        //         alert('失败了');
-        //     }
-        // })
+         $.ajax({
+            type:"get",
+            url:"http://localhost:8100/tianfang/photo",
+            async:"true",
+            success:function(ss){
+                console.log(ss)
+                this.setState({
+                    banner:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -137,76 +139,76 @@ class About extends Component {
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
         }
         document.addEventListener('scroll', this.handleScroll.bind(this));
-        lunbo(document.querySelectorAll('.interact')[0],1060);
-        function lunbo(element,FWidth){
-            var interact=element,
-            lb=interact.querySelector('.lb'),
-            li=lb.querySelectorAll('li'),
-            LBtn=interact.querySelector('.LBtn'),
-            RBtn=interact.querySelector('.RBtn');
-            interact.style.width=FWidth+"px";  
-            var liW=parseInt($(li[0]).width);
-                for(var i=0; i<li.length; i++){
-                    li[i].style.width=FWidth+"px";
-                }
-            lb.style.width=FWidth*li.length+"px";
-            var imgNum=0,//初始化为0；//图片移动次数计数器；
-                aniTime,//定时器
-                lastNum=0,//图片每次移动距离计数器
-                flag=true;//按钮事件开关
-            //右键点击事件
-            RBtn.onclick=function(){
-                if(flag){
-                    flag=false;
-                    if(imgNum>=li.length-1){
-                    lb.style.marginLeft="0px";//sum=sum-1;
-                    imgNum=0;
-                    }
-                    animation(-1060,FWidth);
-                    imgNum++;     
-               }
-            }
-        //左键点击事件
-        LBtn.onclick=function(){
-            if(flag){
-                flag=false;
-                if(imgNum<=0){
-                lb.style.marginLeft=-parseInt(getComputedStyle(lb).width)+1060+'px';
-                imgNum=li.length-1;
-                }
-                animation(1060,FWidth);//移动距离
-                imgNum--;
-            }
-        }
+        // lunbo(document.getElementsByClassName('.interact'),1060);
+        // function lunbo(element,FWidth){
+        //     var interact=element,
+        //     lb=interact.querySelector('.lb'),
+        //     li=lb.querySelectorAll('li'),
+        //     LBtn=interact.querySelector('.LBtn'),
+        //     RBtn=interact.querySelector('.RBtn');
+        //     interact.style.width=FWidth+"px";  
+        //     var liW=parseInt($(li[0]).width);
+        //         for(var i=0; i<li.length; i++){
+        //             li[i].style.width=FWidth+"px";
+        //         }
+        //     lb.style.width=FWidth*li.length+"px";
+        //     var imgNum=0,//初始化为0；//图片移动次数计数器；
+        //         aniTime,//定时器
+        //         lastNum=0,//图片每次移动距离计数器
+        //         flag=true;//按钮事件开关
+        //     //右键点击事件
+        //     RBtn.onclick=function(){
+        //         if(flag){
+        //             flag=false;
+        //             if(imgNum>=li.length-1){
+        //             lb.style.marginLeft="0px";//sum=sum-1;
+        //             imgNum=0;
+        //             }
+        //             animation(-1060,FWidth);
+        //             imgNum++;     
+        //        }
+        //     }
+        // //左键点击事件
+        // LBtn.onclick=function(){
+        //     if(flag){
+        //         flag=false;
+        //         if(imgNum<=0){
+        //         lb.style.marginLeft=-parseInt(getComputedStyle(lb).width)+1060+'px';
+        //         imgNum=li.length-1;
+        //         }
+        //         animation(1060,FWidth);//移动距离
+        //         imgNum--;
+        //     }
+        // }
                   
-        //动画函数
-        function animation(everyMove,liW){        //绝对值math.abs
-                var moveNum=Math.abs(parseInt(1060/everyMove));  
-                aniTime=setInterval(function(){//定时器；
-                    if(lastNum>=moveNum){
-                        clearInterval(aniTime);
-                        lastNum=0;
-                        flag=true;
-                        return;       
-                        }
-                    lb.style.marginLeft=parseInt(getComputedStyle(lb).marginLeft)+everyMove+"px";//封装的代码//animation;
-                    lastNum++;
-                },120);
-            }
-            var autoTime;
-        function autoPlay(){
-            autoTime=setInterval(function(){
-            RBtn.onclick();
-            },5000);
-        }
-        autoPlay();
-        interact.onmouseover=function(){
-            clearInterval(autoTime);
-        }   
-        interact.onmouseout=function(){
-            autoPlay();
-        }   
-        }
+        // //动画函数
+        // function animation(everyMove,liW){        //绝对值math.abs
+        //         var moveNum=Math.abs(parseInt(1060/everyMove));  
+        //         aniTime=setInterval(function(){//定时器；
+        //             if(lastNum>=moveNum){
+        //                 clearInterval(aniTime);
+        //                 lastNum=0;
+        //                 flag=true;
+        //                 return;       
+        //                 }
+        //             lb.style.marginLeft=parseInt(getComputedStyle(lb).marginLeft)+everyMove+"px";//封装的代码//animation;
+        //             lastNum++;
+        //         },120);
+        //     }
+        //     var autoTime;
+        // function autoPlay(){
+        //     autoTime=setInterval(function(){
+        //     RBtn.onclick();
+        //     },5000);
+        // }
+        // autoPlay();
+        // interact.onmouseover=function(){
+        //     clearInterval(autoTime);
+        // }   
+        // interact.onmouseout=function(){
+        //     autoPlay();
+        // }   
+        // }
         
     } 
     handleScroll=function (e) {
@@ -294,19 +296,22 @@ class About extends Component {
                        </div>
                           {/*interact lb*/}
                        <div className="interact">
-                           <ul className="lb">
-                           {/*{this.state.carousel.map(function(ss,i){
+                       <Carousel autoplay arrows="true">
+                            {this.state.banner.map(e=><div key={e.id}><img src={e.img} /></div>)}
+                       </Carousel>
+                           {/*<ul className="lb">
+                           {this.state.carousel.map(function(ss,i){
                                         return (  
                                               <li><img src={ss.carousel_img}/></li>
                                         )
-                            })}*/}
+                            })}
                                 <li><img src="images/fw_01.jpg"/></li>
                                 <li><img src="images/fw_02.jpg"/></li>
                                 <li><img src="images/fw_03.jpg"/></li>
                                 <li><img src="images/fw_04.jpg"/></li>
                                 <li><img src="images/fw_05.jpg"/></li>
                                 <li><img src="images/fw_01.jpg"/></li>
-                           </ul>
+                           </ul>*/}
                             <div className="LBtn btn">&lt;<div className="fliament_left"></div></div>
                             <div className="RBtn btn">&gt;<div className="fliament_right"></div></div>
                             <div className="flia_left"></div>
