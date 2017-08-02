@@ -466,9 +466,13 @@
 	.contact_tops{
 		padding-top:0;
 		margin-top:0;
+		margin-left:1rem;
 	}
 	.contact_tops img{
 		padding-top:0.9562rem;
+		margin-left:2.5rem;
+    width:10.76328502415459rem;
+    height:2.9782608695652173rem;
 	}
 	.contact_uls li{
 		margin-top:0.9856rem;
@@ -476,6 +480,7 @@
 	/* footer_box */
 	.footer_box{
 		margin-top:0.9857rem;
+		line-height:0rem;
 	}
 	
 	
