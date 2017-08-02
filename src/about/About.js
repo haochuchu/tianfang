@@ -345,7 +345,7 @@ class About extends Component {
                                     )
                             })}
                              {/*contact_uls*/}
-                             <ul className="contact_uls">
+                             <ul className="contact_ulw">
                                 {this.state.message.map(function(list,i){
                                     return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                 })}

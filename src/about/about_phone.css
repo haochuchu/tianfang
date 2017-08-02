@@ -231,12 +231,12 @@ body{
 	color:#999;
 	margin-bottom: 0.6rem;
 	margin-left:0.4rem;
-	padding-top:0.5rem;
+	padding-top:0.2rem;
 }
 .made h4{
 	font-family: Georgia,"Times New Roman","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 	cursor: default;
-	font-size: 0.8rem;
+	font-size: 0.6rem;
 	font-weight: 400;
 	color:#999;
 	margin-left:0.4rem;
@@ -245,9 +245,9 @@ body{
 	margin-bottom: 0.2rem;
 }
 /* contact */
-.contact_top{
+.contact_tops{
     width:16rem;
-    height:3.4782608695652173rem;
+    height:5.4782608695652173rem;
     margin:0 auto;
     padding-top:0rem;
     z-index:1000; 
@@ -255,25 +255,25 @@ body{
   #contact_ul{
     padding-top:0rem;
   }
-  .contact_top img{
-    position:relative;
-    bottom:3rem;
+  .contact_tops img{
+  
     /* margin-top:-20rem; */
     margin-left:1.875rem;
     width:10.76328502415459rem;
     height:2.9782608695652173rem;
   }
-  .contact_ul{
+  .contact_ulw{
     width:14.067632850241546rem;
     margin:0 auto;
     margin-top:-10.875rem;
     padding-top:0rem;
   }
-  .contact_ul li{
-     margin-top:-1.875rem;
+  .contact_ulw li{
+    margin-bottom:1.258rem;
+     margin-top:0rem;
   }
   .contact_word{
-    padding-top:-0rem;
+    padding-top:0rem;
   }
   /* footer */
   .footer{

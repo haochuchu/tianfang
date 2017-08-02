@@ -246,7 +246,7 @@ class Start extends Component {
                                             </div>
                                         )
                                     })}
-                                    <ul className="contact_uls" id="contact_ul">
+                                    <ul className="contact_ulw" id="contact_ul">
                                         {this.state.message.map(function(list,i){
                                             return <li key={i}>
                                                     <a><img src={list.imgs} alt='' /></a>

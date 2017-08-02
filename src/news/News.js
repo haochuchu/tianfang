@@ -144,7 +144,7 @@ class News extends Component {
                                 </ul>
                             </div>
                                 {/*contact*/}
-                                <div className="contact">
+                                <div className="contact_boxs">
                                     {this.state.con_img.map(function(foot,i){
                                         return (
                                             <div key={i} className="contact_tops">
