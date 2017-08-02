@@ -74,7 +74,8 @@ body{
 .R_con{
     width:237px;
     height:calc(100% - 60px);
-    padding:30px 40px;
+    padding-left:10px; 
+    padding-top:15px;
     border-left: 1px solid #f0f0f0;
     float:left;
 }
@@ -109,7 +110,7 @@ body{
 .contact_ulw{
   width:200px;
   margin:0 auto;
-  padding-top:40px;
+  padding-top:140px;
 }
 .contact_ulw li{
   width:50px;

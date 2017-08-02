@@ -5,8 +5,12 @@
 	ul li{
 	  list-style:none;
 	}
+	html body{
+		height:0%;
+	}
 	body{
 	 	background:#f0f0f0;
+	 	overflow-x:hidden;
 	}
 	/*  show_top*/
 	.show_top{
@@ -90,7 +94,7 @@
 	/* animate */
 	.animate{
 	  position:fixed;
-	  top:8.729468599033816rem;
+	  top:10.729468599033816rem;
 	  left:1.618357487922705rem;
 	  transform: rotateX(-30deg) rotateY(-15deg) rotateZ(0deg) translateX(-4%);
 	  cursor:pointer;
@@ -473,9 +477,7 @@
 	.footer_box{
 		margin-top:0.9857rem;
 	}
-	/* botmbar */
-	.botmbar{
-		height:
-	}
+	
+	
 
 }

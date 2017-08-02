@@ -107,12 +107,11 @@ body{
 }
 
 /* contact */
-.contact{
-	margin-top:35rem;
-	margin-left:-25rem;
+.contact_boxs{
+	margin-top:27rem;
 }
 /* contact_top */
-.contact_top{
+.contact_tops{
     width:16rem;
     height:3.4782608695652173rem;
     margin:0 auto;
@@ -120,9 +119,9 @@ body{
     z-index:1000; 
 
   }
-  .contact_top img{
+  .contact_tops img{
     position:relative;
-    bottom:3rem;
+   
     /* margin-top:-20rem; */
     margin-left:1.875rem;
     width:10.76328502415459rem;
