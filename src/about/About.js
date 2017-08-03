@@ -16,7 +16,7 @@ class About extends Component {
             message:[],
             hot_line:[],
             con_img:[],
-            banner:[{img:"",id:""}]
+            img:[{img:"",id:""}]
            
         };
     };
@@ -114,12 +114,12 @@ class About extends Component {
         })
          $.ajax({
             type:"get",
-            url:"http://localhost:8100/tianfang/photo",
+            url:"http://localhost:8100/tianfang/img",
             async:"true",
             success:function(ss){
                 console.log(ss)
                 this.setState({
-                    banner:ss
+                    img:ss
                 })
             }.bind(this),
             error:function(){
@@ -297,7 +297,7 @@ class About extends Component {
                           {/*interact lb*/}
                        <div className="interact">
                        <Carousel autoplay arrows="true">
-                            {this.state.banner.map(e=><div key={e.id}><img src={e.img} /></div>)}
+                            {this.state.img.map(e=><div key={e.id}><img src={e.img} /></div>)}
                        </Carousel>
                            {/*<ul className="lb">
                            {this.state.carousel.map(function(ss,i){
