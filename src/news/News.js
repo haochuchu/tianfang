@@ -8,7 +8,7 @@ import $ from 'jquery';
 class News extends Component {
     constructor(){
         super();
-       this.state={
+        this.state={
             prize:[],
             message:[],
             hot_line:[],
@@ -115,7 +115,6 @@ class News extends Component {
             <Router>
                 <div>
                     <Route path="/Prize" component={Prize}></Route>
-
                     <Route exact path="/News" render={()=>(
         			<div className="wrap">
                       {/*show*/}
@@ -143,31 +142,31 @@ class News extends Component {
                                     })}
                                 </ul>
                             </div>
-                                {/*contact*/}
-                                <div className="contact_boxs">
-                                    {this.state.con_img.map(function(foot,i){
-                                        return (
-                                            <div key={i} className="contact_tops">
-                                                <img src={foot.img} alt='' />
-                                            </div>
-                                        )
+                            {/*contact*/}
+                            <div className="contact_boxs">
+                                {this.state.con_img.map(function(foot,i){
+                                    return (
+                                        <div key={i} className="contact_tops">
+                                            <img src={foot.img} alt='' />
+                                        </div>
+                                    )
+                                })}
+                                <ul className="contact_ulw">
+                                    {this.state.message.map(function(list,i){
+                                        return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
                                     })}
-                                    <ul className="contact_ulw">
-                                        {this.state.message.map(function(list,i){
-                                            return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
-                                        })}
-                                    </ul>
-                                    <div className="contact_word">
-                                        {this.state.hot_line.map(function(hot,i){
-                                            return <div key={i}>
-                                                <h5>{hot.hot}</h5>
-                                                <h3 className="light">{hot.line}</h3>
-                                            </div>
-                                        })}
-                                    </div>
+                                </ul>
+                                <div className="contact_word">
+                                    {this.state.hot_line.map(function(hot,i){
+                                        return <div key={i}>
+                                            <h5>{hot.hot}</h5>
+                                            <h3 className="light">{hot.line}</h3>
+                                        </div>
+                                    })}
                                 </div>
+                            </div>
                         </div>
-                          {/*Rt_top*/}
+                        {/*Rt_top*/}
                         <div className="Rt_top">
                             <p id="phones">
                                 <img src="images/phone.jpg" alt="" />

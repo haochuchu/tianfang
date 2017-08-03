@@ -565,11 +565,9 @@ body{
 /* footer */
 .footer_box{
   text-align:center;
-  line-height:21px;
+  line-height:71px;
   margin-top:120px;
-  height:21px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height:71px;
   background-color: #333;
   font-size: 12px;
 }

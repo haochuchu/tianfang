@@ -15,56 +15,56 @@ class Gold extends Component {
         };
     };
 	componentDidMount(){
-            var id=window.location.href.split('?')[1];
-            $.ajax({
-                url:'http://localhost:8100/tianfang/xiangqing3',
-                type:'post',
-                data:{id:id},
-                success:function(e){
-                    this.setState({
-                        system:e
-                    })
-                }.bind(this)
-            })
-            $.ajax({
-                type:"post",
-                url:"http://localhost:8100/tianfang/message",
-                async:"true",
-                success:function(ss){
-                    this.setState({
-                        message:ss
-                    })
-                }.bind(this),
-                error:function(){
-                    alert('失败了');
-                }
-            })
-            $.ajax({
-                type:"post",
-                url:"http://localhost:8100/tianfang/hot_line",
-                async:"true",
-                success:function(ss){
-                    this.setState({
-                        hot_line:ss
-                    })
-                }.bind(this),
-                error:function(){
-                    alert('失败了');
-                }
-            })
-            $.ajax({
-                type:"post",
-                url:"http://localhost:8100/tianfang/con_img",
-                async:"true",
-                success:function(ss){
-                    this.setState({
-                        con_img:ss
-                    })
-                }.bind(this),
-                error:function(){
-                    alert('失败了');
-                }
-            })
+        var id=window.location.href.split('?')[1];
+        $.ajax({
+            url:'http://localhost:8100/tianfang/xiangqing3',
+            type:'post',
+            data:{id:id},
+            success:function(e){
+                this.setState({
+                    system:e
+                })
+            }.bind(this)
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/message",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    message:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/hot_line",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    hot_line:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8100/tianfang/con_img",
+            async:"true",
+            success:function(ss){
+                this.setState({
+                    con_img:ss
+                })
+            }.bind(this),
+            error:function(){
+                alert('失败了');
+            }
+        })
         //回到顶部
         $(function(){
             $('.blocks').click(function(){
@@ -107,7 +107,7 @@ class Gold extends Component {
 	render(){
 		return(
 			<div className="wrap">
-        {/*show*/}
+                {/*show*/}
 				<div className="show_top"></div>
                 <div className="show_bottom" id="showsss"></div>
                 <div className="home_gold" id="home"></div>
@@ -127,28 +127,28 @@ class Gold extends Component {
                     })}
                     
                     {/*contact*/}
-                        <div className="contact_box">
-                            {this.state.con_img.map(function(foot,i){
-                                    return (
-                                        <div key={i} className="contact_tops">
-                                            <img src={foot.img} alt='' />
-                                        </div>
-                                    )
-                            })}
-                            <ul className="contact_uls">
-                                {this.state.message.map(function(list,i){
-                                    return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
-                                })}
-                            </ul>
-                            <div className="contact_word">
-                                {this.state.hot_line.map(function(hot,i){
-                                    return <div key={i}>
-                                        <h5>{hot.hot}</h5>
-                                        <h3 className="light">{hot.line}</h3>
+                    <div className="contact_box">
+                        {this.state.con_img.map(function(foot,i){
+                                return (
+                                    <div key={i} className="contact_tops">
+                                        <img src={foot.img} alt='' />
                                     </div>
-                                })}
-                            </div>
+                                )
+                        })}
+                        <ul className="contact_uls">
+                            {this.state.message.map(function(list,i){
+                                return <li key={i}><a><img src={list.imgs} alt='' /></a></li>
+                            })}
+                        </ul>
+                        <div className="contact_word">
+                            {this.state.hot_line.map(function(hot,i){
+                                return <div key={i}>
+                                    <h5>{hot.hot}</h5>
+                                    <h3 className="light">{hot.line}</h3>
+                                </div>
+                            })}
                         </div>
+                    </div>
                 </div>
                 {/*Rt_top*/}
                 <div className="Rt_top">

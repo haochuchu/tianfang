@@ -150,7 +150,7 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
-                 {/*Rt_top*/}
+                {/*Rt_top*/}
                 <div className="Rt_top">
                     <p id="phones">
                         <img src="images/phone.jpg" alt="" />
