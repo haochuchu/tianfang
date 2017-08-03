@@ -117,7 +117,7 @@ class Supers extends Component {
                     <Route path="/Design" component={Design}></Route>
                     <Route exact path="/supers" render={()=>(
                         <div className="wrap">
-                        {/*show*/}
+                            {/*show*/}
                             <div className="show_top"></div>
                             <div className="show_bottom" id="show_news"></div>
                             <div className="home_system" id="home"></div>
@@ -125,19 +125,19 @@ class Supers extends Component {
                             <div className="fixed_news">
                                 <h2 className="system_word">SI形象设计</h2>
                                 <ul className="system_box">
-                                         {this.state.supers.map(function(per,i){
-                                                return <Link key={i}  to={`/Design?${per.id}`}>
-                                                <li className="db">
-                                                    <div className="system_top">
-                                                        <img src={per.super_img}/>
-                                                    </div>
-                                                    <div className="system_bot">
-                                                        <h5>{per.super_word}</h5>
-                                                        <span>{per.super_new}</span>
-                                                    </div>
-                                                </li>
-                                                </Link>
-                                            })}
+                                    {this.state.supers.map(function(per,i){
+                                        return <Link key={i}  to={`/Design?${per.id}`}>
+                                            <li className="db">
+                                                <div className="system_top">
+                                                    <img src={per.super_img}/>
+                                                </div>
+                                                <div className="system_bot">
+                                                    <h5>{per.super_word}</h5>
+                                                    <span>{per.super_new}</span>
+                                                </div>
+                                            </li>
+                                        </Link>
+                                    })}
                                 </ul>
                                 {/*contact_box*/}
                                 <div className="contact_box">
