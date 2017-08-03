@@ -20,7 +20,7 @@ class About extends Component {
            
         };
     };
-	componentDidMount(){
+    componentDidMount(){
          $.ajax({
             type:"post",
             url:"http://localhost:8100/tianfang/journey",
@@ -236,12 +236,12 @@ class About extends Component {
             document.getElementById("img").style.marginTop='-80px';
         }
     }
-	render(){
-		return(
-			<div className="wrap">
+    render(){
+        return(
+            <div className="wrap">
                 {/*banner*/}
-				<div className="home_about" id="home"></div>
-				<div className="show_top"></div>
+                <div className="home_about" id="home"></div>
+                <div className="show_top"></div>
                 <div className="show_bottom" id="showss_box"></div>
                  {/*content*/}
                 <div className="about_content">
@@ -282,7 +282,6 @@ class About extends Component {
                                 )
                             })}
                         </div>
-<<<<<<< HEAD
                         {/*journey*/}
                         <div className="journey">
                             {this.state.journey.map(function(journey,i){
@@ -295,22 +294,11 @@ class About extends Component {
                                 )
                             })}
                        </div>
-                          {/*interact lb*/}
-                       <div className="interact">
-                       <Carousel autoplay arrows="true">
-                            {this.state.img.map(e=><div key={e.id}><img src={e.img} /></div>)}
-                       </Carousel>
-                           {/*<ul className="lb">
-                           {this.state.carousel.map(function(ss,i){
-                                        return (  
-                                              <li><img src={ss.carousel_img}/></li>
-                                        )
-                            })}
-                        </div>
+                        
                         {/*interact lb*/}
                         <div className="interact">
                         <Carousel autoplay arrows="true">
-                            {this.state.banner.map(e=><div key={e.id}><img src={e.img} alt='' /></div>)}
+                            {this.state.img.map(e=><div key={e.id}><img src={e.img} alt='' /></div>)}
                         </Carousel>
                             <div className="LBtn btn">&lt;<div className="fliament_left"></div></div>
                             <div className="RBtn btn">&gt;<div className="fliament_right"></div></div>
@@ -374,10 +362,9 @@ class About extends Component {
                         <img src="images/gotop.jpg" alt="" />
                     </p>
                 </div>
-			</div>
-
-		)
-	}
+            </div>
+        )
+    }
 }
 
 export default About;
