@@ -89,7 +89,15 @@ class System extends Component {
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(window.screen.width>414){
-            if(document.body.scrollTop>=h){ 
+            if(document.body.scrollTop>=0){ 
+                document.getElementById("head").style.width='100vw';
+                document.getElementById("head").style.background='#fff';
+                document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
+                document.getElementById("img").style.marginTop='-80px';
+                document.getElementById("nav").className='navs';
+                
+            }
+            else if(document.body.scrollTop>=h){ 
                 document.getElementById("head").style.width='100vw';
                 document.getElementById("head").style.background='#fff';
                 document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
