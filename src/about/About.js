@@ -282,7 +282,6 @@ class About extends Component {
                                 )
                             })}
                         </div>
-<<<<<<< HEAD
                         {/*journey*/}
                         <div className="journey">
                             {this.state.journey.map(function(journey,i){
@@ -295,22 +294,11 @@ class About extends Component {
                                 )
                             })}
                        </div>
-                          {/*interact lb*/}
-                       <div className="interact">
-                       <Carousel autoplay arrows="true">
-                            {this.state.img.map(e=><div key={e.id}><img src={e.img} /></div>)}
-                       </Carousel>
-                           {/*<ul className="lb">
-                           {this.state.carousel.map(function(ss,i){
-                                        return (  
-                                              <li><img src={ss.carousel_img}/></li>
-                                        )
-                            })}
-                        </div>
+                        
                         {/*interact lb*/}
                         <div className="interact">
                         <Carousel autoplay arrows="true">
-                            {this.state.banner.map(e=><div key={e.id}><img src={e.img} alt='' /></div>)}
+                            {this.state.img.map(e=><div key={e.id}><img src={e.img} alt='' /></div>)}
                         </Carousel>
                             <div className="LBtn btn">&lt;<div className="fliament_left"></div></div>
                             <div className="RBtn btn">&gt;<div className="fliament_right"></div></div>
@@ -375,7 +363,6 @@ class About extends Component {
                     </p>
                 </div>
 			</div>
-
 		)
 	}
 }
