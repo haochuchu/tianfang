@@ -147,8 +147,6 @@ class App extends Component {
                 $(".nav_btn span").toggleClass("to");
                 $('.nav,.navs').stop().slideToggle();
             })
-            // $('.nav_btn').click(function(){
-            // })
             $('.nav ul').click(function(){
                 $(".nav_btn span").removeClass("to") ;
                 $('.nav,.navs').hide();
@@ -172,7 +170,9 @@ class App extends Component {
                     <div className="header" id="head">
                         {/*logo*/}
                         <div className="logo" id="logo">
-                            <Link to="/"><img id="img" src="images/logo.png" /></Link>
+                            <a href="http://localhost:3000/">
+                                <img id="img" src="images/logo.png" />
+                            </a>
                         </div>
                         {/*navigator*/}
                         <div className="nav" id="nav">
