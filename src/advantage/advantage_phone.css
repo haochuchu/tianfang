@@ -56,7 +56,7 @@ body{
     height:17.27536rem;
 }
 .zero li:nth-of-type(4){
-    height:20.13043rem;
+    height:21.13043rem;
 }
 .zero li:nth-of-type(5){
     height:18.20289rem;
@@ -101,6 +101,12 @@ body{
     font-weight: 400;
 }
 /* contact */
+.contact_tops img{
+    padding-top:0.9562rem;
+    margin-left:2rem;
+    width:10.76328502415459rem;
+    height:2.9782608695652173rem;
+  }
 .contact_ulw{
   width:200px;
   margin:0 auto;
