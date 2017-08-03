@@ -13,6 +13,7 @@ body{
 /* 定宽 */
 .fixed_news{
     width:15rem;
+    height:56.579rem;
     margin:0 auto;
 }
 /* banner */
@@ -36,7 +37,7 @@ body{
 }
 /* prize */
 .prize{
-  height:58.4347rem;
+  height:56.579rem;
    margin-top: 1.15942rem;
 }
 /* prize ul */
@@ -57,9 +58,8 @@ body{
 /* prize_word */
 .prize_word{
   width:12.9082rem;
-  height:2.8599rem;
+  height:4.4rem;
   padding:0.77294rem ;
-  float:right;
 }
 .prize_word h6{
   color:#999;
@@ -104,6 +104,7 @@ body{
 }
 .prize_lore img{
   width:15rem;
+
 }
 
 /* contact */
@@ -160,11 +161,10 @@ body{
   /* footer */
   .footer{
     margin-top:2.2rem;
+    clear:both;
   }
   /* phone */
   #phones{
   	display:block;
   }
-
-
 }

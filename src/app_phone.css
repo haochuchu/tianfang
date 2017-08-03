@@ -442,6 +442,7 @@
 /* contact */
 	.contact_box{
 		margin-top:0;
+		clear:both;
 
 	}
 	.content_box h2{

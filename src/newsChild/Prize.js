@@ -134,7 +134,7 @@ class Prize extends Component {
                         })}
                     </div>
                     {/*contact_box*/}
-                    <div className="contact_box">
+                    <div className="contact_boxw">
                         {this.state.con_img.map(function(foot,i){
                             return (
                                 <div key={i} className="contact_tops">
