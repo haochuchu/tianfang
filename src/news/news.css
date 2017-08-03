@@ -10,17 +10,23 @@ body{
  background:#f0f0f0;
 }
 
+
 /* 定宽 */
 .fixed_news{
     width:1080px;
     margin:0 auto;
 }
+
+
 /* banner */
 .home_news{
   width: 100vw;
   height: 20vh;
   background:#f0f0f0;
 }
+
+
+
 /* prize */
 .fixed_news h2{
   cursor: default;
@@ -32,6 +38,9 @@ body{
   margin:0 auto;
 
 }
+
+
+
 /* prize */
 .prize{
   height:1464px;
@@ -50,6 +59,8 @@ body{
   cursor:pointer;
   transition: all .4s ease;
 }
+
+
 /* prize_word */
 .prize_word{
   width:540px;
@@ -76,6 +87,9 @@ body{
   margin-left:40px;
   margin-bottom:38px;
 }
+
+
+
 /* prize ul */
 .prize ul li:hover:hover h4{
   color:#000;
@@ -90,6 +104,9 @@ body{
   margin-left:40px;
 
 }
+
+
+
 /*  prize_lore*/
 .prize_lore{
   width:540px;
@@ -100,6 +117,9 @@ body{
 .prize_lore img{
   width:540px;
 }
+
+
+
 /* contact_top */
 .contact_tops{
   width:382px;
@@ -107,6 +127,8 @@ body{
   margin:auto;
   clear:both;
 }
+
+
 
 /* phone */
 #phones{

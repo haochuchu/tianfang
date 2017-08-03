@@ -4,6 +4,7 @@ import './about.css';
 import './about_phone.css';
 import $ from 'jquery';
 import { Carousel } from 'antd';
+import conf from './../config';
 
 class About extends Component {
     constructor(){
@@ -23,7 +24,7 @@ class About extends Component {
     componentDidMount(){
          $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/journey",
+            url:`${conf.url}/tianfang/journey`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -36,7 +37,7 @@ class About extends Component {
         })
          $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/made",
+            url:`${conf.url}/tianfang/made`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -49,7 +50,7 @@ class About extends Component {
         })
          $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/brand",
+            url:`${conf.url}/tianfang/brand`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -62,7 +63,7 @@ class About extends Component {
         })
          $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/grow",
+            url:`${conf.url}/tianfang/grow`,
             async:"true",
             success:function(cc){
                 this.setState({
@@ -75,7 +76,7 @@ class About extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -88,7 +89,7 @@ class About extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/hot_line",
+            url:`${conf.url}/tianfang/hot_line`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -101,7 +102,7 @@ class About extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url:`${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -114,7 +115,7 @@ class About extends Component {
         })
          $.ajax({
             type:"get",
-            url:"http://localhost:8100/tianfang/img",
+            url:`${conf.url}/tianfang/img`,
             async:"true",
             success:function(ss){
                 console.log(ss)

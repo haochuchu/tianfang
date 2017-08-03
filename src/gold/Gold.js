@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './gold.css';
 import './gold_phone.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Gold extends Component {
     constructor(){
@@ -17,7 +18,7 @@ class Gold extends Component {
 	componentDidMount(){
         var id=window.location.href.split('?')[1];
         $.ajax({
-            url:'http://localhost:8100/tianfang/xiangqing3',
+            url:`${conf.url}/tianfang/xiangqing3`,
             type:'post',
             data:{id:id},
             success:function(e){
@@ -28,7 +29,7 @@ class Gold extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -41,7 +42,7 @@ class Gold extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/hot_line",
+            url:`${conf.url}/tianfang/hot_line`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -54,7 +55,7 @@ class Gold extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url:`${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({

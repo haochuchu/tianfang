@@ -16,12 +16,18 @@ body{
     height:56.579rem;
     margin:0 auto;
 }
+
+
+
 /* banner */
 .home_news{
   width: 100%;
   height: 3.09178rem;
   background:#f0f0f0;
 }
+
+
+
 /* prize */
 .fixed_news h2{
   cursor: default;
@@ -35,11 +41,16 @@ body{
   text-align:center;
   margin-left:-0.0001rem;
 }
+
+
 /* prize */
 .prize{
   height:56.579rem;
    margin-top: 1.15942rem;
 }
+
+
+
 /* prize ul */
 .prize ul li{
   height:12.56038rem;
@@ -55,6 +66,9 @@ body{
   cursor:pointer;
   transition: all .4s ease;
 }
+
+
+
 /* prize_word */
 .prize_word{
   width:12.9082rem;
@@ -85,6 +99,9 @@ body{
   color:#000;
   transition:.5s;
 }
+
+
+
 /* prize_word span */
 .prize_word span{
   cursor: pointer;
@@ -95,6 +112,9 @@ body{
   margin-left:0;
 
 }
+
+
+
 /* prize_lore */
 .prize_lore{
   width:15rem;
@@ -111,6 +131,8 @@ body{
 .contact_boxs{
 	margin-top:27rem;
 }
+
+
 /* contact_top */
 .contact_tops{
     width:16rem;
@@ -126,6 +148,9 @@ body{
     width:10.76328502415459rem;
     height:2.9782608695652173rem;
   }
+
+
+
   /*contact_ulp  */
   .contact_ulp{
   width:200px;
@@ -150,19 +175,27 @@ body{
 .contact_ulp li:hover{
    box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
 }
+
+
 /* prize_lore */
 .prize_lore{
   margin-bottom:1.5458937198067633rem;
 }
+
+
 /* contact_word */
   .contact_word{
     padding-top:-0rem;
   }
+
+
   /* footer */
   .footer{
     margin-top:2.2rem;
     clear:both;
   }
+
+  
   /* phone */
   #phones{
   	display:block;

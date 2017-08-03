@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './contact.css';
 import './contact_phone.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Contact extends Component {
     constructor(){
@@ -18,7 +19,7 @@ class Contact extends Component {
 	componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/contact",
+            url:`${conf.url}/tianfang/contact`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -31,7 +32,7 @@ class Contact extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -44,7 +45,7 @@ class Contact extends Component {
         })
         $.ajax({
                 type:"post",
-                url:"http://localhost:8100/tianfang/hot_line",
+                url:`${conf.url}/tianfang/hot_line`,
                 async:"true",
                 success:function(ss){
                     this.setState({
@@ -57,7 +58,7 @@ class Contact extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url:`${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({

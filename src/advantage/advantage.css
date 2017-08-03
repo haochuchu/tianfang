@@ -9,6 +9,10 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
+
+
+
+
 /* home_advantage */
 .home_advantage{
     width: 100vw;
@@ -17,12 +21,18 @@ body{
     background-size:100% 100%;
     background-attachment:fixed;
 }
+
+
+
 /* main_ad */
 .main_ad{
     width:1061px;
     margin:0 auto;
     margin-top:-60px;
 }
+
+
+
 /* title */
 .Title{
     width:100%;
@@ -37,6 +47,8 @@ body{
     box-shadow: 0 20px 40px rgba(0,0,0,.1);
     margin-top:-60px;
 }
+
+
 /* zero */
 .zero li{
     width:100%;
@@ -60,6 +72,9 @@ body{
 .zero li:nth-of-type(5){
     height:453px;
 }
+
+
+
 /* L */
 .L_img{
     width:741px;
@@ -70,6 +85,8 @@ body{
     width:741px; 
     height:100%;
 }
+
+
 /* R */
 .R_con{
     width:280px;
@@ -99,6 +116,10 @@ body{
     font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-weight: 400;
 }
+
+
+
+
 /* contact */
 .contact_tops{
   width:382px;
@@ -106,6 +127,9 @@ body{
   margin:0 auto;
   clear:both;
 }
+
+
+
 /* contact_ulw */
 .contact_ulw{
   width:200px;
@@ -130,7 +154,12 @@ body{
 .contact_ulw li:hover{
    box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
 }
+
+
+
 /* contact_word */
+
+
 .contact_word{
   clear:both;
   width:200px;
@@ -138,6 +167,9 @@ body{
   text-align:center;
   padding-top:40px;
 }
+
+
+
 .contact_word h5{
   cursor: default;
   margin-top:2px;
@@ -146,6 +178,8 @@ body{
   font-weight: 400;
   color: #999;
 }
+
+
 .contact_word .light{
   font-family: novecento_light,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   font-weight: 300;
@@ -154,6 +188,10 @@ body{
   font-size: 27px;
   color: #999;
 }
+
+
+
+
 /* phones */
 #phones{
   display:none;

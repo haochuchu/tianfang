@@ -9,6 +9,9 @@
 	 overflow-x:hidden;
 	 background:#f0f0f0;
 	}
+
+
+
 	/*  home_gold*/
 	.home_gold{
 	    width: 100vw;
@@ -17,6 +20,9 @@
 	     background-position:center center;
 	     background-size:200% 140%;
 	}
+
+
+
 	/* Main_gold */
 	.Main_gold{
 		width:16rem; 
@@ -30,6 +36,9 @@
 		padding:0.122468599033816rem;
 		background:#fff;
 	}
+
+
+
 	/* gold */
 	.gold_img{
 		width:87%;
@@ -43,6 +52,9 @@
 		width:100%;
 		margin-top:-5px;
 	}
+
+
+	
 	/* phone */
 	#phone{
 		display:block;

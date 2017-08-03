@@ -5,6 +5,7 @@ import './vi_phone.css';
 import Case from './../case/Case';
 import './../case/case.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Vi extends Component {
     constructor(){
@@ -19,7 +20,7 @@ class Vi extends Component {
 	componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/pic_list",
+            url:`${conf.url}/tianfang/pic_list`,
             async:"true",
             success:function(cc){
                 this.setState({
@@ -35,7 +36,7 @@ class Vi extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -48,7 +49,7 @@ class Vi extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/hot_line",
+            url:`${conf.url}/tianfang/hot_line`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -61,7 +62,7 @@ class Vi extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url: `${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({
