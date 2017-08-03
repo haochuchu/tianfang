@@ -37,7 +37,7 @@ body{
 /* prize */
 .prize{
   height:58.4347rem;
-   margin-top: 1.15942rem;
+  margin-top: 1.15942rem;
 }
 /* prize ul */
 .prize ul li{
@@ -57,9 +57,8 @@ body{
 /* prize_word */
 .prize_word{
   width:12.9082rem;
-  height:2.8599rem;
-  padding:0.77294rem ;
-  float:right;
+  height:4.4rem;
+  padding:0.77294rem;
 }
 .prize_word h6{
   color:#999;
@@ -104,6 +103,7 @@ body{
 }
 .prize_lore img{
   width:15rem;
+
 }
 
 /* contact */
