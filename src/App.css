@@ -508,10 +508,12 @@ body{
 }
 
 /* contact */
+
 .contact_tops{
   width:382px;
   height:90px;
   margin:0 auto;
+  padding:0;
 }
 
 .contact_uls{

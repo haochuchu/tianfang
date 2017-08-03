@@ -72,10 +72,10 @@ body{
 }
 /* R */
 .R_con{
-    width:237px;
-    height:calc(100% - 60px);
-    padding-left:10px; 
-    padding-top:15px;
+    width:280px;
+    height:calc(100% - 1px);
+    padding-left:25px; 
+    padding-top:20px;
     border-left: 1px solid #f0f0f0;
     float:left;
 }
