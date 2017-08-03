@@ -9,6 +9,8 @@ body{
     overflow-x:hidden;
     background:#f0f0f0;
 }
+
+
 /*  home_vi*/
 .home_vi{
     width: 100vw;
@@ -17,6 +19,8 @@ body{
     background-size:100% 100%;
     background-attachment:fixed;
 }
+
+
 /* main_vi */
 .main_vi{
 	width:1094px; 
@@ -32,6 +36,8 @@ body{
     font-weight: 400;
     color:#999;
 }
+
+
 /*img_list  */
 .img_list {
 	width:100%;
@@ -76,6 +82,9 @@ body{
 	font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     font-size: 14px;
 }
+
+
+
 /* contact_top */
 .contact_top{
   width:382px;
@@ -83,6 +92,8 @@ body{
   margin:0 auto;
   clear:both;
 }
+
+
 /* phones */
 #phones{
     display:none;

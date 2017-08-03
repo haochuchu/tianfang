@@ -33,6 +33,8 @@ ul li{
 body{
  background:#f0f0f0;
 }
+
+
 /* show */
 .header_phone{
   display:none;
@@ -78,6 +80,8 @@ body{
         top:100vh;
         }
 }
+
+
 /* home */
 
 .home{width:100%; height:100vh; position:absolute; top:0; z-index:-1; left:0; }
@@ -165,6 +169,8 @@ body{
   transition:0.4s;
 }
 
+
+
 /* header */
 .header{
   height:80px; 
@@ -175,6 +181,9 @@ body{
   left:0;
   z-index:1000;
 }
+
+
+
 /* logo */
 .logo{
   width:157px;
@@ -198,6 +207,9 @@ body{
 .logo:hover{
   background:#fff;
 }
+
+
+
 /* nav */
 .nav{
   line-height:80px;
@@ -299,6 +311,7 @@ body{
    color:#000;
 }
 
+
 /* CASE案例 */
 .first_page{
   width:100%; 
@@ -343,6 +356,9 @@ body{
 .back_btn{
   display:none;
 }
+
+
+
 /* content */
 .fixedBox{
   width:1061px;
@@ -351,6 +367,8 @@ body{
   z-index:1;
   background:#f0f0f0;
 }
+
+
 /* h2  title */
 .content_box {
 	position:relative;
@@ -365,6 +383,8 @@ body{
   font-weight: 400;
   text-align:center;
 }
+
+
 /* content_bundle li */
 .bundle{
   width:346px;
@@ -507,6 +527,7 @@ body{
   transform:scale(0.6);
 }
 
+
 /* contact */
 
 .contact_tops{
@@ -562,6 +583,8 @@ body{
   font-size: 27px;
   color: #999;
 }
+
+
 /* footer */
 .footer_box{
   text-align:center;
