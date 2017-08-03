@@ -34,7 +34,7 @@ body{
 }
 /* prize */
 .prize{
-  height:1211px;
+  height:1464px;
    margin-top: 30px;
 }
 .prize ul li{
@@ -101,12 +101,13 @@ body{
   width:540px;
 }
 /* contact_top */
-.contact_top{
+.contact_tops{
   width:382px;
   height:90px;
-  margin:0 auto;
+  margin:auto;
   clear:both;
 }
+
 /* phone */
 #phones{
     display:none;
