@@ -9,6 +9,9 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
+
+
+
 /*home_contact  */
 .home_contact{
     width: 100vw;
@@ -17,12 +20,17 @@ body{
     background-size:100% 100%;
     background-attachment:fixed;
 }
+
+
+
 /* main_contact */
 .main_contact{
     width:1061px;
     margin:0 auto;
     margin-top:-60px;
 }
+
+
 /* contact */
 .contact_tops{
   padding-top:180px;
@@ -33,6 +41,9 @@ body{
   position:relative;
   z-index:-1;
 }
+
+
+
 /* c */
 .c_word{
 	width:526px;
@@ -78,6 +89,9 @@ body{
     color: #000000;
     text-align: center;
 }
+
+
+
 /*contact_uls  */
 .contact_uls{
   width:200px;
@@ -102,6 +116,10 @@ body{
 .contact_uls li:hover{
    box-shadow:0 0 5px #ccc,0px 0px 5px #ccc,0 0px 8px #999; 
 }
+
+
+
+
 /* contact_words */
 .contact_words{
   clear:both;
@@ -126,6 +144,9 @@ body{
   font-size: 27px;
   color: #999;
 }
+
+
+
 /* phone */
 #phone{
   display:none;

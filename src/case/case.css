@@ -10,6 +10,9 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
+
+
+
 /*  home_case*/
 .home_cases{
     width: 100vw;
@@ -18,6 +21,8 @@ body{
     background-size:100% 100%;
     background-attachment:fixed;
 }
+
+
 /* Main_box */
 .Main_box{
 	width:1094px; 
@@ -36,6 +41,9 @@ body{
     font-size:36px;
     margin-bottom:40px;
 }
+
+
+
 /* more */
 .more_img{
 	width:100%;
@@ -47,6 +55,9 @@ body{
 	width:100%;
 	margin-top:-5px;
 }
+
+
+
 /* phone */
 #phone{
 	display:none;

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import $ from 'jquery';
+import conf from './config';
 
 import './App.css';
-import './app_phone.css';
+import './App_phone.css';
 import Start from './Start';
 import Advantage from './advantage/Advantage';
 import Contact from './contact/Contact';
@@ -35,7 +36,7 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/first_page",
+            url:`${conf.url}/tianfang/first_page`,
             async:"true",
             success:function(pp){
                 this.setState({
@@ -70,7 +71,7 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/nav",
+            url:`${conf.url}/tianfang/nav`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -127,7 +128,7 @@ class App extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/footer",
+            url:`${conf.url}/tianfang/footer`,
             async:"true",
             success:function(ss){
                 this.setState({

@@ -12,6 +12,8 @@
 	 	background:#f0f0f0;
 	 	overflow-x:hidden;
 	}
+
+
 	/*  show_top*/
 	.show_top{
 	  position:fixed; 
@@ -24,6 +26,9 @@
 	  transition: 1s;
 	  animation: show_move 1s forwards;
 	}
+
+
+
 	/* show_bottom */
 	.show_bottom{
 	  position:fixed; 
@@ -52,6 +57,9 @@
 	        top:100vh;
 	        }
 	}
+
+
+
 	/* home */
 	.home{
 		width:100%;
@@ -91,6 +99,8 @@
 	  background-attachment:fixed;
 	  background-position:center center;
 	}
+
+
 	/* animate */
 	.animate{
 	  position:fixed;
@@ -115,6 +125,8 @@
 	  width:4.251207729468599rem;
 	  transition:0.4s;
 	}
+
+
 	/* h1 */
 	.animate h1{
 	  color:#fff;
@@ -125,6 +137,8 @@
 	  font-size:1.355072463768116rem;
 	  font-family: novecento_normal,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
 	}
+
+
 	/* h4 */
 	.animate h4{
 	  color:#fff;
@@ -135,6 +149,8 @@
 	  text-align:center;
 	  font-weight:400;
 	}
+
+
 	/* h6 */
 	.animate h6{
 	  color:#fff;
@@ -144,6 +160,9 @@
 	  line-height:1.1594202898550725rem;
 	  font-weight:400;
 	}
+
+
+
 	/* p */
 	.animate p{
 	  margin:0 auto;
@@ -152,6 +171,8 @@
 	  width:0;
 	  transition:0.4s;
 	}
+
+
 	/* header */
 	.header{
 	  width:100%;
@@ -164,6 +185,8 @@
 	  z-index:10000;
 	  background:#fff;
 	}
+
+
 	/* logo */
 	.logo{
 	  width:4rem;
@@ -187,6 +210,8 @@
 	.logo:hover{
 		background:transparent;
 	}
+
+
 
 	/* nav */
 	.nav{
@@ -240,6 +265,9 @@
 	.navs ul li a{
 		color:#000;
 	}
+
+
+
 	/* CASE案例 */
 	.first_page{
 		position: fixed;
@@ -299,6 +327,8 @@
 		color:#fff;
 	}
 
+
+
 	/* nav_btn */
 	.nav_btn{
       display: block;
@@ -320,6 +350,8 @@
       -webkit-transition: all .4s ease;
       transition: all .4s ease;
   }
+
+
   /* before */
   .nav_btn span:before{
       top: -0.32367170626349892rem;
@@ -331,6 +363,9 @@
       background-color: #c6ba9a;
       transition: all .4s ease;
   }
+
+
+
   /* after */
   .nav_btn span:after{
       top: 0.32367170626349892rem;
@@ -362,6 +397,10 @@
   .nav_btn .span:after{
     background:#000;
   }
+
+
+
+
 	/*  fixedBox*/
 	.fixedBox{
 	  width:16rem;
@@ -370,6 +409,9 @@
 	  z-index:1;
 	  background:#f0f0f0;
 	}
+
+
+
 	/* content */
 	.content {
 		position:relative;
@@ -384,6 +426,9 @@
 	  font-weight: 400;
 	  text-align:center;
 	}
+
+
+
 	/*bundle  */
 	.bundle{
 	  width:4.636908212560386rem;
@@ -398,6 +443,9 @@
 	  margin-left:0.57053140096618356rem;
 	  overflow:hidden;
 	}
+
+
+
 	/* bundle */
 	.bundle{
 	transform:scale(0);
@@ -417,6 +465,9 @@
 	.bundle:nth-of-type(6){
 		transition:all .4s ease 1s;
 	}
+
+
+
 	/* content_bundle */
 	.content_bundle ul li{
 	  width:4.636908212560386rem;
@@ -440,9 +491,13 @@
 	.word{
 		display:none;
 	}
+
+
+
 /* contact */
 	.contact_box{
 		margin-top:0;
+		clear:both;
 
 	}
 	.content_box h2{
@@ -452,6 +507,9 @@
 		padding-top:0rem;
 		margin-bottom:0.5797101449275363rem;
 	}
+
+
+
 	/* contact_top */
 	.contact_top{
 	  width:16rem;
@@ -460,6 +518,9 @@
 	  padding-top:0rem;
 	  z-index:1000; 
 	}
+
+
+
 	/* contact_ul */
 	#contact_ul{
 		padding-top:0rem;
@@ -478,6 +539,9 @@
 	.contact_uls li{
 		margin-top:0.9856rem;
 	}
+
+
+	
 	/* footer_box */
 	.footer_box{
 		margin-top:0.9857rem;

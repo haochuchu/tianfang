@@ -5,6 +5,7 @@ import './supers_phone.css';
 import Design from './../design/Design';
 import './../design/design.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Supers extends Component {
     constructor(){
@@ -19,7 +20,7 @@ class Supers extends Component {
     componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/supers",
+            url: `${conf.url}/tianfang/supers`,
             async:"true",
             success:function(pp){
                 this.setState({
@@ -35,7 +36,7 @@ class Supers extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -48,7 +49,7 @@ class Supers extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/hot_line",
+            url:`${conf.url}/tianfang/hot_line`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -61,7 +62,7 @@ class Supers extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url:`${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({

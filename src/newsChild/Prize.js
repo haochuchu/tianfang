@@ -3,6 +3,7 @@ import  {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './prize.css';
 import './prize_phone.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Prize extends Component {
     constructor(){
@@ -17,7 +18,7 @@ class Prize extends Component {
 	componentDidMount(){
         var id=window.location.href.split('?')[1];
             $.ajax({
-                url:'http://localhost:8100/tianfang/xiangqing2',
+                url:`${conf.url}/tianfang/xiangqing2`,
                 type:'post',
                 data:{id:id},
                 success:function(e){
@@ -28,7 +29,7 @@ class Prize extends Component {
             })
             $.ajax({
                 type:"post",
-                url:"http://localhost:8100/tianfang/message",
+                url:`${conf.url}/tianfang/message`,
                 async:"true",
                 success:function(ss){
                     this.setState({
@@ -41,7 +42,7 @@ class Prize extends Component {
             })
             $.ajax({
                 type:"post",
-                url:"http://localhost:8100/tianfang/hot_line",
+                url:`${conf.url}/tianfang/hot_line`,
                 async:"true",
                 success:function(ss){
                     this.setState({
@@ -54,7 +55,7 @@ class Prize extends Component {
             })
             $.ajax({
                 type:"post",
-                url:"http://localhost:8100/tianfang/con_img",
+                url:`${conf.url}/tianfang/con_img`,
                 async:"true",
                 success:function(ss){
                     this.setState({
@@ -142,7 +143,7 @@ class Prize extends Component {
                         })}
                     </div>
                     {/*contact_box*/}
-                    <div className="contact_box">
+                    <div className="contact_boxw">
                         {this.state.con_img.map(function(foot,i){
                             return (
                                 <div key={i} className="contact_tops">

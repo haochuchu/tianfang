@@ -5,6 +5,7 @@ import './system_phone.css';
 import Gold from './../gold/Gold';
 import './../gold/gold.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class System extends Component {
     constructor(){
@@ -19,7 +20,7 @@ class System extends Component {
     componentDidMount(){
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/system",
+            url:`${conf.url}/tianfang/system`,
             async:"true",
             success:function(pp){
                 console.log(pp)
@@ -36,7 +37,7 @@ class System extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/message",
+            url:`${conf.url}/tianfang/message`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -49,7 +50,7 @@ class System extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/hot_line",
+            url:`${conf.url}/tianfang/hot_line`,
             async:"true",
             success:function(ss){
                 this.setState({
@@ -62,7 +63,7 @@ class System extends Component {
         })
         $.ajax({
             type:"post",
-            url:"http://localhost:8100/tianfang/con_img",
+            url:`${conf.url}/tianfang/con_img`,
             async:"true",
             success:function(ss){
                 this.setState({

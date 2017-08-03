@@ -9,6 +9,8 @@ body{
  overflow-x:hidden;
  background:#f0f0f0;
 }
+
+
 /* home_about */
 .home_about{
   width: 100%;
@@ -17,11 +19,15 @@ body{
   background-size:135% 60%;
   background-attachment:fixed;
 }
+
+
 /* content */
 .fixed_box{
 	width:16rem;
 	margin:0 auto;
 }
+
+
 /* brand */
 .brand{
 	height:6rem;
@@ -55,6 +61,8 @@ body{
 	margin-left:0.001rem;
 	line-height:0.85rem;
 }
+
+
 /* character */
 .character{
 	height:9.353rem;
@@ -63,6 +71,8 @@ body{
 	width:16rem;
 	height:9.353rem;
 }
+
+
 /* grow */
 .grow{
 	height:18rem;
@@ -113,6 +123,9 @@ body{
 .grow_all img{
 	width:20.444rem;
 }
+
+
+
 /* journey */
 .journey{
 	height:11rem;
@@ -131,6 +144,10 @@ body{
 .journey p:first-of-type{
 	padding-top:1.54589rem;
 }
+
+
+
+
 /* interact */
 .interact{
 	height:9rem;
@@ -148,6 +165,9 @@ body{
 .interact .btn{/* width:3.86473rem; height:15.3816rem;  font: 2.31884rem/2.31884rem 'SimSun'; text-align:center; color:#fff; position:absolute; top:4.6376rem;  -webkit-user-select:none; cursor:pointer;  line-height:15.0338rem; 
  transition: all .4s ease; z-index:100; */display:none;
 }
+
+
+
 /* .interact .LBtn{ left:1.1594rem;}
 .fliament_left{
   display:none;
@@ -171,6 +191,9 @@ body{
   right:42px;
   opacity:0;
 } */
+
+
+
 .interact .RBtn{ right:30px;}
 .interact:hover  .RBtn{
   right:10px;
@@ -182,6 +205,8 @@ body{
   background:#fff;
   transition: all .4s ease; 
 }
+
+
 /* flia */
 .flia_left{
   display:none;
@@ -192,6 +217,9 @@ body{
 .car{
   display:none;
 }
+
+
+
 /* .car img{
   width:45px;
   height:23px;
@@ -213,10 +241,14 @@ body{
          transform: translateX(-5px);
        }
 }
+
 .car span img{
   width:26px;
   height:23px;
 } */
+
+
+
 /* made */
 .made{
 	height:5rem;
@@ -244,6 +276,9 @@ body{
 .made h4:first-of-type{
 	margin-bottom: 0.2rem;
 }
+
+
+
 /* contact */
 .contact_tops{
     width:16rem;
@@ -277,6 +312,10 @@ body{
   .footer{
     margin-top:2.2rem;
   }
+
+
+
+
   /* Rt_top */
 .Rt_top{
   position:fixed;
@@ -284,6 +323,9 @@ body{
   bottom:5px;
   cursor:pointer;
 }
+
+
+
 /* phone */
 #phones{
   display:block;

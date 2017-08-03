@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 import './advantage.css';
 import './advantage_phone.css';
 import $ from 'jquery';
+import conf from './../config';
 
 class Advantage extends Component {
     constructor(){
@@ -17,7 +18,7 @@ class Advantage extends Component {
 	componentDidMount(){
     $.ajax({
         type:"post",
-        url:"http://localhost:8100/tianfang/cont",
+        url:`${conf.url}/tianfang/cont`,
         async:"true",
         success:function(ss){
             this.setState({
@@ -30,7 +31,7 @@ class Advantage extends Component {
     })
     $.ajax({
         type:"post",
-        url:"http://localhost:8100/tianfang/message",
+        url:`${conf.url}/tianfang/message`,
         async:"true",
         success:function(ss){
             this.setState({
@@ -43,7 +44,7 @@ class Advantage extends Component {
     })
     $.ajax({
         type:"post",
-        url:"http://localhost:8100/tianfang/hot_line",
+        url:`${conf.url}/tianfang/hot_line`,
         async:"true",
         success:function(ss){
             this.setState({
@@ -56,7 +57,7 @@ class Advantage extends Component {
     })
     $.ajax({
         type:"post",
-        url:"http://localhost:8100/tianfang/con_img",
+        url:`${conf.url}/tianfang/con_img`,
         async:"true",
         success:function(ss){
             this.setState({
