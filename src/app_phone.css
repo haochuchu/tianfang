@@ -161,7 +161,7 @@
 	  position:fixed;
 	  top:0;
 	  left:0;
-	  z-index:10;
+	  z-index:10000;
 	  background:#fff;
 	}
 	/* logo */
@@ -253,6 +253,7 @@
 		right:0;
 		transform: none;
 		background:#fff;
+		z-index:100000;
 	}
 	.first_page li{
 		padding-top:1rem;
