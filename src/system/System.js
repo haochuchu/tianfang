@@ -136,7 +136,7 @@ class System extends Component {
                                 <h2 className="system_word pros">PRODUCTS</h2>
                                 <ul className="system_box">
                                     {this.state.system.map(function(system,i){
-                                        return <Link key={i}  to={`/Gold?${system.id}`}>
+                                        return <Link key={i}  to={`/Gold?id=${system.id}`}>
                                         <li className="db">
                                             <div className="system_tops">
                                                 <img src={system.system_img}/>

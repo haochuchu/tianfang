@@ -136,7 +136,7 @@ class News extends Component {
                             <div className="prize">
                                  <ul>
                                     {this.state.prize.map(function(pp,i){
-                                    return  <Link key={i}  to={`/Prize?${pp.id}`} className="top_new">
+                                    return  <Link key={i}  to={`/Prize?id=${pp.id}`} className="top_new">
                                     <li>
                                         <div className="prize_word">
                                         	<h6>{pp.prize_title}</h6>
