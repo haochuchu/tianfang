@@ -214,14 +214,13 @@ class App extends Component {
                     <Route path="/System" component={System}></Route>
                 {/*footer*/}
                 <div className="footer_box">
-                {this.state.footer.map(function(con,i){
-                    return  <div key={i}>
+                    {this.state.footer.map(function(con,i){
+                        return  <div key={i}>
                             <span>{con.copyright}</span>
                             <a>{con.ality}</a>
                             <a>{con.address}</a>
-                    </div>
-                        })}    
-
+                        </div>
+                    })}    
                 </div>
             </div>
         </Router>

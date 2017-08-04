@@ -124,7 +124,7 @@ class Start extends Component {
                     count=-1;
                 }
                 count++;
-            },5000);
+            },2500);
         })
          $(window).scroll(function () {
             if($("body").scrollTop()>=500){

@@ -121,7 +121,7 @@ class Prize extends Component {
                 <div className="show_bottom" id="show_news"></div>
                 <div className="home_news" id="home"></div>
                 {/*content*/}
-                <div className="prizes_box">
+                <div className="prizes_box" id="prizes_box">
                     <h2 className="prize_h2">NEWS</h2>
                     <p>Jun 08,2017</p>  
                     <div className="prize_box">
