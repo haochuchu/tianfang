@@ -125,13 +125,13 @@ class News extends Component {
                 <div>
                     <Route path="/Prize" component={Prize}></Route>
                     <Route exact path="/News" render={()=>(
-        			<div className="wrap">
+        			<div className="wraps">
                       {/*show*/}
         				<div className="show_top"></div>
                         <div className="show_bottom" id="show_news"></div>
                         <div className="home_news" id="home"></div>
                         {/*content*/}
-                        <div className="fixed_news">
+                        <div className="fixed_news" id="fixed_news">
                             <h2>NEWS</h2>
                             <div className="prize">
                                  <ul>

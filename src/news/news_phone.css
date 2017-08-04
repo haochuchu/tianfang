@@ -27,7 +27,9 @@ body{
 }
 
 
-
+.wraps{
+  height:115.9420289rem;
+}
 /* prize */
 .fixed_news h2{
   cursor: default;

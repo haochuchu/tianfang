@@ -119,12 +119,12 @@ class Start extends Component {
         $(function() {
             var count=0;
             setInterval(function () {
-                $(".home>div").eq(count).fadeIn(600).siblings().fadeOut(600);
+                $(".home>div").eq(count).fadeIn(1000).siblings().fadeOut(1000);
                 if(count>=2){
                     count=-1;
                 }
                 count++;
-            },2000);
+            },2500);
         })
          $(window).scroll(function () {
             if($("body").scrollTop()>=500){
