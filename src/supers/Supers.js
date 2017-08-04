@@ -135,7 +135,7 @@ class Supers extends Component {
                                 <h2 className="system_word">SI形象设计</h2>
                                 <ul className="system_box">
                                     {this.state.supers.map(function(per,i){
-                                        return <Link key={i}  to={`/Design?${per.id}`}>
+                                        return <Link key={i}  to={`/Design?id=${per.id}`}>
                                             <li className="db">
                                                 <div className="system_top">
                                                     <img src={per.super_img}/>

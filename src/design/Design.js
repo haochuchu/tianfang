@@ -16,7 +16,7 @@ class Gold extends Component {
         };
     };
 	componentDidMount(){
-            var id=window.location.href.split('?')[1];
+            var id=window.location.href.split('=')[1];
             $.ajax({
                 url:`${conf.url}/tianfang/xiangqing4`,
                 type:'post',
