@@ -76,7 +76,7 @@ class System extends Component {
         })
         $(function(){
             $('.blocks').click(function(){
-                $('body').animate({scrollTop:0},function(){
+                $('body,html').animate({scrollTop:0},function(){
                     return false;
                 })
             });
@@ -85,12 +85,17 @@ class System extends Component {
         backs.onclick=function(){
             (document.body.scrollTop=0) || (document.documentElement.scrollTop=0);
         }
-        document.addEventListener('scroll', this.handleScroll.bind(this));
+        //document.addEventListener('scroll', this.handleScroll.bind(this));
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.handleScroll);
+        }else{
+            document.attachEvent('onscroll', this.handleScroll);
+        }
     };
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(window.screen.width>414){
-            if(document.body.scrollTop>=0){ 
+            if((document.body.scrollTop || document.documentElement.scrollTop)>=0){ 
                 document.getElementById("head").style.width='100vw';
                 document.getElementById("head").style.background='#fff';
                 document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
@@ -98,7 +103,7 @@ class System extends Component {
                 document.getElementById("nav").className='navs';
                 
             }
-            else if(document.body.scrollTop>=h){ 
+            else if((document.body.scrollTop || document.documentElement.scrollTop)>=h){ 
                 document.getElementById("head").style.width='100vw';
                 document.getElementById("head").style.background='#fff';
                 document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';

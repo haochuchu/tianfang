@@ -114,7 +114,7 @@ class Start extends Component {
                 alert('失败了');
             }
         })
-        document.addEventListener('scroll', this.handleScroll.bind(this));
+        
 
         $(function() {
             var count=0;
@@ -127,7 +127,7 @@ class Start extends Component {
             },2500);
         })
          $(window).scroll(function () {
-            if($("body").scrollTop()>=500){
+            if($("body")||$("html").scrollTop()>=500){
                 $('.content h2').css({
                     opacity:'1',
                     transition: 'all .6s ',
@@ -137,13 +137,20 @@ class Start extends Component {
                 })
             }
         })
+        //document.addEventListener('scroll', this.handleScroll.bind(this));
+        if(window.addEventListener){
+            document.addEventListener('scroll', this.handleScroll);
+        }else{
+            document.attachEvent('onscroll', this.handleScroll);
+        }
+
 
     } 
 
     handleScroll=function (e) {
         var h=document.getElementById('home').offsetHeight-document.getElementById('head').offsetHeight;
         if(window.screen.width>414){
-            if(document.body.scrollTop>=h){ 
+            if((document.body.scrollTop || document.documentElement.scrollTop)>=h){ 
                 document.getElementById("head").style.width='100vw';
                 document.getElementById("head").style.background='#fff';
                 document.getElementById("head").style.boxShadow='0 0 30px rgba(0,0,0,.1)';
